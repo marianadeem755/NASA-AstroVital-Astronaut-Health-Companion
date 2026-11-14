@@ -1,0 +1,82 @@
+{
+  "_notice": "EXAMPLE PROTOCOLS FOR DEVELOPMENT ONLY. Written by the dev team as non-prescriptive structure examples. They are NOT NASA-approved countermeasures. Replace with protocols approved by the flight surgeon / NASA sources before any real use. Loaded as inactive and pending approval by default.",
+  "protocols": [
+    {
+      "code": "EX-SLEEP-HYGIENE",
+      "version": 1,
+      "title": "Review sleep schedule and sleep environment",
+      "description": "Review the crew sleep schedule and the sleep station environment. Keep consistent sleep and wake times, reduce light and noise during the scheduled sleep period, limit bright light exposure before sleep, and log sleep quality each day.",
+      "trigger_conditions": { "risk_categories": ["sleep_fatigue"], "min_risk_level": "medium" },
+      "priority": "medium",
+      "requires_medical_review": false,
+      "source_reference": "EXAMPLE ONLY - not an approved NASA protocol"
+    },
+    {
+      "code": "EX-FATIGUE-WORKLOAD",
+      "version": 1,
+      "title": "Notify mission lead and flight surgeon about fatigue risk",
+      "description": "Inform the mission lead and the flight surgeon of the elevated fatigue and performance risk. Review whether safety-critical tasks can be rescheduled and whether additional recovery time can be added to the plan.",
+      "trigger_conditions": {
+        "risk_categories": ["sleep_fatigue", "combined_cognitive_performance"],
+        "min_risk_level": "high"
+      },
+      "priority": "high",
+      "requires_medical_review": true,
+      "source_reference": "EXAMPLE ONLY - not an approved NASA protocol"
+    },
+    {
+      "code": "EX-PSYCH-SUPPORT",
+      "version": 1,
+      "title": "Offer a behavioral health support conversation",
+      "description": "Offer a private, scheduled conversation with the behavioral health support team to discuss current stress and mood. This is a support contact, not an assessment.",
+      "trigger_conditions": { "risk_categories": ["psychological"], "min_risk_level": "medium" },
+      "priority": "medium",
+      "requires_medical_review": true,
+      "source_reference": "EXAMPLE ONLY - not an approved NASA protocol"
+    },
+    {
+      "code": "EX-CARDIO-RECHECK",
+      "version": 1,
+      "title": "Repeat cardiovascular measurements at rest",
+      "description": "Repeat the heart rate and blood pressure measurements after five minutes of seated rest, using the same equipment, and share both sets of readings with the flight surgeon.",
+      "trigger_conditions": { "risk_categories": ["cardiovascular"], "min_risk_level": "medium" },
+      "priority": "medium",
+      "requires_medical_review": true,
+      "source_reference": "EXAMPLE ONLY - not an approved NASA protocol"
+    },
+    {
+      "code": "EX-SPO2-RECHECK",
+      "version": 1,
+      "title": "Recheck oxygen saturation measurement",
+      "description": "Check sensor placement and repeat the oxygen saturation measurement. If the low reading persists, contact the flight surgeon immediately.",
+      "trigger_conditions": { "risk_categories": ["respiratory"], "min_risk_level": "medium" },
+      "priority": "high",
+      "requires_medical_review": true,
+      "source_reference": "EXAMPLE ONLY - not an approved NASA protocol"
+    },
+    {
+      "code": "EX-SYMPTOM-HEADACHE",
+      "version": 1,
+      "title": "Record and report headache details",
+      "description": "Record when the headache started, how long it has lasted, its severity, and any accompanying symptoms such as nausea or changes in vision. Report the record to the flight surgeon.",
+      "trigger_conditions": {
+        "symptoms": [{ "type": "headache", "region": "head", "min_severity": 4 }]
+      },
+      "priority": "medium",
+      "requires_medical_review": true,
+      "source_reference": "EXAMPLE ONLY - not an approved NASA protocol"
+    },
+    {
+      "code": "EX-SYMPTOM-BACK-PAIN",
+      "version": 1,
+      "title": "Record and report back pain details",
+      "description": "Record the pain level, the activities around its onset, and whether it changes with posture or movement. Report the record to the flight surgeon.",
+      "trigger_conditions": {
+        "symptoms": [{ "type": "back_pain", "region": "lower_back", "min_severity": 4 }]
+      },
+      "priority": "medium",
+      "requires_medical_review": true,
+      "source_reference": "EXAMPLE ONLY - not an approved NASA protocol"
+    }
+  ]
+}
