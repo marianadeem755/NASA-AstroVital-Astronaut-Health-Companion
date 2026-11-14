@@ -1,0 +1,307 @@
+{
+  "sleep_poor_logreg": {
+    "data": [
+      "MMASH_sleep_summary.csv",
+      "MMASH_psychological_scores.csv",
+      "MMASH_activity_summary_quality_reviewed.csv",
+      "MMASH_RR_HRV_final_all_windows__1.csv (means only)"
+    ],
+    "target": "Pittsburgh > 5 (poor sleep)",
+    "n": 21,
+    "positives": 6,
+    "features": [
+      "total_sleep_minutes",
+      "total_waso_minutes",
+      "total_awakenings",
+      "sleep_efficiency_percent",
+      "total_steps",
+      "original_mean_heart_rate_bpm",
+      "mean_vector_magnitude",
+      "Daily_stress",
+      "STAI1",
+      "STAI2",
+      "hrv_mean_rr_rmssd_ms"
+    ],
+    "validation": "Leave-One-Out CV",
+    "accuracy": 0.571,
+    "roc_auc": 0.467,
+    "warning": "Does NOT beat chance (AUC 0.47). Demo pipeline only, do not use for decisions. n=21, 2-day aggregates have no daily variation."
+  },
+  "stress_ridge": {
+    "data": [
+      "MMASH_sleep_summary.csv",
+      "MMASH_psychological_scores.csv",
+      "MMASH_activity_summary_quality_reviewed.csv",
+      "MMASH_RR_HRV_final_all_windows__1.csv (means only)"
+    ],
+    "target": "Daily_stress (continuous)",
+    "n": 21,
+    "features": [
+      "total_sleep_minutes",
+      "sleep_efficiency_percent",
+      "total_waso_minutes",
+      "total_steps",
+      "original_mean_heart_rate_bpm",
+      "mean_vector_magnitude",
+      "Pittsburgh",
+      "STAI1",
+      "STAI2",
+      "hrv_mean_rr_rmssd_ms",
+      "panas_neg_10",
+      "panas_pos_10"
+    ],
+    "validation": "Leave-One-Out CV",
+    "r2": -0.999,
+    "mae": 16.2,
+    "target_mean": 32.9,
+    "target_sd": 16.3,
+    "warning": "R2 is negative, MAE is about the same as the target sd. Predicting the mean is as good. No signal in 2-day aggregates. Demo pipeline only."
+  },
+  "hrv_anomaly_isoforest": {
+    "data": [
+      "MMASH_RR_HRV_final_all_windows__1.csv"
+    ],
+    "target": "unsupervised anomaly flag (-1 = unusual window)",
+    "n_train_windows": 5830,
+    "features": [
+      "mean_hr_bpm",
+      "rr_sdnn_ms",
+      "rr_rmssd_ms",
+      "rr_pnn50_percent"
+    ],
+    "excluded": "user_4 (median RMSSD 499 ms, sensor/unit problem), ineligible windows",
+    "train_anomaly_rate": 0.05,
+    "user_4_anomaly_rate": 0.891,
+    "note": "user_4 was NOT in training, yet 89% of its windows are flagged. That is the detector doing its job."
+  },
+  "hrv_low_rmssd_rf_eval": {
+    "data": [
+      "MMASH_RR_HRV_final_all_windows__1.csv"
+    ],
+    "target": "rr_rmssd_ms < 30 ms (low recovery window)",
+    "n_windows": 5830,
+    "positive_rate": 0.284,
+    "features": [
+      "mean_hr_bpm",
+      "valid_percent",
+      "pair_continuity_percent",
+      "window_number",
+      "total_intervals"
+    ],
+    "validation": "5-fold GroupKFold by participant_id",
+    "accuracy": 0.705,
+    "roc_auc": 0.733,
+    "warning": "AUC 0.73 shows some ranking signal, but accuracy 0.71 does not beat the 0.72 majority-class baseline. Weak model, use the anomaly detector (Model 3) for flagging instead. Not saved as a .pkl."
+  },
+  "insp4_postflight_logreg": {
+    "data": [
+      "Inspiration4_integrated_serum_CBC_metabolomics.csv"
+    ],
+    "target": "timepoint R+1 (1 day after landing) vs pre-flight L-92/L-44/L-3",
+    "n_train": 16,
+    "positives_R+1": 4,
+    "n_features": 39,
+    "features": "serum CMP value columns + CBC value columns only (immune percent-normalized proteins and metabolomics intensities excluded, too many features for n=16)",
+    "validation": "Leave-One-Astronaut-Out CV (4 folds, whole crew held out)",
+    "accuracy": 0.75,
+    "roc_auc": 0.625,
+    "classification_report": "              precision    recall  f1-score   support\n\n           0       0.83      0.83      0.83        12\n           1       0.50      0.50      0.50         4\n\n    accuracy                           0.75        16\n   macro avg       0.67      0.67      0.67        16\nweighted avg       0.75      0.75      0.75        16\n",
+    "recovery_check_R+45_R+82_P_R+1_like": [
+      0.07,
+      0.11,
+      0.16,
+      0.45,
+      0.2,
+      0.2,
+      0.1,
+      0.36
+    ],
+    "recovery_check_timepoints": [
+      "R+45",
+      "R+82",
+      "R+45",
+      "R+82",
+      "R+45",
+      "R+82",
+      "R+45",
+      "R+82"
+    ],
+    "note": "Recovery rows were NOT in training. Their P(R+1-like) is mostly 0.08-0.45, i.e. blood looks more like pre-flight again by R+45/R+82. n=16 is tiny, proof-of-concept only."
+  },
+  "osd571_postflight_pca_logreg": {
+    "data": [
+      "OSD-571_ANP_RP_metabolomics_combined.csv"
+    ],
+    "target": "timepoint R+1 vs pre-flight L-92/L-44/L-3",
+    "n_train": 16,
+    "positives_R+1": 4,
+    "n_features": 680,
+    "model": "StandardScaler + PCA(3 components) + LogisticRegression",
+    "validation": "Leave-One-Astronaut-Out CV (4 folds, whole crew held out)",
+    "accuracy": 0.812,
+    "roc_auc": 0.833,
+    "classification_report": "              precision    recall  f1-score   support\n\n           0       0.85      0.92      0.88        12\n           1       0.67      0.50      0.57         4\n\n    accuracy                           0.81        16\n   macro avg       0.76      0.71      0.73        16\nweighted avg       0.80      0.81      0.80        16\n",
+    "pca_explained_variance_ratio": [
+      0.231,
+      0.152,
+      0.119
+    ],
+    "top_PC1_metabolites_by_abs_loading": [
+      "ANP__PI(34:2)",
+      "ANP__PI(40:7)",
+      "RP_MTBE__866.5796@6.61|Mass=866.5796|RT=6.61",
+      "ANP__PI(34:1)",
+      "ANP__Uric Acid",
+      "ANP__PI(36:2)",
+      "ANP__PI(40:5)",
+      "RP_MTBE__838.5477@5.91|Mass=838.5477|RT=5.91",
+      "RP_MTBE__835.5286@5.4|Mass=835.5286|RT=5.40",
+      "RP_MTBE__833.5327@5.41|Mass=833.5327|RT=5.41"
+    ],
+    "warning": "680 features, 16 rows. PCA is used precisely because a direct model would overfit. Proof-of-concept only, same 4 crew as Model 4."
+  },
+  "glds431_pca": {
+    "data": [
+      "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv",
+      "GLDS-431_rna_seq_qc_metrics_GLbulkRNAseq.csv"
+    ],
+    "target": "none - unsupervised PCA only, no condition label in the files",
+    "n_samples": 8,
+    "n_genes": 21470,
+    "samples": [
+      "GSM4781322",
+      "GSM4781323",
+      "GSM4781324",
+      "GSM4781325",
+      "GSM4781326",
+      "GSM4781327",
+      "GSM4781328",
+      "GSM4781329"
+    ],
+    "tissue": "HMEC-1 dermal microvascular endothelial cells, Homo sapiens",
+    "explained_variance_ratio": [
+      0.351,
+      0.177,
+      0.136
+    ],
+    "pc_scores_by_sample": {
+      "GSM4781322": [
+        -4.11,
+        2.01,
+        10.62
+      ],
+      "GSM4781323": [
+        -75.06,
+        7.97,
+        33.41
+      ],
+      "GSM4781324": [
+        -50.17,
+        -114.69,
+        22.2
+      ],
+      "GSM4781325": [
+        126.12,
+        63.83,
+        94.87
+      ],
+      "GSM4781326": [
+        -52.47,
+        -38.12,
+        25.39
+      ],
+      "GSM4781327": [
+        -42.97,
+        34.72,
+        -62.12
+      ],
+      "GSM4781328": [
+        -66.28,
+        90.86,
+        -47.05
+      ],
+      "GSM4781329": [
+        164.94,
+        -46.58,
+        -77.34
+      ]
+    },
+    "warning": "Do not use this as a spaceflight classifier. No label, 8 samples only."
+  },
+  "nhanes_bone_risk": {
+    "data": [
+      "DEMO_H.xpt",
+      "DXXFEM_H.xpt",
+      "MGX_H.xpt",
+      "BMX_H.xpt",
+      "PAQ_H.xpt",
+      "SLQ_H.xpt (NHANES 2013-2014, CDC)"
+    ],
+    "population": "US adults 40-80 with a valid femur DXA scan. NOT astronauts.",
+    "target": "bone_risk from femoral-neck T-score: 0 Low (T>=-1), 1 Medium (-2.5<T<-1), 2 High (T<=-2.5)",
+    "t_score_reference": "NHANES III non-Hispanic White women 20-29: mean 0.858, SD 0.120 g/cm2 (WHO/ISCD)",
+    "n": 3127,
+    "class_counts": {
+      "0": 1851,
+      "1": 1123,
+      "2": 153
+    },
+    "features": [
+      "age",
+      "sex_female",
+      "bmi",
+      "grip_max_kg",
+      "vig_work_min_week",
+      "mod_work_min_week",
+      "vig_rec_min_week",
+      "mod_rec_min_week",
+      "sedentary_min_day",
+      "sleep_hours",
+      "trouble_sleeping"
+    ],
+    "validation": "Stratified 5-fold CV",
+    "majority_baseline_accuracy": 0.592,
+    "saved_model": "LogisticRegression",
+    "logistic_regression_cv": {
+      "accuracy": 0.577,
+      "balanced_accuracy": 0.585,
+      "macro_auc_ovr": 0.754,
+      "classification_report": "              precision    recall  f1-score   support\n\n         Low       0.79      0.69      0.74      1851\n      Medium       0.49      0.37      0.42      1123\n        High       0.16      0.69      0.26       153\n\n    accuracy                           0.58      3127\n   macro avg       0.48      0.59      0.47      3127\nweighted avg       0.65      0.58      0.60      3127\n"
+    },
+    "random_forest_cv": {
+      "accuracy": 0.672,
+      "balanced_accuracy": 0.509,
+      "macro_auc_ovr": 0.771,
+      "classification_report": "              precision    recall  f1-score   support\n\n         Low       0.77      0.75      0.76      1851\n      Medium       0.55      0.61      0.58      1123\n        High       0.29      0.16      0.21       153\n\n    accuracy                           0.67      3127\n   macro avg       0.54      0.51      0.52      3127\nweighted avg       0.67      0.67      0.67      3127\n"
+    },
+    "chosen_cv": {
+      "accuracy": 0.577,
+      "balanced_accuracy": 0.585,
+      "macro_auc_ovr": 0.754,
+      "classification_report": "              precision    recall  f1-score   support\n\n         Low       0.79      0.69      0.74      1851\n      Medium       0.49      0.37      0.42      1123\n        High       0.16      0.69      0.26       153\n\n    accuracy                           0.58      3127\n   macro avg       0.48      0.59      0.47      3127\nweighted avg       0.65      0.58      0.60      3127\n"
+    },
+    "warning": "Real signal (macro AUC ~0.75) but modest 3-class accuracy and poor High-risk precision (~0.16 for LogReg). Screening flag only: a High prediction means 'get a DXA scan', never a diagnosis. Do not present as an astronaut model."
+  },
+  "no_model_OSD-56_sample_metadata": {
+    "data": [
+      "OSD-56_sample_metadata.csv"
+    ],
+    "rows": 10,
+    "content": "5 donors (A, C, G, H, P) x 2 conditions: 1G by RWV vs uG by RWV, human peripheral blood lymphocytes",
+    "why_no_model": "Metadata only, no numbers / no gene expression values in the file. A 1G-vs-uG classifier needs the expression matrix for these 10 samples. Upload that file and this becomes a clean paired binary task."
+  },
+  "no_model_GLDS-615": {
+    "data": [
+      "GLDS-615_rna_seq_qc_metrics_GLbulkRNAseq.csv"
+    ],
+    "rows": 12,
+    "content": "Myoblasts (muscle precursor cells), OSD-684, 12 samples, RIN 9.0-9.5 for first 6, 7.2-9.0 for last 6",
+    "why_no_model": "QC metrics only, no normalized counts file uploaded for GLDS-615. Bone & Muscle therefore has no trainable model in this upload. Upload GLDS-615 normalized counts to train a muscle model."
+  },
+  "bone_muscle_gap": {
+    "gap_in_uploaded_csvs": "No bone density, muscle mass, exercise adherence, or bone/muscle label in any of the 10 uploaded CSV files.",
+    "replacement": "Model 7 (nhanes_bone_risk) is trained on NHANES 2013-2014 DXA + grip + activity + sleep instead, and NASA OSD-342 (mouse plasma proteomics, flight vs ground) is the spaceflight-side evidence for bone/muscle loss. See combined_data_plan.md.",
+    "proxy_in_old_models": "MMASH activity (total_steps, mean_vector_magnitude) is used as an exercise proxy inside Models 1 and 2 only.",
+    "what_to_upload_next": "Exercise logs with sets/reps, bone density, muscle strength, or GLDS-615 normalized counts."
+  }
+}

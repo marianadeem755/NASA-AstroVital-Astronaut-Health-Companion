@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.v1.endpoints import alerts, astronauts, body_map, dashboard, health, observations, recommendations, risk, sync, wellbeing
+from app.api.v1.endpoints import alerts, astronauts, body_map, dashboard, health, ml, observations, recommendations, risk, sync, wellbeing
 
 api_router = APIRouter()
 
@@ -14,3 +14,4 @@ api_router.include_router(alerts.router)
 api_router.include_router(wellbeing.router)
 api_router.include_router(dashboard.router)
 api_router.include_router(sync.router)
+api_router.include_router(ml.router)

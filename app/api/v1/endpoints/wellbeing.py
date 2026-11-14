@@ -6,7 +6,14 @@ from sqlalchemy.orm import Session
 from app.core.database import get_db
 from app.repositories import astronaut_repo, wellbeing_repo
 from app.schemas.observation import to_utc
-from app.schemas.wellbeing import WellbeingCreate, WellbeingPage, WellbeingRead, WellbeingTrendResponse
+from app.schemas.wellbeing import (
+    MOOD_OPTIONS,
+    MoodOptionRead,
+    WellbeingCreate,
+    WellbeingPage,
+    WellbeingRead,
+    WellbeingTrendResponse,
+)
 from app.wellbeing import assessment_service
 
 router = APIRouter(prefix="/wellbeing", tags=["Wellbeing"])
@@ -26,6 +33,16 @@ def submit_assessment(payload: WellbeingCreate, response: Response, db: Session 
     if not created:
         response.status_code = status.HTTP_200_OK
     return assessment_service.to_read(assessment)
+
+
+# Must stay ABOVE the "/{astronaut_id}" routes, or "mood-options" would be read as an astronaut id.
+@router.get("/mood-options", response_model=list[MoodOptionRead])
+def mood_options():
+    """The mood choices to show in the form. Send the chosen "value" as "mood_option" when submitting."""
+    return [
+        MoodOptionRead(value=key, label=key.replace("_", " ").capitalize(), score=score)
+        for key, score in MOOD_OPTIONS.items()
+    ]
 
 
 @router.get("/{astronaut_id}", response_model=WellbeingPage)

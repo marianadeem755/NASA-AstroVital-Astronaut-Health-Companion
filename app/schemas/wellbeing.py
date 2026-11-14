@@ -1,4 +1,5 @@
 from datetime import UTC, date, datetime, timedelta
+from enum import StrEnum
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
@@ -9,6 +10,27 @@ NOTE = (
     "Self-reported wellbeing and cognitive indicators only. Flags describe possible "
     "performance concerns and are not psychiatric or medical diagnoses."
 )
+
+# Every self-report scale runs from SCALE_MIN to SCALE_MAX (higher is better for sleep_quality
+# and mood, worse for stress and fatigue).
+SCALE_MIN = 0
+SCALE_MAX = 10
+
+# Mood choices the astronaut can pick instead of typing a number, ordered from lowest to highest.
+# Each choice is stored as the middle of its equal-sized slice of the scale, so trends, concern
+# rules and the database are unchanged. Add or remove a level here and the scores adjust by themselves.
+MOOD_LEVELS = ("very_low", "low", "neutral", "good", "very_good")
+MOOD_OPTIONS: dict[str, int] = {
+    level: round(SCALE_MIN + (i + 0.5) * (SCALE_MAX - SCALE_MIN) / len(MOOD_LEVELS))
+    for i, level in enumerate(MOOD_LEVELS)
+}
+MoodOption = StrEnum("MoodOption", list(MOOD_OPTIONS))
+
+
+class MoodOptionRead(BaseModel):
+    value: str   # send this in "mood_option"
+    label: str   # text to show on a button or dropdown
+    score: int   # the scale value it is stored as
 
 
 class CognitiveInput(BaseModel):
@@ -25,17 +47,27 @@ class CognitiveInput(BaseModel):
 
 
 class WellbeingCreate(BaseModel):
-    """Scales are 0-10. Higher is better for sleep_quality and mood;
-    higher is worse for stress and fatigue."""
+    """Scales run from SCALE_MIN to SCALE_MAX. Higher is better for sleep_quality and mood;
+    higher is worse for stress and fatigue.
+    Mood: send EITHER "mood" (a number on the scale) OR "mood_option" (a choice from GET /wellbeing/mood-options)."""
     astronaut_id: int = Field(gt=0)
     assessed_at: datetime | None = None  # defaults to now (UTC)
-    sleep_quality: int = Field(ge=0, le=10)
-    mood: int = Field(ge=0, le=10)
-    stress: int = Field(ge=0, le=10)
-    fatigue: int = Field(ge=0, le=10)
+    sleep_quality: int = Field(ge=SCALE_MIN, le=SCALE_MAX)
+    mood: int | None = Field(default=None, ge=SCALE_MIN, le=SCALE_MAX)
+    mood_option: MoodOption | None = None
+    stress: int = Field(ge=SCALE_MIN, le=SCALE_MAX)
+    fatigue: int = Field(ge=SCALE_MIN, le=SCALE_MAX)
     notes: str | None = Field(default=None, max_length=1000)
     cognitive: CognitiveInput | None = None
     client_uuid: str | None = Field(default=None, min_length=8, max_length=64)
+
+    @model_validator(mode="after")
+    def _resolve_mood(self):
+        if (self.mood is None) == (self.mood_option is None):
+            raise ValueError('send exactly one of "mood" (a number on the scale) or "mood_option"')
+        if self.mood is None:
+            self.mood = MOOD_OPTIONS[self.mood_option.value]  # the option becomes its scale score
+        return self
 
     @field_validator("assessed_at")
     @classmethod

@@ -1,7 +1,8 @@
-.venv/
+venv/
 __pycache__/
 .env
 *.db
 *.db-wal
 *.db-shm
 .pytest_cache/
+*.zip

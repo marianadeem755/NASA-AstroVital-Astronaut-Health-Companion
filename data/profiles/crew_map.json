@@ -1,0 +1,52 @@
+{
+  "_readme": "Links crew to data in this data folder. Nothing here is typed in by the user at run time. 'auto:good'/'auto:poor' (MMASH) and 'auto:normal'/'auto:anomalous' (HRV) are picked from the data by the backend. Edit freely; keys you leave out are simply not used.",
+  "subjects": [
+    {
+      "subject_id": "C001",
+      "display_name": "Crew C001 (Inspiration4)",
+      "blood_astronaut": "C001",
+      "bone_profile": {
+        "age": 55, "sex_female": 1, "bmi": 27.4, "grip_max_kg": 34,
+        "vig_work_min_week": 0, "mod_work_min_week": 150,
+        "vig_rec_min_week": 60, "mod_rec_min_week": 90,
+        "sedentary_min_day": 480, "sleep_hours": 7, "trouble_sleeping": 0
+      },
+      "bone_profile_note": "PLACEHOLDER values copied from the example in model_cards/07. Replace with real crew values or delete this block."
+    },
+    { "subject_id": "C002", "display_name": "Crew C002 (Inspiration4)", "blood_astronaut": "C002" },
+    { "subject_id": "C003", "display_name": "Crew C003 (Inspiration4)", "blood_astronaut": "C003" },
+    { "subject_id": "C004", "display_name": "Crew C004 (Inspiration4)", "blood_astronaut": "C004" }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "A_preflight_good_day",
+      "title": "C001 before flight, good day",
+      "subject_id": "C001",
+      "mmash_user": "auto:good", "hrv_user": "auto:normal",
+      "blood_astronaut": "C001", "timepoint": "L-3", "exercise_minutes": 45
+    },
+    {
+      "scenario_id": "B_R+1_bad_day",
+      "title": "C001 one day after landing, bad day",
+      "subject_id": "C001",
+      "mmash_user": "auto:poor", "hrv_user": "auto:anomalous",
+      "blood_astronaut": "C001", "timepoint": "R+1", "exercise_minutes": 10
+    },
+    {
+      "scenario_id": "C_R+45_recovery",
+      "title": "C001 recovered (45 days after landing)",
+      "subject_id": "C001",
+      "mmash_user": "auto:good", "hrv_user": "auto:normal",
+      "blood_astronaut": "C001", "timepoint": "R+45", "exercise_minutes": 45
+    },
+    {
+      "scenario_id": "D_hrv_only_user4",
+      "title": "Only HRV available (unusual windows)",
+      "hrv_user": "auto:anomalous"
+    },
+    {
+      "scenario_id": "E_no_data",
+      "title": "Nothing logged"
+    }
+  ]
+}

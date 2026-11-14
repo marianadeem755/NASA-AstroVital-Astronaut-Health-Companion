@@ -1,0 +1,149 @@
+{
+ "sleep_poor_logreg": {
+  "model_file": "sleep_poor_logreg.pkl",
+  "predicts": "P(poor sleeper), 0-1",
+  "data": [
+   "MMASH_sleep_summary.csv",
+   "MMASH_psychological_scores.csv",
+   "MMASH_activity_summary_quality_reviewed.csv",
+   "MMASH_RR_HRV_final_all_windows__1.csv (means only)"
+  ],
+  "population": "21 healthy young men on Earth, 2 days (MMASH)",
+  "target": "Pittsburgh sleep score (PSQI) > 5",
+  "validation": "Leave-One-Out CV",
+  "status": "Does NOT beat chance (AUC 0.47). Demo only.",
+  "n_features": 11,
+  "sklearn_version_trained_with": "1.9.1",
+  "trained_on": "2026-11-14",
+  "metrics": {
+   "accuracy": 0.571,
+   "roc_auc": 0.467
+  }
+ },
+ "stress_ridge": {
+  "model_file": "stress_ridge.pkl",
+  "predicts": "Daily_stress score (a number)",
+  "data": [
+   "MMASH_sleep_summary.csv",
+   "MMASH_psychological_scores.csv",
+   "MMASH_activity_summary_quality_reviewed.csv",
+   "MMASH_RR_HRV_final_all_windows__1.csv (means only)"
+  ],
+  "population": "21 healthy young men on Earth, 2 days (MMASH)",
+  "target": "Daily_stress (continuous)",
+  "validation": "Leave-One-Out CV",
+  "status": "No signal (R2 -1.00). Demo only.",
+  "n_features": 12,
+  "sklearn_version_trained_with": "1.9.1",
+  "trained_on": "2026-11-14",
+  "metrics": {
+   "r2": -0.999,
+   "mae": 16.2
+  }
+ },
+ "hrv_anomaly_isoforest": {
+  "model_file": "hrv_anomaly_isoforest.pkl",
+  "predicts": "1 = normal window, -1 = unusual window",
+  "data": [
+   "MMASH_RR_HRV_final_all_windows__1.csv"
+  ],
+  "population": "MMASH HRV windows, 5,830 eligible windows, user_4 excluded",
+  "target": "unsupervised anomaly flag",
+  "validation": "none (unsupervised); user_4 held out as a check",
+  "status": "Works. user_4 flagged in 89.1% of windows.",
+  "n_features": 4,
+  "sklearn_version_trained_with": "1.9.1",
+  "trained_on": "2026-11-14",
+  "metrics": {
+   "train_anomaly_rate": 0.05,
+   "user_4_anomaly_rate": 0.891
+  }
+ },
+ "insp4_postflight_logreg": {
+  "model_file": "insp4_postflight_logreg.pkl",
+  "predicts": "P(blood looks like 1 day after landing), 0-1",
+  "data": [
+   "Inspiration4_integrated_serum_CBC_metabolomics.csv"
+  ],
+  "population": "NASA OSD-575 Inspiration4, 4 crew, n=16 training rows",
+  "target": "timepoint R+1 vs pre-flight L-92/L-44/L-3",
+  "validation": "Leave-One-Astronaut-Out CV (4 folds)",
+  "status": "Proof of concept, n=16. Do not use for decisions.",
+  "n_features": 39,
+  "sklearn_version_trained_with": "1.9.1",
+  "trained_on": "2026-11-14",
+  "metrics": {
+   "accuracy": 0.75,
+   "roc_auc": 0.625
+  }
+ },
+ "osd571_postflight_pca_logreg": {
+  "model_file": "osd571_postflight_pca_logreg.pkl",
+  "predicts": "P(sample looks like 1 day after landing), 0-1",
+  "data": [
+   "OSD-571_ANP_RP_metabolomics_combined.csv"
+  ],
+  "population": "NASA OSD-571, same 4 crew as Model 4, n=16 training rows",
+  "target": "timepoint R+1 vs pre-flight L-92/L-44/L-3",
+  "validation": "Leave-One-Astronaut-Out CV (4 folds)",
+  "status": "Proof of concept, n=16. Same crew as Model 4, not independent.",
+  "n_features": 680,
+  "sklearn_version_trained_with": "1.9.1",
+  "trained_on": "2026-11-14",
+  "metrics": {
+   "accuracy": 0.812,
+   "roc_auc": 0.833
+  }
+ },
+ "glds431_pca": {
+  "model_file": "glds431_pca.pkl",
+  "predicts": "nothing - 3 PC scores per sample (unsupervised)",
+  "data": [
+   "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv"
+  ],
+  "population": "NASA OSD-431, HMEC-1 human endothelial cells, 8 samples",
+  "target": "none - no condition label in the files",
+  "validation": "none (unsupervised)",
+  "status": "Exploration only. Not a classifier.",
+  "n_features": 21470,
+  "sklearn_version_trained_with": "1.9.1",
+  "trained_on": "2026-11-14",
+  "metrics": {
+   "explained_variance_ratio": [
+    0.351,
+    0.177,
+    0.136
+   ]
+  }
+ },
+ "nhanes_bone_risk": {
+  "model_file": "nhanes_bone_risk.pkl",
+  "predicts": "bone risk class: 0 Low, 1 Medium, 2 High",
+  "data": [
+   "DEMO_H.csv",
+   "DXXFEM_H.csv",
+   "MGX_H.csv",
+   "BMX_H.csv",
+   "PAQ_H.csv",
+   "SLQ_H.csv"
+  ],
+  "population": "CDC NHANES 2013-2014, US adults 40-80, n=3,127",
+  "target": "femoral-neck T-score -> 0 Low (T>=-1), 1 Medium, 2 High (T<=-2.5)",
+  "validation": "Stratified 5-fold CV",
+  "status": "Real signal (macro AUC 0.75). Screening flag only, not a diagnosis.",
+  "n_features": 11,
+  "sklearn_version_trained_with": "1.9.1",
+  "trained_on": "2026-11-14",
+  "metrics": {
+   "accuracy": 0.577,
+   "balanced_accuracy": 0.585,
+   "macro_auc_ovr": 0.754,
+   "classification_report": "              precision    recall  f1-score   support\n\n         Low       0.79      0.69      0.74      1851\n      Medium       0.49      0.37      0.42      1123\n        High       0.16      0.69      0.26       153\n\n    accuracy                           0.58      3127\n   macro avg       0.48      0.59      0.47      3127\nweighted avg       0.65      0.58      0.60      3127\n"
+  },
+  "class_counts": {
+   "0": 1851,
+   "1": 1123,
+   "2": 153
+  }
+ }
+}

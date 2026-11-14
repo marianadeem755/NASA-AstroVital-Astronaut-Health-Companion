@@ -200,3 +200,28 @@ def test_baseline_not_judged_before_enough_measurements(client, astronaut_id):
     cognitive_series(client, astronaut_id, [250, 250, 250, 400, 400, 400, 400])  # only 7
     cog = metrics(client.get(f"/api/v1/wellbeing/{astronaut_id}/trends").json(), "cognitive")["reaction_time_ms"]
     assert cog["baseline_mean"] is None and cog["deviates_from_baseline"] is False and cog["baseline_n"] == 7
+
+
+# ---------- mood options ----------
+
+def submit_raw(client, astronaut_id, **fields):
+    payload = {"astronaut_id": astronaut_id, "sleep_quality": 7, "stress": 3, "fatigue": 3, **fields}
+    return client.post("/api/v1/wellbeing/assessment", json=payload)
+
+
+def test_mood_options_endpoint_lists_choices(client):
+    r = client.get("/api/v1/wellbeing/mood-options")
+    assert r.status_code == 200
+    assert {o["value"] for o in r.json()} >= {"very_low", "neutral", "very_good"}
+    assert all(0 <= o["score"] <= 10 and o["label"] for o in r.json())
+
+
+def test_mood_option_is_stored_as_its_score(client, astronaut_id):
+    r = submit_raw(client, astronaut_id, mood_option="low")
+    assert r.status_code == 201 and r.json()["mood"] == 3
+    assert any(c["metric"] == "mood" for c in r.json()["concerns"])  # score 3 still triggers the mood rule
+
+
+@pytest.mark.parametrize("fields", [{}, {"mood": 5, "mood_option": "good"}, {"mood_option": "ecstatic"}])
+def test_mood_needs_exactly_one_valid_input(client, astronaut_id, fields):
+    assert submit_raw(client, astronaut_id, **fields).status_code == 422

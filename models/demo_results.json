@@ -1,0 +1,110 @@
+{
+  "A_preflight_good_day": {
+    "level": "green",
+    "flags": [],
+    "n_strong_flags": 0,
+    "n_weak_flags": 0,
+    "missing": [],
+    "recommendations": [
+      "No flag. Keep the normal schedule and log tomorrow as usual."
+    ],
+    "note": "Demo only, not medical advice. Sleep and stress flags are weak evidence (see metrics.json). Bone/muscle has no trained model.",
+    "scores": {
+      "P_poor_sleep": 0.06,
+      "predicted_daily_stress": 34.2,
+      "hrv_anomaly_frac": 0.05,
+      "hrv_windows_checked": 20,
+      "P_R+1_like_insp4_blood": 0.01,
+      "P_R+1_like_osd571_blood": 0.0
+    }
+  },
+  "B_R+1_bad_day": {
+    "level": "red",
+    "flags": [
+      "Poor sleep likely (P=0.88) [weak evidence]",
+      "High stress (Daily_stress=51, over 50) [weak evidence]",
+      "Unusual HRV in 100% of windows (over 10%) [strong evidence]",
+      "Blood looks post-flight-like (P=0.89) [strong evidence]",
+      "Low exercise today (proxy only, no trained bone/muscle model)"
+    ],
+    "n_strong_flags": 2,
+    "n_weak_flags": 3,
+    "missing": [],
+    "recommendations": [
+      "Sleep: keep a regular sleep window, dark and quiet, no caffeine late, check again tomorrow.",
+      "Stress: guided breathing, a short journal note, and a short break or a talk with a crewmate.",
+      "HRV: rest today, light exercise only, re-check the next HRV window. Tell the medical officer if it stays unusual.",
+      "Blood: rest, drink water, tell the mission medical officer, and re-check bloods when scheduled.",
+      "Exercise: do the scheduled countermeasure exercise and log it, so bone and muscle stay loaded.",
+      "RED: contact the mission medical officer today. Do not do hard training until they say so."
+    ],
+    "note": "Demo only, not medical advice. Sleep and stress flags are weak evidence (see metrics.json). Bone/muscle has no trained model.",
+    "scores": {
+      "P_poor_sleep": 0.88,
+      "predicted_daily_stress": 51.3,
+      "hrv_anomaly_frac": 1.0,
+      "hrv_windows_checked": 20,
+      "P_R+1_like_insp4_blood": 0.57,
+      "P_R+1_like_osd571_blood": 0.89
+    }
+  },
+  "C_R+45_recovery": {
+    "level": "green",
+    "flags": [],
+    "n_strong_flags": 0,
+    "n_weak_flags": 0,
+    "missing": [],
+    "recommendations": [
+      "No flag. Keep the normal schedule and log tomorrow as usual."
+    ],
+    "note": "Demo only, not medical advice. Sleep and stress flags are weak evidence (see metrics.json). Bone/muscle has no trained model.",
+    "scores": {
+      "P_poor_sleep": 0.06,
+      "predicted_daily_stress": 34.2,
+      "hrv_anomaly_frac": 0.05,
+      "hrv_windows_checked": 20,
+      "P_R+1_like_insp4_blood": 0.07,
+      "P_R+1_like_osd571_blood": 0.01
+    }
+  },
+  "D_hrv_only_user4": {
+    "level": "amber",
+    "flags": [
+      "Unusual HRV in 100% of windows (over 10%) [strong evidence]"
+    ],
+    "n_strong_flags": 1,
+    "n_weak_flags": 0,
+    "missing": [
+      "sleep (no MMASH row for this person/day)",
+      "stress (no Daily_stress for this person/day)",
+      "blood (no blood sample for this check)",
+      "bone/muscle (no exercise data, and no trained model exists for it)"
+    ],
+    "recommendations": [
+      "HRV: rest today, light exercise only, re-check the next HRV window. Tell the medical officer if it stays unusual.",
+      "AMBER: take the steps above and check again tomorrow. Tell the medical officer if a second flag appears."
+    ],
+    "note": "Demo only, not medical advice. Sleep and stress flags are weak evidence (see metrics.json). Bone/muscle has no trained model.",
+    "scores": {
+      "hrv_anomaly_frac": 1.0,
+      "hrv_windows_checked": 20
+    }
+  },
+  "E_no_data": {
+    "level": "unknown",
+    "flags": [],
+    "n_strong_flags": 0,
+    "n_weak_flags": 0,
+    "missing": [
+      "sleep (no MMASH row for this person/day)",
+      "stress (no Daily_stress for this person/day)",
+      "HRV (no HRV windows for this check)",
+      "blood (no blood sample for this check)",
+      "bone/muscle (no exercise data, and no trained model exists for it)"
+    ],
+    "recommendations": [
+      "No data for this check. Log sleep, stress, HRV, blood, or exercise first."
+    ],
+    "note": "Demo only, not medical advice. Sleep and stress flags are weak evidence (see metrics.json). Bone/muscle has no trained model."
+  }
+}
