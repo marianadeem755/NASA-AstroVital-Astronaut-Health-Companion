@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from sqlalchemy import DateTime, ForeignKey, Index, String, Text
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.models.base import Base, CreatedMixin
 
@@ -27,3 +27,13 @@ class SymptomReport(CreatedMixin, Base):
     notes: Mapped[str | None] = mapped_column(Text)
     reported_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     client_uuid: Mapped[str | None] = mapped_column(String(64), unique=True)
+    # Loaded with the report (joined) so API responses can include the region code/name.
+    region: Mapped[BodyRegion] = relationship(lazy="joined")
+
+    @property
+    def region_code(self) -> str:
+        return self.region.code
+
+    @property
+    def region_name(self) -> str:
+        return self.region.name
