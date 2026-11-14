@@ -1,0 +1,2 @@
+study_id,genelab_accession,metadata,assay_metadata,raw_files,processed_data,s3_osd_prefix,s3_glds_prefix,collection_status
+OSD-941,GLDS-769,Retrieved,Retrieved,"Referenced, not located",Not located,No objects,No objects,Pending NASA data availability

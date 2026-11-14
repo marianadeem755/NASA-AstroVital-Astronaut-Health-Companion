@@ -1,0 +1,112 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	EFO	NCIT	CRO	MESH	OBI
+Term Source File	http://data.bioontology.org/ontologies/EFO				http://data.bioontology.org/ontologies/OBI
+Term Source Version	132				29
+Term Source Description	Experimental Factor Ontology				Ontology for Biomedical Investigations
+INVESTIGATION
+Investigation Identifier
+Investigation Title
+Investigation Description
+Investigation Submission Date
+Investigation Public Release Date
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Study Identifier	OSD-1005
+Study Title	PROtection MEdiated by Antioxidant NanoTEchnOlogy Against Neuronal Damage in Space 2 (PROMETEO 2, Nano Protection)
+Study Description	The spaceflight environment exposes biological systems to microgravity and cosmic radiation, which are factors known to induce oxidative stress and neurodegenerative processes. As the central nervous system is highly susceptible to disruptions in redox homeostasis, the development of effective strategies to safeguard astronaut health and cognitive function during extended space missions has become imperative. In this study, we investigate cerium oxide nanoparticles (nanoceria, NC) as an antioxidant agent for human neuron-like cells aboard the International Space Station. Nanoceria demonstrated excellent biocompatibility, strong antioxidant properties, and the ability to stimulate neurite extension under both Earth gravity and simulated microgravity. Following the return of the samples to Earth, transcriptomic analyses revealed that nanoceria effectively counteracted the detrimental transcriptional alterations triggered by spaceflight stressors, thereby maintaining neuronal homeostasis. Importantly, the expression of genes involved in antioxidant defense, mitochondrial activity, and dopamine metabolism remained stable in nanoceria-treated neurons, in contrast to the dysregulation observed in untreated controls. These findings position cerium oxide nanoparticles as promising antioxidant neuroprotectants for long-duration space missions and related neurodegenerative conditions.
+Study Submission Date	25-Apr-2025
+Study Public Release Date	15-May-2026
+Study File Name	s_OSD-1005.txt
+Comment[Acknowledgments]	The authors acknowledge the ESA and Biotesc for providing utilization resources for the execution of the experiment and supporting the payload integration, as well as the Italian Air Force for its collaboration in the Ax-−3 mission. Paolo Cergna and Rosa Sapone (Altec) are gratefully acknowledged for the logistic support to the in-flight experiment. Astronaut Walter Villadei is also gratefully acknowledged for the care taken for experiment implementation aboard the ISS.
+Comment[DOI]	10.26030/n4wy-gy28
+Comment[Data Source Accession]	GSE295652
+Comment[Data Source Link]	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE295652
+Comment[Experiment Platform]	Kubik incubator
+Comment[Flight Program]	International Space Station (ISS)
+Comment[Funding]	This study was supported by Agenzia Spaziale Italiana (2021-2-R.1-2023).
+Comment[Identifiers]
+Comment[Managing NASA Center]
+Comment[Mission End]	02/09/2024
+Comment[Mission Link]	https://osdr.nasa.gov/bio/repo/data/missions/Ax-3
+Comment[Mission Name]	Ax-3
+Comment[Mission Start]	01/18/2024
+Comment[Project Identifier]	PROMETEO II, Simulated_Microgravity
+Comment[Project Link]
+Comment[Project Title]
+Comment[Project Type]	Spaceflight Study
+Comment[Space Program]	Italian Space Agency (ASI)
+Comment[Study Grant Number]
+STUDY DESIGN DESCRIPTORS
+Study Design Type
+Study Design Type Term Accession Number
+Study Design Type Term Source REF
+STUDY PUBLICATIONS
+Study PubMed ID	42112470
+Study Publication DOI	10.1002/smsc.70271
+Study Publication Author List	Carmignani A, Marino A, Battaglini M, Di Leo N, Carrubba E, Balsamo M, Valentini G, Mascetti G, Perilli S, De Boni F, Marras S, Prato M, Genchi GG, Ciofani G.
+Study Publication Title	Neuroprotective Effects of Cerium Oxide Nanoparticles During Spaceflight.
+Study Publication Status	published
+Study Publication Status Term Accession Number	http://www.ebi.ac.uk/efo/EFO_0001796
+Study Publication Status Term Source REF	EFO
+Comment[Study Publication Link]	https://doi.org/10.1002/smsc.70271
+STUDY FACTORS
+Study Factor Name	Spaceflight	Altered Gravity	Treatment
+Study Factor Type	Space Flight	Gravity, Altered	treatment
+Study Factor Type Term Accession Number	http://purl.bioontology.org/ontology/MESH/D013026	http://purl.bioontology.org/ontology/MESH/D018470	http://www.ebi.ac.uk/efo/EFO_0000727
+Study Factor Type Term Source REF	MESH	MESH	EFO
+STUDY ASSAYS
+Study Assay File Name	a_OSD-1005_transcription-profiling_rna-sequencing-(rna-seq)_Illumina.txt
+Study Assay Measurement Type	transcription profiling
+Study Assay Measurement Type Term Accession Number	obo:OBI_0000424
+Study Assay Measurement Type Term Source REF	OBI
+Study Assay Technology Type	RNA Sequencing (RNA-Seq)
+Study Assay Technology Type Term Accession Number	obo:OBI_0001271
+Study Assay Technology Type Term Source REF	OBI
+Study Assay Technology Platform	Illumina
+STUDY PROTOCOLS
+Study Protocol Name	Growth Protocol	Treatment Protocol	sample collection	Nucleic Acid Extraction	Library Construction	Nucleic Acid Sequencing	GeneLab raw data processing protocol
+Study Protocol Type	growth protocol	treatment protocol	sample collection	Nucleic Acid Extraction	Library Construction	Nucleic Acid Sequencing	data transformation
+Study Protocol Type Term Accession Number	http://www.ebi.ac.uk/efo/EFO_0003789	https://osdr.nasa.gov/					http://purl.obolibrary.org/obo/OBI_0200000
+Study Protocol Type Term Source REF	EFO	EFO	EFO	EFO	EFO	EFO	OBI
+Study Protocol Description	Human SH-SY5Y neuroblastoma cells (HTL95013, ICLC) were used as a neuron-like cell model. Cells were grown in DMEM/ F-12 supplemented with 10% FBS, 1% L-glutamine, and 1% penicillin–streptomycin, and maintained at 37C in a humidified 5% CO2. The proliferation medium was replaced with the low serum medium described in the previous paragraph for differentiation induction.	Nanoparticle–Cell Interaction: In vitro studies on nanoparticle–cell interactions were carried out by using differentiated SH-SY5Y neuroblastoma cells maintained either at 1g or under sug. Simulated gravity conditions were obtained with a random positioning machine (RPM, Airbus 2.0) operated at an angular speed of 25–60 degree/s. The “home” position of the instrument was defined as the orientation in which the sample holder was perpendicular to the 1g gravity vector, while the inner and outer rotational frames were, respectively, arranged parallel and orthogonal to this vector. In-Flight Experiment: Neuron-like cells were plated at 1,000 cells/cm2 on Thermanox coverslips (10.5 × 22.0 mm, Nunc) positioned in custom-made silicone multiwell plates at approximately L − 96h. At L − 77h, the coverslips were transferred into 12 EUs (KEU-ST, developed by Kayser Italia and flight-qualified for use on the ISS, providing the first containment level). Each EU featured five reservoirs (1.3 mL each), which were filled as follows. Reservoirs 1 and 2 contained HEPES-buffered differentiation medium, either without or with 100 ug/mL nanoceria; reservoirs 3 and 4 were loaded with DPBS for rinsing cells before fixation; reservoir 5 was filled with RNAlater (Ambion AM7020) to fix and preserve nucleic acids. For each condition, EUs (n equals 3 per group) were placed inside an experimental container (EC; KIC-SL, developed by Kayser Italia and flight-qualified for use on the ISS), which supplied the second containment level and allowed interface with the European Space Agency (ESA) Kubik incubator aboard the ISS. Selected ECs carried iButton devices for temperature logging. From payload handover through its integration into the Kubik incubator, all samples were maintained at 37C under active thermal control. The payload was launched on a Crew Dragon Freedom/Falcon 9 spacecraft (SpaceX). Within 24h of docking to the ISS, ECs were inserted into the Kubik incubator preset to 37C , and the first of five automated fluidic operations was initiated. Differentiation medium (with or without nanoceria) from reservoirs 1 and 2 was released at L+63h and L+111h, respectively. DPBS from reservoirs 3 and 4 was dispensed at L+ 159 h with a 2 min interval between the two releases, followed 2 min later by the activation of reservoir 5 (RNAlater fixative). An identical experimental protocol was reproduced on the ground by using an RPM to obtain sug. Exposure to μg and CR in the presence or absence of nanoceria generated eight distinct experimental conditions: A (-NC, ug, +CR), B (+NC, ug, +CR), C (-NC, s1g, +CR), D (+NC, s1g, +CR), E (-NC, sug, -CR), F (+NC, sug, -CR), G (-NC, 1g, -CR), and H (+NC, 1g, -CR).	Two h after fixation, ECs were moved to the −80C Minus Eighty-Degree Laboratory Freezer for ISS and stored at −80C until their return to Earth. An identical experimental protocol was reproduced on the ground by using an RPM to obtain sug.	After hardware deintegration for both the in-flight and ground-based experiments, cell cultures were first inspected by phase-contrast microscopy (Nikon Eclipse Ti), and temperature profiles from data loggers were analyzed to confirm that environmental conditions had remained compatible with cell survival. Cells were then transferred into 2 mL tubes, covered with their corresponding supernatants (containing greater than 70% RNAlater), and centrifuged at 16,000 g for 15 min at 4 C to collect cell pellets. Total RNA was isolated and purified by using the mirVana PARIS Kit (Ambion AM1556), following the supplier’s recommendations. RNA quality and quantity was assessed with a NanoDrop 2000 spectrophotometer (Thermo Scientific).	A quantity of 300 ng of total RNA underwent rRNA depletion and RNA library building with NEBNext rRNA Depletion Kit (Human/Mouse/Rat) | NEB and NEBNext Ultra II RNA Library Prep Kit for Illumina | NEB kits. Final libraries were quantified by using a Qubit DNA assay (Thermo Fisher Scientific) and NanoDrop, and their fragment-size distribution was evaluated on an Agilent 2100 Bioanalyzer. Quantitative real-time PCR was then used to determine the number of amplifiable sequencing templates.	Sequencing was carried out on an Illumina NovaSeq 6000 platform in paired-end mode, and raw output reads were converted into FASTQ files for downstream analysis.	Fastq format was checked with fastq_utils v0.25.1. Quality assessment of reads was performed with FastQC v0.11.9 and reports were combined with MultiQC v1.12. rRNA percentages of reads were estimated with the 'hts_SeqScreener' program of htstream v1.4.1 screened against a fasta file of H-sapiens rRNA sequences retrieved from NCBI on 08-Jan-2026.
+Study Protocol URI
+Study Protocol Version
+Study Protocol Parameters Name	Sample Media Information used during the growth protocol;Growth Temperature;Gas Composition used during the growth protocol;Growth Property	Sample Media Information used during the treatment protocol;Growth Temperature used during the treatment protocol;Duration in Space	Sample Preservation Method;Sample Storage Temperature	QA Instrument	Library Selection;Library Layout;Stranded;Library Kit	Sequencing Instrument;Base Caller;Read Length	Read Depth;rRNA Contamination;MultiQC File Names
+Study Protocol Parameters Name Term Accession Number	https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/	https://osdr.nasa.gov/;https://osdr.nasa.gov/;https://osdr.nasa.gov/	https://genelab-data.ndc.nasa.gov/;https://genelab-data.ndc.nasa.gov/		;;;	;;	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl;https://osdr.nasa.gov/;https://osdr.nasa.gov/
+Study Protocol Parameters Name Term Source REF	;;;	;;	;		;;;	;;	NCIT;;
+Study Protocol Components Name
+Study Protocol Components Type
+Study Protocol Components Type Term Accession Number
+Study Protocol Components Type Term Source REF
+STUDY CONTACTS
+Study Person Last Name	Ciofani
+Study Person First Name	Gianni
+Study Person Mid Initials
+Study Person Email	gianni.ciofani@iit.it
+Study Person Phone
+Study Person Fax
+Study Person Address
+Study Person Affiliation	Smart Bio-Interfaces Istituto Italiano di Tecnologia Pontedera Italy
+Study Person Roles	conceptualization role
+Study Person Roles Term Accession Number	http://purl.org/credit/ontology
+Study Person Roles Term Source REF	CRO
+Comment[orcidIdentifier]	0000-0003-1192-3647

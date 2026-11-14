@@ -1,0 +1,6 @@
+key,size_bytes,size_MB,last_modified,version,extension
+OSD-56/version-1/metadata/GLDS-56_metadata_E-GEOD-57408-ISA.zip,6458,0.006,2024-04-09 03:24:46+00:00,version-1,.zip
+OSD-56/version-1/microarray/GLDS-56_microarray_A-AGIL-28.adf.txt,9912289,9.453,2024-04-09 03:27:27+00:00,version-1,.adf.txt
+OSD-56/version-1/microarray/GLDS-56_microarray_E-GEOD-57408.raw.1.zip,52711145,50.269,2024-04-09 03:27:28+00:00,version-1,.raw.1.zip
+OSD-56/version-2/metadata/OSD-56_metadata_OSD-56-ISA.zip,18966,0.018,2025-02-13 07:08:10+00:00,version-2,.zip
+OSD-56/version-2/microarray/GLDS-56_microarray_E-GEOD-57408.raw.1.zip,52711145,50.269,2025-02-13 07:08:11+00:00,version-2,.raw.1.zip

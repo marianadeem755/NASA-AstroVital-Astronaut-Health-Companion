@@ -1,0 +1,3 @@
+assay_group,source_file,measurement_rows,unique_samples
+ANP,GLDS-563_metabolomics_metabolomics_ANPPOS-NEG_preprocessed_data.xlsx,10896,24
+RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx,5424,24

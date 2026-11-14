@@ -1,0 +1,112 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	EFO	MESH
+Term Source File	http://data.bioontology.org/ontologies/EFO	http://data.bioontology.org/ontologies/MESH
+Term Source Version	111	5
+Term Source Description	Experimental Factor Ontology	Medical Subject Headings
+INVESTIGATION
+Investigation Identifier
+Investigation Title
+Investigation Description
+Investigation Submission Date
+Investigation Public Release Date
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID
+Investigation Publication DOI
+Investigation Publication Author List
+Investigation Publication Title
+Investigation Publication Status
+Investigation Publication Status Term Accession Number
+Investigation Publication Status Term Source REF
+INVESTIGATION CONTACTS
+Investigation Person Last Name
+Investigation Person First Name
+Investigation Person Mid Initials
+Investigation Person Email
+Investigation Person Phone
+Investigation Person Fax
+Investigation Person Address
+Investigation Person Affiliation
+Investigation Person Roles
+Investigation Person Roles Term Accession Number
+Investigation Person Roles Term Source REF
+STUDY
+Study Identifier	OSD-56
+Study Title	Gene expression profiling of human peripheral blood lymphocytes cultured in modeled microgravity
+Study Description	In the present study we analyzed miRNA and mRNA expression profiles in human peripheral blood lymphocytes (PBLs) incubated in microgravity condition, simulated by a ground-based Rotating Wall Vessel (RWV) bioreactor. Our results show that 42 miRNAs were differentially expressed in MMG-incubated PBLs compared with 1g-incubated ones. Among these, miR-9-5p, miR-9-3p, miR-155-5p, miR-150-3p, and miR-378-3p were the most dysregulated. To improve the detection of functional miRNA-mRNA pairs we performed gene expression profiles on the same samples assayed for miRNA profiling and we integrated miRNA and mRNA expression data. The functional classification of miRNA-correlated genes evidenced significant enrichments in the biological processes of immune/inflammatory response, signal transduction, regulation of response to stress, regulation of programmed cell death and regulation of cell proliferation. We identified the correlation between miR-9-3p, miR-155-5p, miR-150-3p and miR-378-3p expression with that of genes involved in immune/inflammatory response (eg. IFNG and IL17F), apoptosis (eg. PDCD4 and PTEN) and cell proliferation (eg. NKX3-1 and GADD45A). Experimental assays of cell viability and apoptosis induction validated the results obtained by bioinformatics analyses demonstrating that in human PBLs the exposure to reduced gravitational force increases the frequency of apoptosis and decreases cell proliferation. Gene expression profiling was carried out in MMG-incubated PBLs vs. 1g-incubated PBLs on total RNA extracted from the same PBL samples assayed for miRNA profiling. We used the Whole Human Genome Oligo Microarray (Agilent), consisting of ~41.000 (60-mer) oligonucleotide probes, which span conserved exons across the transcripts of the targeted full-length genes.
+Study Submission Date	7-May-2014
+Study Public Release Date	17-Jul-2014
+Study File Name	s_OSD-56.txt
+Comment[Acknowledgments]	The authors gratefully acknowledge M. De Bernard for critical discussion and R. Mazzaro for graphical support.
+Comment[DOI]	10.26030/nc96-xp67
+Comment[Data Source Accession]	E-GEOD-57408
+Comment[Data Source Link]	http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-57408/
+Comment[Experiment Platform]	Rotating Wall Vessel
+Comment[Flight Program]
+Comment[Funding]	This work was done with the support of the Italian Space Agency (ASI, XMAB, from Molecules to Man, 1/014/06/0) to L. Celotti and of the University of Padova (CPDA061783) to M. Mognato.
+Comment[Identifiers]
+Comment[Managing NASA Center]
+Comment[Mission End]
+Comment[Mission Link]
+Comment[Mission Name]
+Comment[Mission Start]
+Comment[Project Identifier]	Simulated_Microgravity
+Comment[Project Link]
+Comment[Project Title]
+Comment[Project Type]	Ground Study
+Comment[Space Program]	ESA
+Comment[Study Grant Number]	ASI-1/014/06/0
+STUDY DESIGN DESCRIPTORS
+Study Design Type	transcription profiling by array
+Study Design Type Term Accession Number	http://www.ebi.ac.uk/efo/EFO_0002768
+Study Design Type Term Source REF	EFO
+STUDY PUBLICATIONS
+Study PubMed ID	25045661
+Study Publication DOI	10.1155/2014/296747
+Study Publication Author List	Girardi C, De Pitta C, Casara S, Calura E, Romualdi C, Celotti L, Mognato M.
+Study Publication Title	Integration analysis of microRNA and mRNA expression profiles in human peripheral blood lymphocytes cultured in modeled microgravity.
+Study Publication Status	published
+Study Publication Status Term Accession Number
+Study Publication Status Term Source REF
+Comment[Study Publication Link]	http://www.ncbi.nlm.nih.gov/pubmed/?term=25045661
+STUDY FACTORS
+Study Factor Name	Microgravity Simulation
+Study Factor Type	Weightlessness Simulation
+Study Factor Type Term Accession Number	http://purl.bioontology.org/ontology/MESH/D018474
+Study Factor Type Term Source REF	MESH
+STUDY ASSAYS
+Study Assay File Name	a_OSD-56_transcription-profiling_dna-microarray_Agilent.txt
+Study Assay Measurement Type	transcription profiling
+Study Assay Measurement Type Term Accession Number
+Study Assay Measurement Type Term Source REF
+Study Assay Technology Type	DNA microarray
+Study Assay Technology Type Term Accession Number
+Study Assay Technology Type Term Source REF
+Study Assay Technology Platform	Agilent
+STUDY PROTOCOLS
+Study Protocol Name	sample treatment protocol	P-GSE57408-3	labelling protocol	P-GSE57408-5	P-GSE57408-6	P-GSE57408-1
+Study Protocol Type	sample treatment protocol	nucleic acid extraction protocol	labelling protocol	hybridization protocol	array scanning protocol	normalization data transformation protocol
+Study Protocol Type Term Accession Number
+Study Protocol Type Term Source REF
+Study Protocol Description	Human Peripheral blood lymphocytes (PBL) were isolated by separation on Biocoll density gradient from freshly collected buffy coats provided by the Blood Centre of Padova's Hospital. After a overnight incubation, PBL, consisting of peripheral mononuclear cells depleted of monocytes were kept in parallel ground conditions (control-1g). After a overnight incubation, PBL, consisting of peripheral mononuclear cells depleted of monocytes were incubated in modelled microgravity (control-mmg) or parallel ground conditions (control-1g).	Total RNA was isolated from 107 cells by using Trizol Reagent (Invitrogen) according to the manufacturer’s protocol. Total RNA was quantified using the ND-1000 spectrophotometer (Nanodrop), while RNA integrity and content of microRNAs (%) in each samples were assessed by capillary electrophoresis using the RNA 6000 Nano LabChip using the Agilent Bioanalyzer 2100 (Agilent Technologies). Only total RNA samples with R.I.N. (RNA Integrity Number) values of 6, or higher, were used for microarray analysis.	Eight hundred nanograms of total RNA were labelled with Agilent One-Color Microarray-Based Gene Expression protocol (Agilent) according to the manufacturer instructions. The synthesized cDNA was transcribed into cRNA and labelled with cyanine 3-labelled nucleotide. Labelled cRNA was purified with RNeasy Mini columns (Qiagen). The quality of each cRNA sample was verified by total yield and specificity calculated with NanoDrop ND-1000 spectrophotometer measurement (NanoDrop Technologies).	Samples were hybridized to Whole Human Genome Microarray 4 x 44K (G4112F, Agilent Technologies). 1.65 ug of Cy3 labelled aRNA were hybridized for 17 hours at 65ºC in a hybridization oven (G2545A, Agilent) set to 10 rpm in a final concentration of 1X GEx Hybridization Buffer HI-RPM, according to manufacturer's instructions (One-Color Microarray-Based Gene Expression Analysis, Agilent Technologies). Arrays were washed with Agilent Gene Expression wash buffers and Stabilization and Drying Solution as suggest by the supplier.	Slides were scanned on an Agilent microarray scanner (model G2565CA) at 100% and 10% sensitivity settings.	Only spots with signal minus background flagged as positive and significant (flag equals 1) were used in the following analysis as detected spot while probes with flag equal to 0 were noted as null. Probes with less than 90% of detected spots across all arrays were removed from the analysis. Background corrected intensities of replicated spots on each array were averaged. Data were inter-array normalized with Quantile normalization (Bolstad BM et al., Bioinformatics (2003), 19(2):185-93) and then log2-transformed. Principal component analysis, cluster analysis and profile similarity searching were performed with tMev that is part of the TM4 Microarray Software Suite (Saeed AI, Bhagabati NK, Braisted JC, Liang W, Sharov V, Howe EA, et al. Methods in Enzymology. 2006;411:134-93). Identification of differentially expressed genes was performed with one and two class Significance Analysis of Microarray (SAM) program (Tusher VG, Tibshirani R, Chu G. Proc Natl Acad Sci USA 2001;98:5116-121) with default settings. SAM uses a permutation-based multiple testing algorithm and identifies significant genes with variable false-discovery rates (FDR). This can be manually adjusted to include a reasonable number of candidate genes with acceptable and well defined error probabilities. ID_REF equals  VALUE equals Normalized and log2-transformed value
+Study Protocol URI
+Study Protocol Version
+Study Protocol Parameters Name			label
+Study Protocol Parameters Name Term Accession Number
+Study Protocol Parameters Name Term Source REF
+Study Protocol Components Name
+Study Protocol Components Type
+Study Protocol Components Type Term Accession Number
+Study Protocol Components Type Term Source REF
+STUDY CONTACTS
+Study Person Last Name	Lanfranchi	Girardi	De Pitta	Casara	Calura	Romualdi	Celotti	Mognato
+Study Person First Name	Gerolamo	Cristina	Cristiano	Silvia	Enrica	Chiara	Lucia	Maddalena
+Study Person Mid Initials
+Study Person Email	stefanoc@cribi.unipd.it
+Study Person Phone	-498276123
+Study Person Fax
+Study Person Address	CRIBI - Biotechnology Center and Biology Department, University of Padova, Via U. Bassi, 58/B, Padova, Italy
+Study Person Affiliation	University of Padova
+Study Person Roles	submitter
+Study Person Roles Term Accession Number
+Study Person Roles Term Source REF
+Comment[Study Person REF]
