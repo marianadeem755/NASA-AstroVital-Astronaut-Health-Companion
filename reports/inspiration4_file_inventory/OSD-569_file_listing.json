@@ -1,0 +1,13 @@
+{
+  "hits": 0,
+  "input": "569",
+  "page_number": 0,
+  "page_size": 25,
+  "page_total": 1,
+  "studies": {},
+  "success": true,
+  "total_hits": 1,
+  "valid_input": [
+    "569"
+  ]
+}

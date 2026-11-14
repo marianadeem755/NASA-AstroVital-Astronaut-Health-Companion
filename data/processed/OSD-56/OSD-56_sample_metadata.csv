@@ -1,0 +1,11 @@
+sample_id,donor,condition,cell_type,organism
+GSM506089,A,1G by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506090,A,uG by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506093,C,1G by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506094,C,uG by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506097,G,1G by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506098,G,uG by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506101,H,uG by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506104,P,uG by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506115,H,1G by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens
+GSM506116,P,1G by RWV,Human Peripheral blood lymphocytes (PBL),Homo sapiens

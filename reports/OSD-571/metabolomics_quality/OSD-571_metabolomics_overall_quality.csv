@@ -1,0 +1,3 @@
+assay,rows,columns,unique_samples,unique_measurement_columns,unique_features,missing_abundance,missing_percent,zero_values,negative_values,minimum,median,maximum
+ANP,10896,20,24,24,454,227,2.083,0,0,396.4736,150207.6,350000000.0
+RP_MTBE,5424,22,24,24,225,54,0.996,0,0,696.146066589365,102779.3531591795,116318542.37075

@@ -1,0 +1,7 @@
+metric,value
+Number of samples,28
+Number of total columns,624
+Number of biological features,623
+Duplicate sample IDs,0
+Total missing cells,487
+Features containing missing values,412

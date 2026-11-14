@@ -1,0 +1,227 @@
+assay_group,Assigned ID,feature_id,Formula,Mass,RT,CAS ID,Confidence of metabolite annotation,assay,source_file
+RP_MTBE,TG (44:0) [M+NH4]+,TG (44:0) [M+NH4]+|Mass=767.7023|RT=11.14,,767.7023,11.14,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (44:1) [M+NH4]+,TG (44:1) [M+NH4]+|Mass=765.6852|RT=10.92,,765.6852,10.92,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (46:0) [M+NH4]+,TG (46:0) [M+NH4]+|Mass=795.7325|RT=11.35,,795.7325,11.35,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (46:1) [M+NH4]+,TG (46:1) [M+NH4]+|Mass=793.7175|RT=11.17,,793.7175,11.17,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (46:2) [M+Na]+,TG (46:2) [M+Na]+|Mass=797.6606|RT=10.95,,797.6606,10.95,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (46:2) [M+NH4]+,TG (46:2) [M+NH4]+|Mass=791.7019|RT=10.95,,791.7019,10.95,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (46:3) [M+NH4]+,TG (46:3) [M+NH4]+|Mass=789.6864|RT=10.71,,789.6864,10.71,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:0) [M+Na]+,TG (48:0) [M+Na]+|Mass=829.7246|RT=11.54,,829.7246,11.54,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:0) [M+NH4]+,TG (48:0) [M+NH4]+|Mass=823.7642|RT=11.55,,823.7642,11.55,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:1) [M+Na]+,TG (48:1) [M+Na]+|Mass=827.7068|RT=11.37,,827.7068,11.37,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:1) [M+NH4]+,TG (48:1) [M+NH4]+|Mass=821.7489|RT=11.37,,821.7489,11.37,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:2) [M+NH4]+,TG (48:2) [M+NH4]+|Mass=819.7335|RT=11.19,,819.7335,11.19,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:3) [M+Na]+,TG (48:3) [M+Na]+|Mass=823.6760|RT=10.98,,823.676,10.98,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:3) [M+NH4]+,TG (48:3) [M+NH4]+|Mass=817.7165|RT=10.99,,817.7165,10.99,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:4) [M+Na]+,TG (48:4) [M+Na]+|Mass=821.6596|RT=10.76,,821.6596,10.76,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (48:4) [M+NH4]+,TG (48:4) [M+NH4]+|Mass=815.7008|RT=10.77,,815.7008,10.77,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (49:1) [M+NH4]+,TG (49:1) [M+NH4]+|Mass=835.7644|RT=11.46,,835.7644,11.46,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (49:2) [M+NH4]+,TG (49:2) [M+NH4]+|Mass=833.7485|RT=11.30,,833.7485,11.3,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (49:3) [M+NH4]+,TG (49:3) [M+NH4]+|Mass=831.7334|RT=11.11,,831.7334,11.11,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:0) [M+NH4]+,TG (50:0) [M+NH4]+|Mass=851.7874|RT=11.55,,851.7874,11.55,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:1) [M+Na]+,TG (50:1) [M+Na]+|Mass=855.7393|RT=11.55,,855.7393,11.55,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:1) [M+NH4]+,TG (50:1) [M+NH4]+|Mass=849.7800|RT=11.55,,849.78,11.55,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:2) [M+Na]+,TG (50:2) [M+Na]+|Mass=853.7229|RT=11.38,,853.7229,11.38,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:2) [M+NH4]+,TG (50:2) [M+NH4]+|Mass=847.7641|RT=11.39,,847.7641,11.39,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:3) [M+Na]+,TG (50:3) [M+Na]+|Mass=851.7071|RT=11.20,,851.7071,11.2,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:4) [M+Na]+,TG (50:4) [M+Na]+|Mass=849.6903|RT=11.02,,849.6903,11.02,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:4) [M+NH4]+,TG (50:4) [M+NH4]+|Mass=843.7327|RT=11.02,,843.7327,11.02,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:5) [M+NH4]+,TG (50:5) [M+NH4]+|Mass=841.7166|RT=10.83,,841.7166,10.83,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (50:6) [M+NH4]+,TG (50:6) [M+NH4]+|Mass=839.7077|RT=11.29,,839.7077,11.29,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (51:3) [M+NH4]+,TG (51:3) [M+NH4]+|Mass=859.7638|RT=11.32,,859.7638,11.32,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (51:4) [M+NH4]+,TG (51:4) [M+NH4]+|Mass=857.7479|RT=11.14,,857.7479,11.14,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:0) [M+Na]+,TG (52:0) [M+Na]+|Mass=885.7781|RT=11.33,,885.7781,11.33,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:2) [M+NH4]+,TG (52:2) [M+NH4]+|Mass=875.7956|RT=11.56,,875.7956,11.56,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:3) [M+Na]+,TG (52:3) [M+Na]+|Mass=879.7387|RT=11.41,,879.7387,11.41,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:3) [M+NH4]+,TG (52:3) [M+NH4]+|Mass=873.7799|RT=11.41,,873.7799,11.41,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:4) [M+NH4]+,TG (52:4) [M+NH4]+|Mass=871.7647|RT=11.25,,871.7647,11.25,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:5) [M+Na]+,TG (52:5) [M+Na]+|Mass=875.7080|RT=11.07,,875.708,11.07,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:5) [M+NH4]+,TG (52:5) [M+NH4]+|Mass=869.7489|RT=11.07,,869.7489,11.07,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (52:6) [M+NH4]+,TG (52:6) [M+NH4]+|Mass=867.7324|RT=10.89,,867.7324,10.89,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (53:0) [M+NH4]+,TG (53:0) [M+NH4]+|Mass=893.8402|RT=11.53,,893.8402,11.53,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (53:2) [M+NH4]+,TG (53:2) [M+NH4]+|Mass=889.8096|RT=11.63,,889.8096,11.63,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (53:3) [M+NH4]+,TG (53:3) [M+NH4]+|Mass=887.7929|RT=11.50,,887.7929,11.5,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:0) [M+Na]+,TG (54:0) [M+Na]+|Mass=913.8056|RT=11.25,,913.8056,11.25,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:2) [M+NH4]+,TG (54:2) [M+NH4]+|Mass=903.8172|RT=11.57,,903.8172,11.57,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:3) [M+Na]+,TG (54:3) [M+Na]+|Mass=907.7694|RT=11.58,,907.7694,11.58,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:3) [M+NH4]+,TG (54:3) [M+NH4]+|Mass=901.8113|RT=11.58,,901.8113,11.58,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:4) [M+Na]+,TG (54:4) [M+Na]+|Mass=905.7537|RT=11.42,,905.7537,11.42,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:4) [M+NH4]+,TG (54:4) [M+NH4]+|Mass=899.7958|RT=11.43,,899.7958,11.43,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:5) [M+NH4]+,TG (54:5) [M+NH4]+|Mass=897.7799|RT=11.27,,897.7799,11.27,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:5)  [M+Na]+,TG (54:5)  [M+Na]+|Mass=903.7382|RT=11.27,,903.7382,11.27,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:6)  [M+Na]+,TG (54:6)  [M+Na]+|Mass=901.7232|RT=11.09,,901.7232,11.09,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:6)  [M+NH4]+,TG (54:6)  [M+NH4]+|Mass=895.7654|RT=11.10,,895.7654,11.1,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:7) [M+Na]+,TG (54:7) [M+Na]+|Mass=899.7069|RT=10.91,,899.7069,10.91,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (54:7) [M+NH4]+,TG (54:7) [M+NH4]+|Mass=893.7488|RT=10.91,,893.7488,10.91,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:2) [M+NH4]+,TG (56:2) [M+NH4]+|Mass=931.8561|RT=11.39,,931.8561,11.39,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:3) [M+NH4]+,TG (56:3) [M+NH4]+|Mass=929.8409|RT=11.22,,929.8409,11.22,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:5) [M+NH4]+,TG (56:5) [M+NH4]+|Mass=925.8086|RT=11.07,,925.8086,11.07,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:6) [M+Na]+,TG (56:6) [M+Na]+|Mass=929.7640|RT=11.37,,929.764,11.37,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:6) [M+NH4]+,TG (56:6) [M+NH4]+|Mass=923.7998|RT=11.37,,923.7998,11.37,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:7) [M+Na]+,TG (56:7) [M+Na]+|Mass=927.7391|RT=11.20,,927.7391,11.2,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:7)  [M+NH4]+,TG (56:7)  [M+NH4]+|Mass=921.7827|RT=11.20,,921.7827,11.2,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:8)  [M+NH4]+,TG (56:8)  [M+NH4]+|Mass=919.7636|RT=11.05,,919.7636,11.05,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,TG (56:8)  [M+Na]+,TG (56:8)  [M+Na]+|Mass=925.7225|RT=11.04,,925.7225,11.04,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (34:1)+Na,DG (34:1)+Na|Mass=617.5115|RT=8.70,,617.5115,8.7,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (34:1) [M+NH4]+,DG (34:1) [M+NH4]+|Mass=611.5492|RT=8.69,,611.5492,8.69,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (34:2) [M+Na]+,DG (34:2) [M+Na]+|Mass=615.4937|RT=8.11,,615.4937,8.11,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (34:2) [M+NH4]+,DG (34:2) [M+NH4]+|Mass=609.5357|RT=8.11,,609.5357,8.11,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (36:2) [M+Na]+,DG (36:2) [M+Na]+|Mass=643.5243|RT=8.79,,643.5243,8.79,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (36:2) [M+NH4]+,DG (36:2) [M+NH4]+|Mass=637.5665|RT=8.79,,637.5665,8.79,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (36:3) [M+Na]+,DG (36:3) [M+Na]+|Mass=641.5089|RT=8.22,,641.5089,8.22,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (36:3) [M+NH4]+,DG (36:3) [M+NH4]+|Mass=635.5500|RT=8.21,,635.55,8.21,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (36:4) [M+NH4]+,DG (36:4) [M+NH4]+|Mass=633.5339|RT=7.63,,633.5339,7.63,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (36:4)[M+Na]+,DG (36:4)[M+Na]+|Mass=639.4930|RT=7.63,,639.493,7.63,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (38:6) [M+Na]+,DG (38:6) [M+Na]+|Mass=663.4862|RT=7.49,,663.4862,7.49,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,DG (38:6) [M+NH4]+,DG (38:6) [M+NH4]+|Mass=657.5320|RT=7.47,,657.532,7.47,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (14:0) [M-H]-,FA (14:0) [M-H]-|Mass=228.2092|RT=3.15,,228.2092,3.15,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (15:0)  [M-H]-,FA (15:0)  [M-H]-|Mass=242.2250|RT=3.53,,242.225,3.53,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (16:0) [M-H]-,FA (16:0) [M-H]-|Mass=256.2411|RT=3.86,,256.2411,3.86,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (16:1) [M-H]-,FA (16:1) [M-H]-|Mass=254.2250|RT=3.40,,254.225,3.4,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (17:1) [M-H]-,FA (17:1) [M-H]-|Mass=268.2404|RT=3.68,,268.2404,3.68,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (18:0) [M-H]-,FA (18:0) [M-H]-|Mass=284.2723|RT=4.58,,284.2723,4.58,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (18:1) A [M-H]-,FA (18:1) A [M-H]-|Mass=282.2568|RT=3.99,,282.2568,3.99,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (18:2) [M-H]-,FA (18:2) [M-H]-|Mass=280.2410|RT=3.54,,280.241,3.54,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (18:3) B [M-H]-,FA (18:3) B [M-H]-|Mass=278.2252|RT=3.07,,278.2252,3.07,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (20:1) [M-H]-,FA (20:1) [M-H]-|Mass=310.2882|RT=4.67,,310.2882,4.67,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (20:2) [M-H]-,FA (20:2) [M-H]-|Mass=308.2720|RT=4.14,,308.272,4.14,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (20:3) [M-H]-,FA (20:3) [M-H]-|Mass=306.2568|RT=3.86,,306.2568,3.86,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (20:4) [M-H]-,FA (20:4) [M-H]-|Mass=304.2409|RT=3.47,,304.2409,3.47,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (20:5) [M-H]-,FA (20:5) [M-H]-|Mass=302.2247|RT=2.98,,302.2247,2.98,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (22:0) [M-H]-,FA (22:0) [M-H]-|Mass=340.3341|RT=7.52,,340.3341,7.52,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (22:1) [M-H]-,FA (22:1) [M-H]-|Mass=338.3190|RT=5.98,,338.319,5.98,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (22:4) [M-H]-,FA (22:4) [M-H]-|Mass=332.2722|RT=3.94,,332.2722,3.94,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (22:5) [M-H]-,FA (22:5) [M-H]-|Mass=330.2564|RT=3.57,,330.2564,3.57,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (22:5) [M-H]-,FA (22:5) [M-H]-|Mass=330.2562|RT=3.73,,330.2562,3.73,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (22:6) [M-H]-,FA (22:6) [M-H]-|Mass=328.2411|RT=3.37,,328.2411,3.37,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (26:0) [M-H]-,FA (26:0) [M-H]-|Mass=396.3968|RT=7.78,,396.3968,7.78,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,FA (28:0) [M-H]-,FA (28:0) [M-H]-|Mass=424.4283|RT=8.66,,424.4283,8.66,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,CPA(18:0)[M-H]-,CPA(18:0)[M-H]-|Mass=420.2532|RT=4.26,C21H41O6P,420.2532,4.26,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,LPA(16:0)[M-H]-,LPA(16:0)[M-H]-|Mass=410.2416|RT=1.93,C19H39O7P,410.2416,1.93,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,LPA(18:0)[M-H]-,LPA(18:0)[M-H]-|Mass=438.2667|RT=3.89,C21H43O7P,438.2667,3.89,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,LPA(18:1)[M-H]-,LPA(18:1)[M-H]-|Mass=436.2601|RT=1.91,C21H41O7P,436.2601,1.91,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PA(34:1)[M-H]-,PA(34:1)[M-H]-|Mass=674.4982|RT=8.25,C37H71O8P,674.4982,8.25,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PA(36:2)[M-H]-,PA(36:2)[M-H]-|Mass=700.4857|RT=6.08,C39H73O8P,700.4857,6.08,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PA(40:9)[M-H]-,PA(40:9)[M-H]-|Mass=744.4692|RT=4.96,C40H73O10P,744.4692,4.96,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PA(44:9)[M-H]-,PA(44:9)[M-H]-|Mass=798.5225|RT=5.79,C44H79O10P,798.5225,5.79,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PA 44:10[M-H]-,PA 44:10[M-H]-|Mass=796.5182|RT=4.97,C44H77O10P,796.5182,4.97,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PA(44:11)[M-H]-,PA(44:11)[M-H]-|Mass=794.5003|RT=4.51,C44H75O10P,794.5003,4.51,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,LPE (18:1) [M-H]-,LPE (18:1) [M-H]-|Mass=479.3012|RT=2.08,,479.3012,2.08,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,LPE (20:4) [M-H]-,LPE (20:4) [M-H]-|Mass=501.2854|RT=1.46,,501.2854,1.46,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,LPE (22:6) [M-H]-,LPE (22:6) [M-H]-|Mass=525.2852|RT=1.39,,525.2852,1.39,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (30:0) [M+H]+,PC (30:0) [M+H]+|Mass=705.5318|RT=6.25,,705.5318,6.25,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (35:1) [M+H]+,PC (35:1) [M+H]+|Mass=773.5845|RT=6.96,,773.5845,6.96,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (35:2) [M+H]+,PC (35:2) [M+H]+|Mass=771.5788|RT=6.96,,771.5788,6.96,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (35:3) [M+H]+,PC (35:3) [M+H]+|Mass=769.5623|RT=6.35,,769.5623,6.35,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (35:4) [M+H]+,PC (35:4) [M+H]+|Mass=767.5477|RT=6.04,,767.5477,6.04,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (36:4) [M+H]+,PC (36:4) [M+H]+|Mass=781.5661|RT=6.40,,781.5661,6.4,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (38:2) [M+H]+,PC (38:2) [M+H]+|Mass=813.6254|RT=8.17,,813.6254,8.17,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (38:3) [M+H]+,PC (38:3) [M+H]+|Mass=811.6110|RT=7.61,,811.611,7.61,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (38:4) [M+HAc-H]-,PC (38:4) [M+HAc-H]-|Mass=869.5910|RT=5.98,,869.591,5.98,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (38:4)  [M+H]+,PC (38:4)  [M+H]+|Mass=809.5957|RT=7.22,,809.5957,7.22,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (38:5)  [M+H]+,PC (38:5)  [M+H]+|Mass=807.5626|RT=5.43,,807.5626,5.43,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (38:5) [M+H]+,PC (38:5) [M+H]+|Mass=807.5708|RT=6.14,,807.5708,6.14,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (40:4) [M+H]+,PC (40:4) [M+H]+|Mass=837.6252|RT=7.84,,837.6252,7.84,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (40:5) [M+H]+,PC (40:5) [M+H]+|Mass=835.6092|RT=7.28,,835.6092,7.28,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (40:6) [M+H]+,PC (40:6) [M+H]+|Mass=833.5951|RT=7.02,,833.5951,7.02,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (o-32:0) [M+H]+,PC (o-32:0) [M+H]+|Mass=719.5834|RT=7.70,,719.5834,7.7,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (o-34:0) [M+H]+,PC (o-34:0) [M+H]+|Mass=747.6035|RT=7.77,,747.6035,7.77,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (p-34:1) or PC (o-34:2) [M+H]+,PC (p-34:1) or PC (o-34:2) [M+H]+|Mass=743.5829|RT=7.14,,743.5829,7.14,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (p-34:2) or PC (o-34:3) [M+H]+,PC (p-34:2) or PC (o-34:3) [M+H]+|Mass=741.5686|RT=6.96,,741.5686,6.96,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PC (p-38:4) or PC (o-38:5) [M+H]+,PC (p-38:4) or PC (o-38:5) [M+H]+|Mass=793.5992|RT=7.03,,793.5992,7.03,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PE (34:1) [M-H]-,PE (34:1) [M-H]-|Mass=717.5303|RT=7.07,,717.5303,7.07,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PE (36:1) [M+H]+,PE (36:1) [M+H]+|Mass=745.5630|RT=6.76,,745.563,6.76,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PE (36:2) [M+H]+,PE (36:2) [M+H]+|Mass=743.5477|RT=6.13,,743.5477,6.13,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PE (36:4) [M-H]-,PE (36:4) [M-H]-|Mass=739.5146|RT=6.39,,739.5146,6.39,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PE (38:6) [M-H]-,PE (38:6) [M-H]-|Mass=763.5431|RT=5.42,,763.5431,5.42,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PE (p-34:2) or PE (o-34:3) [M-H]-,PE (p-34:2) or PE (o-34:3) [M-H]-|Mass=699.5198|RT=6.89,,699.5198,6.89,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,PE (p-36:2) or PE (o-36:3) [M-H]-,PE (p-36:2) or PE (o-36:3) [M-H]-|Mass=727.5481|RT=6.92,,727.5481,6.92,RPNEG,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d32:2) [M+H]+,SM (d32:2) [M+H]+|Mass=672.5224|RT=3.42,,672.5224,3.42,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d33:1) [M+H]+,SM (d33:1) [M+H]+|Mass=688.5529|RT=5.64,,688.5529,5.64,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d34:1) [M+H]+,SM (d34:1) [M+H]+|Mass=702.5704|RT=6.05,,702.5704,6.05,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d34:2) [M+H]+,SM (d34:2) [M+H]+|Mass=700.5538|RT=5.40,,700.5538,5.4,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d36:0) [M+H]+,SM (d36:0) [M+H]+|Mass=732.6124|RT=7.18,,732.6124,7.18,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d36:1) [M+H]+,SM (d36:1) [M+H]+|Mass=730.6000|RT=6.88,,730.6,6.88,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d36:3) [M+H]+,SM (d36:3) [M+H]+|Mass=726.5571|RT=6.04,,726.5571,6.04,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d38:1) [M+H]+,SM (d38:1) [M+H]+|Mass=758.6307|RT=7.76,,758.6307,7.76,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d38:2) [M+H]+,SM (d38:2) [M+H]+|Mass=756.6147|RT=7.05,,756.6147,7.05,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d39:1) [M+H]+,SM (d39:1) [M+H]+|Mass=772.6454|RT=8.20,,772.6454,8.2,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d40:1) [M+H]+,SM (d40:1) [M+H]+|Mass=786.6623|RT=8.59,,786.6623,8.59,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d40:2) [M+H]+,SM (d40:2) [M+H]+|Mass=784.6467|RT=7.89,,784.6467,7.89,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d41:2) [M+H]+,SM (d41:2) [M+H]+|Mass=798.6612|RT=8.32,,798.6612,8.32,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,SM (d42:3) [M+H]+,SM (d42:3) [M+H]+|Mass=810.6622|RT=7.89,,810.6622,7.89,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,967.8566@11.27,967.8566@11.27|Mass=967.8566|RT=11.27,,967.8566,11.27,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,965.8405@11.1,965.8405@11.1|Mass=965.8405|RT=11.10,,965.8405,11.1,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,963.8213@10.95,963.8213@10.95|Mass=963.8213|RT=10.95,,963.8213,10.95,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,955.8572@11.25,955.8572@11.25|Mass=955.8572|RT=11.25,,955.8572,11.25,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,985.9021@11.58,985.9021@11.58|Mass=985.9021|RT=11.58,,985.9021,11.58,RPPOS,2.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,977.615@7.55,977.615@7.55|Mass=977.6150|RT=7.55,C54 H92 N O12 P,977.615,7.55,RPNEG,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,893.5387@5.86,893.5387@5.86|Mass=893.5387|RT=5.86,C48 H80 N O12 P,893.5387,5.86,RPNEG,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,837.4651@5.22,837.4651@5.22|Mass=837.4651|RT=5.22,C44 H72 N O12 P,837.4651,5.22,RPNEG,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,720.5421@6.76,720.5421@6.76|Mass=720.5421|RT=6.76,C38H75O10P,720.5421,6.76,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,750.5262@7.55,750.5262@7.55|Mass=750.5262|RT=7.55,C40H79O10P,750.5262,7.55,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,748.5665@6.86,748.5665@6.86|Mass=748.5665|RT=6.86,C40H77O10P,748.5665,6.86,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,746.4926@6.56,746.4926@6.56|Mass=746.4926|RT=6.56,C40H75O10P,746.4926,6.56,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,772.544@6.66,772.544@6.66|Mass=772.5440|RT=6.66,C42H77O10P,772.544,6.66,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,770.5185@6.08,770.5185@6.08|Mass=770.5185|RT=6.08,C42H75O10P,770.5185,6.08,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,742.4594@4.97,742.4594@4.97|Mass=742.4594|RT=4.97,C40H71O10P,742.4594,4.97,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,768.5113@6.89,768.5113@6.89|Mass=768.5113|RT=6.89,C42H73O10P,768.5113,6.89,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,792.5106@6.77,792.5106@6.77|Mass=792.5106|RT=6.77,C44H73O10P,792.5106,6.77,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,776.5544@6.31,776.5544@6.31|Mass=776.5544|RT=6.31,C42H81O10P,776.5544,6.31,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,774.5738@5.73,774.5738@5.73|Mass=774.5738|RT=5.73,C42H79O10P,774.5738,5.73,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,800.5384@5.95,800.5384@5.95|Mass=800.5384|RT=5.95,C44H81O10P,800.5384,5.95,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,826.5538@6.35,826.5538@6.35|Mass=826.5538|RT=6.35,C46H83O10P,826.5538,6.35,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,822.5721@7.33,822.5721@7.33|Mass=822.5721|RT=7.33,C46H79O10P,822.5721,7.33,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,766.473@6.89,766.473@6.89|Mass=766.4730|RT=6.89,C42H71O10P,766.473,6.89,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,816.4659@6.86,816.4659@6.86|Mass=816.4659|RT=6.86,C46H73O10P,816.4659,6.86,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,810.5169@7.27,810.5169@7.27|Mass=810.5169|RT=7.27,C41H79O13P,810.5169,7.27,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,808.5095@5.25,808.5095@5.25|Mass=808.5095|RT=5.25,C41H77O13P,808.5095,5.25,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,806.5302@6.38,806.5302@6.38|Mass=806.5302|RT=6.38,C41H75O13P,806.5302,6.38,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,838.5477@5.91,838.5477@5.91|Mass=838.5477|RT=5.91,C43H83O13P,838.5477,5.91,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,866.5796@6.61,866.5796@6.61|Mass=866.5796|RT=6.61,C45H87O13P,866.5796,6.61,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,914.5901@4.94,914.5901@4.94|Mass=914.5901|RT=4.94,C49H87O13P,914.5901,4.94,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,679.4315@4.87,679.4315@4.87|Mass=679.4315|RT=4.87,C34H66NO10P,679.4315,4.87,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,677.4408@4.87,677.4408@4.87|Mass=677.4408|RT=4.87,C34H64NO10P,677.4408,4.87,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,707.4569@5.25,707.4569@5.25|Mass=707.4569|RT=5.25,C36H70NO10P,707.4569,5.25,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,705.4421@3.98,705.4421@3.98|Mass=705.4421|RT=3.98,C36H68NO10P,705.4421,3.98,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,735.4771@5.36,735.4771@5.36|Mass=735.4771|RT=5.36,C38H74NO10P,735.4771,5.36,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,733.505@6.08,733.505@6.08|Mass=733.5050|RT=6.08,C38H72NO10P,733.505,6.08,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,731.4642@4.64,731.4642@4.64|Mass=731.4642|RT=4.64,C38H70NO10P,731.4642,4.64,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,757.4755@6.89,757.4755@6.89|Mass=757.4755|RT=6.89,C40H72NO10P,757.4755,6.89,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,755.4926@6.08,755.4926@6.08|Mass=755.4926|RT=6.08,C40H70NO10P,755.4926,6.08,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,779.5027@5.24,779.5027@5.24|Mass=779.5027|RT=5.24,C42H70NO10P,779.5027,5.24,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,675.4042@4.54,675.4042@4.54|Mass=675.4042|RT=4.54,C34H62NO10P,675.4042,4.54,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,703.4559@4.69,703.4559@4.69|Mass=703.4559|RT=4.69,C36H66NO10P,703.4559,4.69,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,753.4485@4.65,753.4485@4.65|Mass=753.4485|RT=4.65,C40H68NO10P,753.4485,4.65,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,777.4407@10.23,777.4407@10.23|Mass=777.4407|RT=10.23,C42H68NO10P,777.4407,10.23,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,763.5154@6.2,763.5154@6.2|Mass=763.5154|RT=6.20,C40H78NO10P,763.5154,6.2,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,761.538@6.89,761.538@6.89|Mass=761.5380|RT=6.89,C40H76NO10P,761.538,6.89,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,759.4495@4.51,759.4495@4.51|Mass=759.4495|RT=4.51,C40H74NO10P,759.4495,4.51,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,785.5309@7.06,785.5309@7.06|Mass=785.5309|RT=7.06,C42H76NO10P,785.5309,7.06,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,783.5019@6.49,783.5019@6.49|Mass=783.5019|RT=6.49,C42H74NO10P,783.5019,6.49,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,807.5187@5.25,807.5187@5.25|Mass=807.5187|RT=5.25,C44H74NO10P,807.5187,5.25,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,781.4782@6.77,781.4782@6.77|Mass=781.4782|RT=6.77,C42H72NO10P,781.4782,6.77,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,805.5183@5.36,805.5183@5.36|Mass=805.5183|RT=5.36,C44H72NO10P,805.5183,5.36,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,791.5473@6.97,791.5473@6.97|Mass=791.5473|RT=6.97,C42H82NO10P,791.5473,6.97,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,789.5513@6.11,789.5513@6.11|Mass=789.5513|RT=6.11,C42H80NO10P,789.5513,6.11,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,787.4744@5.22,787.4744@5.22|Mass=787.4744|RT=5.22,C42H78NO10P,787.4744,5.22,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,819.594@7.53,819.594@7.53|Mass=819.5940|RT=7.53,C44H86NO10P,819.594,7.53,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,813.5039@5.36,813.5039@5.36|Mass=813.5039|RT=5.36,C44H80NO10P,813.5039,5.36,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,811.5337@7.27,811.5337@7.27|Mass=811.5337|RT=7.27,C44H78NO10P,811.5337,7.27,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,835.5286@5.4,835.5286@5.4|Mass=835.5286|RT=5.40,C46H78NO10P,835.5286,5.4,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,809.5175@6.6,809.5175@6.6|Mass=809.5175|RT=6.60,C44H76NO10P,809.5175,6.6,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,833.5327@5.41,833.5327@5.41|Mass=833.5327|RT=5.41,C46H76NO10P,833.5327,5.41,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,831.5045@6.2,831.5045@6.2|Mass=831.5045|RT=6.20,C46H74NO10P,831.5045,6.2,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,857.5181@5.33,857.5181@5.33|Mass=857.5181|RT=5.33,C48H76NO10P,857.5181,5.33,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,855.4955@5.22,855.4955@5.22|Mass=855.4955|RT=5.22,C48H74NO10P,855.4955,5.22,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,879.5229@7.27,879.5229@7.27|Mass=879.5229|RT=7.27,C50H74NO10P,879.5229,7.27,RPNEG,4.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,815.646@8.18,815.646@8.18|Mass=815.6460|RT=8.18,,815.646,8.18,RPNEG,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,843.6788@8.89,843.6788@8.89|Mass=843.6788|RT=8.89,,843.6788,8.89,RPNEG,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,806.6286@7.89,806.6286@7.89|Mass=806.6286|RT=7.89,,806.6286,7.89,RPPOS,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,857.6688@7.83,857.6688@7.83|Mass=857.6688|RT=7.83,,857.6688,7.83,RPNEG,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,811.6647@7.89,811.6647@7.89|Mass=811.6647|RT=7.89,,811.6647,7.89,RPPOS,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,871.6858@8.25,871.6858@8.25|Mass=871.6858|RT=8.25,,871.6858,8.25,RPNEG,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,834.6594@8.56,834.6594@8.56|Mass=834.6594|RT=8.56,,834.6594,8.56,RPPOS,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,809.6478@8.57,809.6478@8.57|Mass=809.6478|RT=8.57,,809.6478,8.57,RPPOS,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,832.644@7.89,832.644@7.89|Mass=832.6440|RT=7.89,,832.644,7.89,RPPOS,3.0,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx
+RP_MTBE,368.345@6.12,368.345@6.12|Mass=368.3450|RT=6.12,,368.345,6.12,RPPOS,,RP_MTBE,GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx

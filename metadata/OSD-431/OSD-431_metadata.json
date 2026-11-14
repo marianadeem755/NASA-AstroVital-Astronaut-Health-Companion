@@ -1,0 +1,4266 @@
+{
+  "hits": 1,
+  "input": "431",
+  "study": {
+    "OSD-431": {
+      "comments": [],
+      "ontologySourceReferences": [
+        {
+          "comments": [],
+          "description": "Experimental Factor Ontology",
+          "file": "http://data.bioontology.org/ontologies/EFO",
+          "name": "EFO",
+          "version": "132"
+        },
+        {
+          "comments": [],
+          "description": "",
+          "file": "",
+          "name": "NCIT",
+          "version": ""
+        },
+        {
+          "comments": [],
+          "description": "",
+          "file": "",
+          "name": "MESH",
+          "version": ""
+        },
+        {
+          "comments": [],
+          "description": "Ontology for Biomedical Investigations",
+          "file": "http://data.bioontology.org/ontologies/OBI",
+          "name": "OBI",
+          "version": "29"
+        },
+        {
+          "comments": [],
+          "description": "",
+          "file": "",
+          "name": "CRO",
+          "version": ""
+        }
+      ],
+      "people": [],
+      "publications": [],
+      "studies": [
+        {
+          "assays": [
+            {
+              "characteristicCategories": [],
+              "comments": [],
+              "dataFiles": [
+                {
+                  "@id": "#data/deriveddatafile-140487325656784",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSE157937_RNAseq_expressionMatrix_CPM.txt.gz",
+                  "type": "Derived Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325657648",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781322_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781322_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325658896",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781323_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781323_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325657888",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781324_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781324_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325658992",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781325_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781325_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325657072",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781326_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781326_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325655152",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781327_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781327_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325655824",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781328_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781328_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "#data/rawdatafile-140487325658272",
+                  "comments": [],
+                  "name": "GLDS-431_rna-seq_GSM4781329_R1_raw.fastq.gz,GLDS-431_rna-seq_GSM4781329_R2_raw.fastq.gz",
+                  "type": "Raw Data File"
+                }
+              ],
+              "filename": "a_OSD-431_transcription-profiling_rna-sequencing-(rna-seq)_Illumina.txt",
+              "materials": {
+                "otherMaterials": [
+                  {
+                    "@id": "#material/extract-140487326916512",
+                    "characteristics": [],
+                    "name": "GSM4781322",
+                    "type": "Extract Name"
+                  },
+                  {
+                    "@id": "#material/extract-140487326913488",
+                    "characteristics": [],
+                    "name": "GSM4781323",
+                    "type": "Extract Name"
+                  },
+                  {
+                    "@id": "#material/extract-140487326914832",
+                    "characteristics": [],
+                    "name": "GSM4781324",
+                    "type": "Extract Name"
+                  },
+                  {
+                    "@id": "#material/extract-140487326914400",
+                    "characteristics": [],
+                    "name": "GSM4781325",
+                    "type": "Extract Name"
+                  },
+                  {
+                    "@id": "#material/extract-140487325655440",
+                    "characteristics": [],
+                    "name": "GSM4781326",
+                    "type": "Extract Name"
+                  },
+                  {
+                    "@id": "#material/extract-140487325655920",
+                    "characteristics": [],
+                    "name": "GSM4781327",
+                    "type": "Extract Name"
+                  },
+                  {
+                    "@id": "#material/extract-140487325657984",
+                    "characteristics": [],
+                    "name": "GSM4781328",
+                    "type": "Extract Name"
+                  },
+                  {
+                    "@id": "#material/extract-140487325657120",
+                    "characteristics": [],
+                    "name": "GSM4781329",
+                    "type": "Extract Name"
+                  }
+                ],
+                "samples": [
+                  {
+                    "@id": "#sample/140487335582832",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                          "annotationValue": "Space Flight",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                          "termSource": "MESH"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      }
+                    ],
+                    "name": "GSM4781322"
+                  },
+                  {
+                    "@id": "#sample/140487335583072",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                          "annotationValue": "Space Flight",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                          "termSource": "MESH"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      }
+                    ],
+                    "name": "GSM4781323"
+                  },
+                  {
+                    "@id": "#sample/140487335582400",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                          "annotationValue": "Space Flight",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                          "termSource": "MESH"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      }
+                    ],
+                    "name": "GSM4781324"
+                  },
+                  {
+                    "@id": "#sample/140487335583456",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                          "annotationValue": "Space Flight",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "name": "GSM4781325"
+                  },
+                  {
+                    "@id": "#sample/140487335583216",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                          "annotationValue": "Space Flight",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "name": "GSM4781326"
+                  },
+                  {
+                    "@id": "#sample/140487335581680",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "53fGwReLcXFxHTWk6v2x6El3JXGcsJ5kk7l6hAxC",
+                          "annotationValue": "Ground Control",
+                          "comments": [],
+                          "termAccession": "https://genelab-data.ndc.nasa.gov/",
+                          "termSource": ""
+                        }
+                      }
+                    ],
+                    "name": "GSM4781327"
+                  },
+                  {
+                    "@id": "#sample/140487335580432",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "53fGwReLcXFxHTWk6v2x6El3JXGcsJ5kk7l6hAxC",
+                          "annotationValue": "Ground Control",
+                          "comments": [],
+                          "termAccession": "https://genelab-data.ndc.nasa.gov/",
+                          "termSource": ""
+                        }
+                      }
+                    ],
+                    "name": "GSM4781328"
+                  },
+                  {
+                    "@id": "#sample/140487335583312",
+                    "characteristics": [
+                      {
+                        "category": {
+                          "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                        },
+                        "value": {
+                          "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                          "annotationValue": "Homo sapiens",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                        },
+                        "value": {
+                          "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                          "annotationValue": "HMEC-1 cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                        },
+                        "value": {
+                          "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                          "annotationValue": "dermal microvascular endothelial cell",
+                          "comments": [],
+                          "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                          "termSource": ""
+                        }
+                      },
+                      {
+                        "category": {
+                          "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                        },
+                        "value": {
+                          "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                          "annotationValue": "Cells",
+                          "comments": [],
+                          "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                          "termSource": "MESH"
+                        }
+                      }
+                    ],
+                    "derivesFrom": [],
+                    "factorValues": [
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                        }
+                      },
+                      {
+                        "@id": "",
+                        "category": {
+                          "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                        },
+                        "value": {
+                          "@id": "53fGwReLcXFxHTWk6v2x6El3JXGcsJ5kk7l6hAxC",
+                          "annotationValue": "Ground Control",
+                          "comments": [],
+                          "termAccession": "https://genelab-data.ndc.nasa.gov/",
+                          "termSource": ""
+                        }
+                      }
+                    ],
+                    "name": "GSM4781329"
+                  }
+                ],
+                "sources": []
+              },
+              "measurementType": {
+                "@id": "jGo9iA3xprysX2IZmhNYRdsyHQEGg4GuLcAiq5h4",
+                "annotationValue": "transcription profiling",
+                "comments": [],
+                "termAccession": "obo:OBI_0000424",
+                "termSource": "OBI"
+              },
+              "processSequence": [
+                {
+                  "@id": "#process/140487325656880",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335582832"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487325655632"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487326913008",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335583072"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487322641504"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487325657696",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335582400"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844448"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487325655296",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335583456"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844208"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487325658464",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335583216"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332846944"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487307786656",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335581680"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332845744"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487340330144",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335580432"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844112"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487340329232",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487329295280"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#sample/140487335583312"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332847136"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487335207840"
+                      },
+                      "value": "NanoView Spectrophotometer"
+                    }
+                  ],
+                  "performer": ""
+                },
+                {
+                  "@id": "#process/140487325655632",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487326916512"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325657648"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487325656880"
+                  }
+                },
+                {
+                  "@id": "#process/140487322641504",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487326913488"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325658896"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487326913008"
+                  }
+                },
+                {
+                  "@id": "#process/140487332844448",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487326914832"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325657888"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487325657696"
+                  }
+                },
+                {
+                  "@id": "#process/140487332844208",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487326914400"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325658992"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487325655296"
+                  }
+                },
+                {
+                  "@id": "#process/140487332846944",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487325655440"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325657072"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487325658464"
+                  }
+                },
+                {
+                  "@id": "#process/140487332845744",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487325655920"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325655152"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487307786656"
+                  }
+                },
+                {
+                  "@id": "#process/140487332844112",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487325657984"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325655824"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487340330144"
+                  }
+                },
+                {
+                  "@id": "#process/140487332847136",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207072"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#material/extract-140487325657120"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487332844352"
+                  },
+                  "outputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325658272"
+                    }
+                  ],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340633296"
+                      },
+                      "value": "ribo-depletion"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630128"
+                      },
+                      "value": "PAIRED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630080"
+                      },
+                      "value": "STRANDED"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340633104"
+                      },
+                      "value": "TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487340329232"
+                  }
+                },
+                {
+                  "@id": "#process/140487332844352",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335207984"
+                  },
+                  "inputs": [],
+                  "nextProcess": {
+                    "@id": "#process/140487329667728"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487340630848"
+                      },
+                      "value": "Illumina HiSeq 2500"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487340630464"
+                      },
+                      "unit": {
+                        "@id": "sJbGAkjkD6jwhrV8MacFsE0v7k6kCW66ygCcyFUf"
+                      },
+                      "value": "125, 130"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332847136"
+                  }
+                },
+                {
+                  "@id": "#process/140487340328272",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325657648"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487340330288"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487332846128",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325658896"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487329666720"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487332844592",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325657888"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487329665232"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487329668544",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325658992"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487329665712"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487329668832",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325657072"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487329666048"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487329667200",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325655152"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487329667536"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487329666768",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325655824"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487329665088"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487329667728",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208464"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/rawdatafile-140487325658272"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487329667344"
+                  },
+                  "outputs": [],
+                  "parameterValues": [],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844352"
+                  }
+                },
+                {
+                  "@id": "#process/140487340330288",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487325176112"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "66235307"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.42"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487340328272"
+                  }
+                },
+                {
+                  "@id": "#process/140487329666720",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487325176256"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "68106994"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.05"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332846128"
+                  }
+                },
+                {
+                  "@id": "#process/140487329665232",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487325178560"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "56159727"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.65"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487332844592"
+                  }
+                },
+                {
+                  "@id": "#process/140487329665712",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487325176208"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "59858688"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.68"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329668544"
+                  }
+                },
+                {
+                  "@id": "#process/140487329666048",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487325179856"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "56924494"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.69"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329668832"
+                  }
+                },
+                {
+                  "@id": "#process/140487329667536",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487323207088"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "58459322"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.25"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329667200"
+                  }
+                },
+                {
+                  "@id": "#process/140487329665088",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487312314912"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "60944067"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.09"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329666768"
+                  }
+                },
+                {
+                  "@id": "#process/140487329667344",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487335208704"
+                  },
+                  "inputs": [
+                    {
+                      "@id": "#data/deriveddatafile-140487325656784"
+                    }
+                  ],
+                  "nextProcess": {
+                    "@id": "#process/140487312316112"
+                  },
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487312655024"
+                      },
+                      "unit": {
+                        "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg"
+                      },
+                      "value": "54776351"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312656800"
+                      },
+                      "unit": {
+                        "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe"
+                      },
+                      "value": "0.52"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312658288"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_R1_raw.fastq.gz,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_R2_raw.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487312655600"
+                      },
+                      "value": "GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_raw_multiqc_GLbulkRNAseq.html"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329667728"
+                  }
+                },
+                {
+                  "@id": "#process/140487325176112",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781322_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781322_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781322_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487340330288"
+                  }
+                },
+                {
+                  "@id": "#process/140487325176256",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781323_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781323_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781323_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329666720"
+                  }
+                },
+                {
+                  "@id": "#process/140487325178560",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781324_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781324_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781324_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329665232"
+                  }
+                },
+                {
+                  "@id": "#process/140487325176208",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781325_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781325_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781325_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329665712"
+                  }
+                },
+                {
+                  "@id": "#process/140487325179856",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781326_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781326_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781326_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329666048"
+                  }
+                },
+                {
+                  "@id": "#process/140487323207088",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781327_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781327_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781327_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329667536"
+                  }
+                },
+                {
+                  "@id": "#process/140487312314912",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781328_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781328_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781328_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329665088"
+                  }
+                },
+                {
+                  "@id": "#process/140487312316112",
+                  "comments": [],
+                  "date": "",
+                  "executesProtocol": {
+                    "@id": "#140487340632768"
+                  },
+                  "inputs": [],
+                  "outputs": [],
+                  "parameterValues": [
+                    {
+                      "category": {
+                        "@id": "#140487310967280"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_R1_trimmed.fastq.gz,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_R2_trimmed.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969488"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781329_R1_GLbulkRNAseq_trimming_report.txt,GLDS-431_rna_seq_GSM4781329_R2_GLbulkRNAseq_trimming_report.txt"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969296"
+                      },
+                      "value": "GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_trimmed_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969104"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_Aligned.sortedByCoord_sorted.out.bam.bai,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_Aligned.toTranscriptome.out.bam,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_SJ.out.tab"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310968672"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_R1_unmapped.fastq.gz,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_R2_unmapped.fastq.gz"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310969248"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_Log.final.out"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487310967040"
+                      },
+                      "value": "GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_align_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583552"
+                      },
+                      "value": "GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_geneBody_cov_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_infer_exp_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_inner_dist_multiqc_GLbulkRNAseq.html,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_read_dist_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581632"
+                      },
+                      "value": "GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq.genes.results,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq.isoforms.results,GLDS-431_rna_seq_GSM4781329_GLbulkRNAseq_rRNArm.genes.results"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335581056"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_STAR_Unnormalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335580720"
+                      },
+                      "value": "GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq_data.zip,GLDS-431_rna_seq_RSEM_count_multiqc_GLbulkRNAseq.html"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335583024"
+                      },
+                      "value": "GLDS-431_rna_seq_Normalized_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_GLbulkRNAseq.csv,GLDS-431_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv,GLDS-431_rna_seq_VST_Counts_rRNArm_GLbulkRNAseq.csv"
+                    },
+                    {
+                      "category": {
+                        "@id": "#140487335582592"
+                      },
+                      "value": "GLDS-431_rna_seq_SampleTable_GLbulkRNAseq.csv,GLDS-431_rna_seq_contrasts_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_GLbulkRNAseq.csv,GLDS-431_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv"
+                    }
+                  ],
+                  "performer": "",
+                  "previousProcess": {
+                    "@id": "#process/140487329667344"
+                  }
+                }
+              ],
+              "technologyPlatform": "Illumina",
+              "technologyType": {
+                "@id": "FGPgUG40RqNJgQ76DppeJCp32q6pDjuTqpVn4qL3",
+                "annotationValue": "RNA Sequencing (RNA-Seq)",
+                "comments": [],
+                "termAccession": "obo:OBI_0001271",
+                "termSource": "OBI"
+              },
+              "unitCategories": [
+                {
+                  "@id": "sJbGAkjkD6jwhrV8MacFsE0v7k6kCW66ygCcyFUf",
+                  "annotationValue": "base pair",
+                  "comments": [],
+                  "termAccession": "http://purl.obolibrary.org/obo/UO_0000244",
+                  "termSource": ""
+                },
+                {
+                  "@id": "QzsdOSD19kEspoFDZ7FXPfWP017I6qBWqwvSvjPe",
+                  "annotationValue": "percent",
+                  "comments": [],
+                  "termAccession": "http://purl.obolibrary.org/obo/UO_0000187",
+                  "termSource": ""
+                },
+                {
+                  "@id": "wlRETTZuaJv8SbT4KZfCNYaSK5G9d7CuW5MGgCrg",
+                  "annotationValue": "read",
+                  "comments": [],
+                  "termAccession": "http://purl.obolibrary.org/obo/SO_0000150",
+                  "termSource": ""
+                }
+              ]
+            }
+          ],
+          "characteristicCategories": [
+            {
+              "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s",
+              "characteristicType": {
+                "@id": "oc2DWovlupBQLmnY7fSNLcIweY8slbRbgViHTjdH",
+                "annotationValue": "Cell Line",
+                "comments": [],
+                "termAccession": "",
+                "termSource": ""
+              }
+            },
+            {
+              "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30",
+              "characteristicType": {
+                "@id": "LHmZyms6bEdkUL5QaHV42kuzI1ImB8hJYAjcA0Wu",
+                "annotationValue": "Material Type",
+                "comments": [],
+                "termAccession": "",
+                "termSource": ""
+              }
+            },
+            {
+              "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi",
+              "characteristicType": {
+                "@id": "mlZb2gHEWcShWNCdbe4vOMc8yyux2QmLr9Ip5N4s",
+                "annotationValue": "Organism",
+                "comments": [],
+                "termAccession": "",
+                "termSource": ""
+              }
+            },
+            {
+              "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA",
+              "characteristicType": {
+                "@id": "Cp0sFLsqfKUfk0YyXq7uhPWVxqTxjqKwNollzOnk",
+                "annotationValue": "cell type",
+                "comments": [],
+                "termAccession": "",
+                "termSource": ""
+              }
+            }
+          ],
+          "comments": [
+            {
+              "name": "Acknowledgments",
+              "value": ""
+            },
+            {
+              "name": "DOI",
+              "value": ""
+            },
+            {
+              "name": "DOI",
+              "value": ""
+            },
+            {
+              "name": "Data Source Accession",
+              "value": "GSE157937"
+            },
+            {
+              "name": "Data Source Link",
+              "value": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE157937"
+            },
+            {
+              "name": "Experiment Platform",
+              "value": "Kubik incubator"
+            },
+            {
+              "name": "Flight Program",
+              "value": "International Space Station (ISS)"
+            },
+            {
+              "name": "Funding",
+              "value": "The study was supported by European Space Agency (ESA ILSRA-2009-1026), Agenzia Spaziale Italiana (contract number 5681)."
+            },
+            {
+              "name": "Identifiers",
+              "value": ""
+            },
+            {
+              "name": "Managing NASA Center",
+              "value": ""
+            },
+            {
+              "name": "Mission End",
+              "value": "2015-09-12"
+            },
+            {
+              "name": "Mission Link",
+              "value": "https://osdr.nasa.gov/bio/repo/data/missions/Soyuz TMA-18M"
+            },
+            {
+              "name": "Mission Name",
+              "value": "Soyuz TMA-18M"
+            },
+            {
+              "name": "Mission Start",
+              "value": "2015-09-02"
+            },
+            {
+              "name": "Project Identifier",
+              "value": "IRISS"
+            },
+            {
+              "name": "Project Link",
+              "value": ""
+            },
+            {
+              "name": "Project Title",
+              "value": ""
+            },
+            {
+              "name": "Project Type",
+              "value": "Spaceflight Study"
+            },
+            {
+              "name": "Space Program",
+              "value": "ESA"
+            },
+            {
+              "name": "Study Grant Number",
+              "value": ""
+            }
+          ],
+          "description": "Microgravity and space radiation (SR) are two highly influential factors affecting humans in space flight. Many health problems reported by astronauts derive from endothelial dysfunction and impaired homeostasis. Here we describe the adaptive response of human, capillary endothelial cells to space. Reference samples on ground and at 1g onboard allowed discrimination between the contribution of microgravity and SR within the combined response to space. Cell softening and reduced motility occurred in space, with loss of actin stress fibers and a greater distribution of microtubules and intermediate filaments in compensation. The frequency of primary cilia also increased. DNA repair mechanisms were indeed activated. Transcriptomics highlighted the opposing effect of microgravity from SR on specific molecular pathways: radiation, unlike microgravity, stimulated pathways for endothelial activation (hypoxia, inflammation), DNA repair and apoptosis, promoting an ageing-like phenotype; microgravity, unlike SR, activated pathways for metabolism and pro-proliferation phenotype. Thus, microgravity and SR should be considered separately to tailor effective countermeasures to protect astronauts\u2019 health. To identify transcriptional changes induced by microgravity, space radiation, and their combination together with other stimuli in space flight, we used a model of human endothelial cells of microvascular origin (HMEC-1). Space samples were exposed to environmental microgravity (g) or set inside the centrifuge reproducing 1g; on ground samples were used as ground control.",
+          "factors": [
+            {
+              "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k",
+              "comments": [],
+              "factorName": "Spaceflight",
+              "factorType": {
+                "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                "annotationValue": "Space Flight",
+                "comments": [],
+                "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                "termSource": "MESH"
+              }
+            },
+            {
+              "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2",
+              "comments": [],
+              "factorName": "Altered Gravity",
+              "factorType": {
+                "@id": "PDmY1sKTXFdQ1hZVG6o5TrZ6BxH0kq1JMb1RuJZC",
+                "annotationValue": "Gravity, Altered",
+                "comments": [],
+                "termAccession": "http://purl.bioontology.org/ontology/MESH/D018470",
+                "termSource": "MESH"
+              }
+            }
+          ],
+          "identifier": "OSD-431",
+          "materials": {
+            "otherMaterials": [],
+            "samples": [
+              {
+                "@id": "#sample/140487335582832",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                      "annotationValue": "Space Flight",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                      "termSource": "MESH"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  }
+                ],
+                "name": "GSM4781322"
+              },
+              {
+                "@id": "#sample/140487335583072",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                      "annotationValue": "Space Flight",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                      "termSource": "MESH"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  }
+                ],
+                "name": "GSM4781323"
+              },
+              {
+                "@id": "#sample/140487335582400",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                      "annotationValue": "Space Flight",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                      "termSource": "MESH"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  }
+                ],
+                "name": "GSM4781324"
+              },
+              {
+                "@id": "#sample/140487335583456",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                      "annotationValue": "Space Flight",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "name": "GSM4781325"
+              },
+              {
+                "@id": "#sample/140487335583216",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "XJ2x9G5FYOhyGGbYDO0xkevuzcPxPnzdf1nFa9fv",
+                      "annotationValue": "Space Flight",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D013026",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "name": "GSM4781326"
+              },
+              {
+                "@id": "#sample/140487335581680",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "53fGwReLcXFxHTWk6v2x6El3JXGcsJ5kk7l6hAxC",
+                      "annotationValue": "Ground Control",
+                      "comments": [],
+                      "termAccession": "https://genelab-data.ndc.nasa.gov/",
+                      "termSource": ""
+                    }
+                  }
+                ],
+                "name": "GSM4781327"
+              },
+              {
+                "@id": "#sample/140487335580432",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "53fGwReLcXFxHTWk6v2x6El3JXGcsJ5kk7l6hAxC",
+                      "annotationValue": "Ground Control",
+                      "comments": [],
+                      "termAccession": "https://genelab-data.ndc.nasa.gov/",
+                      "termSource": ""
+                    }
+                  }
+                ],
+                "name": "GSM4781328"
+              },
+              {
+                "@id": "#sample/140487335583312",
+                "characteristics": [
+                  {
+                    "category": {
+                      "@id": "399SzhBQzExSjIr4pjc31bssabQKEbyJxfwbrlYi"
+                    },
+                    "value": {
+                      "@id": "RjTzuANoXpxSw3S8Ja6Sw5fzEzdeM5I3f94uEHCA",
+                      "annotationValue": "Homo sapiens",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "CyYvQclcVMlq3dbbD7OZseH3UYd5cYIKaRgmR55s"
+                    },
+                    "value": {
+                      "@id": "zNj21NLp31vch0RqvyOU25GGrdsF9AOWtqT9WiVG",
+                      "annotationValue": "HMEC-1 cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/BTO_0002828",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "dFCQ68SfXpZ2u9e3OnamUgPmR3uxAK3EOPor5wKA"
+                    },
+                    "value": {
+                      "@id": "7hcS2CDE8H8koWmyupDrGs8RzbTIFXECdk6ZtqgO",
+                      "annotationValue": "dermal microvascular endothelial cell",
+                      "comments": [],
+                      "termAccession": "http://purl.obolibrary.org/obo/CL_0011030",
+                      "termSource": ""
+                    }
+                  },
+                  {
+                    "category": {
+                      "@id": "49juZ4FGB57I9ooIymVnW2cIJgBOgOHjamafkg30"
+                    },
+                    "value": {
+                      "@id": "OhQ3eBBfmuvG4gzxxayHGFzg2MOz3MGmIbVeiNek",
+                      "annotationValue": "Cells",
+                      "comments": [],
+                      "termAccession": "http://purl.bioontology.org/ontology/MESH/D002477",
+                      "termSource": "MESH"
+                    }
+                  }
+                ],
+                "derivesFrom": [],
+                "factorValues": [
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "XVwaJlTIF2q47sfrQq99a9PcHaoTfif10Dabpwg2"
+                    }
+                  },
+                  {
+                    "@id": "",
+                    "category": {
+                      "@id": "rrAHixexWAdqOKNaj15Ezk66kWZSMcprcBRZfg1k"
+                    },
+                    "value": {
+                      "@id": "53fGwReLcXFxHTWk6v2x6El3JXGcsJ5kk7l6hAxC",
+                      "annotationValue": "Ground Control",
+                      "comments": [],
+                      "termAccession": "https://genelab-data.ndc.nasa.gov/",
+                      "termSource": ""
+                    }
+                  }
+                ],
+                "name": "GSM4781329"
+              }
+            ],
+            "sources": [
+              {
+                "@id": "#source/140487335581008",
+                "characteristics": [],
+                "name": "GSM4781322"
+              },
+              {
+                "@id": "#source/140487335582304",
+                "characteristics": [],
+                "name": "GSM4781323"
+              },
+              {
+                "@id": "#source/140487335580384",
+                "characteristics": [],
+                "name": "GSM4781324"
+              },
+              {
+                "@id": "#source/140487335583504",
+                "characteristics": [],
+                "name": "GSM4781325"
+              },
+              {
+                "@id": "#source/140487335582160",
+                "characteristics": [],
+                "name": "GSM4781326"
+              },
+              {
+                "@id": "#source/140487335581968",
+                "characteristics": [],
+                "name": "GSM4781327"
+              },
+              {
+                "@id": "#source/140487335582112",
+                "characteristics": [],
+                "name": "GSM4781328"
+              },
+              {
+                "@id": "#source/140487335583264",
+                "characteristics": [],
+                "name": "GSM4781329"
+              }
+            ]
+          },
+          "people": [
+            {
+              "@id": "",
+              "address": "",
+              "affiliation": "nstitute of Life Sciences, Scuola Superiore Sant'Anna",
+              "comments": [
+                {
+                  "name": "orcidIdentifier",
+                  "value": "0000-0002-3850-5392"
+                }
+              ],
+              "email": "d.angeloni@santannapisa.it",
+              "fax": "",
+              "firstName": "Debora",
+              "lastName": "Angeloni",
+              "midInitials": "",
+              "phone": "",
+              "roles": [
+                {
+                  "@id": "HJPRq6x6GhRrWvebUJbKqTYWJMttZH85UbFKx2NQ",
+                  "annotationValue": "conceptualization role",
+                  "comments": [],
+                  "termAccession": "http://purl.org/credit/ontology",
+                  "termSource": "CRO"
+                }
+              ]
+            }
+          ],
+          "processSequence": [
+            {
+              "@id": "#process/140487343379552",
+              "comments": [],
+              "date": "",
+              "executesProtocol": {
+                "@id": "#140487329293408"
+              },
+              "inputs": [
+                {
+                  "@id": "#sample/140487335582832"
+                },
+                {
+                  "@id": "#sample/140487335583072"
+                },
+                {
+                  "@id": "#sample/140487335582400"
+                },
+                {
+                  "@id": "#sample/140487335583456"
+                },
+                {
+                  "@id": "#sample/140487335583216"
+                },
+                {
+                  "@id": "#sample/140487335581680"
+                },
+                {
+                  "@id": "#sample/140487335580432"
+                },
+                {
+                  "@id": "#sample/140487335583312"
+                }
+              ],
+              "nextProcess": {
+                "@id": "#process/140487339920592"
+              },
+              "outputs": [],
+              "parameterValues": [
+                {
+                  "category": {
+                    "@id": "#140487310969872"
+                  },
+                  "unit": {
+                    "@id": "s4mQc0cEaxmkRxH4swt1u3Kwmsdo3hiNE43z9pX9"
+                  },
+                  "value": "110"
+                }
+              ],
+              "performer": ""
+            },
+            {
+              "@id": "#process/140487339920592",
+              "comments": [],
+              "date": "",
+              "executesProtocol": {
+                "@id": "#140487329293360"
+              },
+              "inputs": [],
+              "nextProcess": {
+                "@id": "#process/140487314075360"
+              },
+              "outputs": [],
+              "parameterValues": [
+                {
+                  "category": {
+                    "@id": "#140487310967328"
+                  },
+                  "unit": {
+                    "@id": "ixhZXi79C7bGPbpBgn0nhYS3WcKUHFxvfrXat1ju"
+                  },
+                  "value": "37"
+                }
+              ],
+              "performer": "",
+              "previousProcess": {
+                "@id": "#process/140487343379552"
+              }
+            },
+            {
+              "@id": "#process/140487314075360",
+              "comments": [],
+              "date": "",
+              "executesProtocol": {
+                "@id": "#140487329295952"
+              },
+              "inputs": [],
+              "outputs": [],
+              "parameterValues": [
+                {
+                  "category": {
+                    "@id": "#140487335207168"
+                  },
+                  "value": "RNAProtect Cell Reagent"
+                },
+                {
+                  "category": {
+                    "@id": "#140487335208032"
+                  },
+                  "unit": {
+                    "@id": "ixhZXi79C7bGPbpBgn0nhYS3WcKUHFxvfrXat1ju"
+                  },
+                  "value": "6"
+                }
+              ],
+              "performer": "",
+              "previousProcess": {
+                "@id": "#process/140487339920592"
+              }
+            }
+          ],
+          "protocols": [
+            {
+              "@id": "#140487329293408",
+              "comments": [],
+              "components": [],
+              "description": "HMEC-1 cells were seeded on Cyclic Olefin Copolymer coverslips, with 2% gelatin coating to improve cell adhesion, in MCDB131 medium supplemented with 10% Fetal Bovine Serum, hydrocortisone (1 ug/ml), EGF (10 ng/ml), 1 mM sodium bicarbonate, Penicillin (1 U/ml) Streptomycin (1 ug/ml), HEPES (20 mM). Cell cultures were incubated at 37degreeC in 5% CO2, 80% humidity, before insertion into the Experimental Units (EUs). The EUs are able to fulfill under electronic control and without human intervention, a scientific protocol for cell culture and fixing. 20 samples prepared for nucleic acid extraction were fixed with RNA Protect Cell Reagent.",
+              "name": "Growth protocol",
+              "parameters": [
+                {
+                  "@id": "#140487310969872",
+                  "parameterName": {
+                    "@id": "Bzz7bu7517gUzkIRMUJTkNUM69gax5CL2S2nGCNa",
+                    "annotationValue": "Growth Time",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "0gMEkcMNeDUnXJOXyMiO3HWs7cSThiG9RpoYliDD",
+                "annotationValue": "growth protocol",
+                "comments": [],
+                "termAccession": "http://www.ebi.ac.uk/efo/EFO_0003789",
+                "termSource": "EFO"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487329293360",
+              "comments": [],
+              "components": [],
+              "description": "Samples were brought to the Columbus module of the ISS with the Soyuz TMA-18M 44S manned mission on September 2nd, 2015, within the IRISS mission of ESA. At rendezvous, samples were immediately transferred into the KUBIC facility, an incubator with internal centrifuge for artificial gravity. Space microg samples were exposed to environmental microgravity (ug) and named Space_microg samples; Space_1g samples were set inside the centrifuge reproducing 1g. Other samples, concomitantly prepared for ground control, flew back to Pisa with civilian airlines just when the others were flying into space, and were integrated within the KISS facility in the home laboratory. Experiment activation and media exchanges occurred contemporarily in space and on ground.",
+              "name": "treatment protocol",
+              "parameters": [
+                {
+                  "@id": "#140487310967328",
+                  "parameterName": {
+                    "@id": "4i0AwcetJRq06iP7gpbVPDbwnnHGgtyQXjCCl6MM",
+                    "annotationValue": "Growth Temperature",
+                    "comments": [],
+                    "termAccession": "https://genelab-data.ndc.nasa.gov/",
+                    "termSource": ""
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "GDSifk9HXz1F1LeAaxaTPEPYbgH8H9DYtofQqQd8",
+                "annotationValue": "treatment protocol",
+                "comments": [],
+                "termAccession": "http://www.ebi.ac.uk/efo/EFO_0003969",
+                "termSource": "EFO"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487329295952",
+              "comments": [],
+              "components": [],
+              "description": "At the end of the space mission, the samples were fixed in space, sent back to Earth with manned Soyuz TMA-16M 42S on September 12, 2015, retrieved by ESA personnel, brought to the PI laboratory in Pisa and stored at 6C until processed.",
+              "name": "sample collection",
+              "parameters": [
+                {
+                  "@id": "#140487335207168",
+                  "parameterName": {
+                    "@id": "T9ZaR7iFG1KZdFNFgsvZNfrliUBsLg6sYSH8jHdK",
+                    "annotationValue": "Sample Preservation Method",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487335208032",
+                  "parameterName": {
+                    "@id": "fNrtaBJeDPxCUozUjjSLOO9FqJqyzih4ewx1ahgo",
+                    "annotationValue": "Sample Storage Temperature",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "9JHqEeMmBxeOo37a1rUZfqzDzBGkVDY4M9i0yNjA",
+                "annotationValue": "sample collection",
+                "comments": [],
+                "termAccession": "https://osdr.nasa.gov/",
+                "termSource": "EFO"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487329295280",
+              "comments": [],
+              "components": [],
+              "description": "Total RNA was extracted with ReliaPrep RNA Cell Miniprep System (Promega, Madison WI, USA). RNA integrity was assessed with agarose gel electrophoresis and ethidium bromide staining/UV light (GenoPlex, VWR, USA), concentration and purity with NanoView Spectrophotometer (GE Healthcare, Pittsburgh, PA, USA).",
+              "name": "Nucleic Acid Extraction",
+              "parameters": [
+                {
+                  "@id": "#140487335207840",
+                  "parameterName": {
+                    "@id": "Hop5C9AJDN9g3VYqtIJtB2A611oQjKFpzG6shAoZ",
+                    "annotationValue": "QA Instrument",
+                    "comments": [],
+                    "termAccession": "",
+                    "termSource": ""
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "SUvQ2YF4kYqggIqs6nZbO3jPYZOOa6kg99LuQwua",
+                "annotationValue": "Nucleic Acid Extraction",
+                "comments": [],
+                "termAccession": "",
+                "termSource": "EFO"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487335207072",
+              "comments": [],
+              "components": [],
+              "description": "The RNA-seq libraries were prepared using TruSeq Stranded Total RNA with Ribo-Zero Library Prep Kit.",
+              "name": "Library Construction",
+              "parameters": [
+                {
+                  "@id": "#140487340633296",
+                  "parameterName": {
+                    "@id": "SXpkstgzgf9WOhn8BRUImqf5kbHf1TJ3GjkLiaMg",
+                    "annotationValue": "Library Selection",
+                    "comments": [],
+                    "termAccession": "",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487340630128",
+                  "parameterName": {
+                    "@id": "rlzTK2chbZkUcaCWHWpzFmlVUzKNZ7DXWAzUXMTb",
+                    "annotationValue": "Library Layout",
+                    "comments": [],
+                    "termAccession": "",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487340630080",
+                  "parameterName": {
+                    "@id": "FgvdSWC3uI17LsXvErGgSgUHhsklR2Ok3RnEeJgE",
+                    "annotationValue": "Stranded",
+                    "comments": [],
+                    "termAccession": "",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487340633104",
+                  "parameterName": {
+                    "@id": "8WYoCyz2C7EHCUeJopWqPTSkwz6WD98uPi77l4Ik",
+                    "annotationValue": "Library Kit",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "XwjyzSmjqwin5GREdbnjSVPuFEUzn18nShdNZvvS",
+                "annotationValue": "Library Construction",
+                "comments": [],
+                "termAccession": "",
+                "termSource": "EFO"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487335207984",
+              "comments": [],
+              "components": [],
+              "description": "The libraries were sequenced with Illumina HiSeq 2500 platform and CASAVA version 1.8.2 was used to perform base calling. The quality of the 2 \u00d7 125 bp and 2 \u00d7 130 bp paired-end reads was assessed with FastQC.",
+              "name": "Nucleic Acid Sequencing",
+              "parameters": [
+                {
+                  "@id": "#140487340630848",
+                  "parameterName": {
+                    "@id": "QZv3O6FfjrX7Rj1AdVBpE7MMkvX0gDPFNyhTgsul",
+                    "annotationValue": "Sequencing Instrument",
+                    "comments": [],
+                    "termAccession": "",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487340630464",
+                  "parameterName": {
+                    "@id": "DOWz9RyvfMoltYGyC7An2WqtHdVXvLLJU32JiRbM",
+                    "annotationValue": "Read Length",
+                    "comments": [],
+                    "termAccession": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                    "termSource": "NCIT"
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "PsdoouSqq1TS1MOsEV6KSaZ1z6HqOAcEOC3cEEVX",
+                "annotationValue": "Nucleic Acid Sequencing",
+                "comments": [],
+                "termAccession": "",
+                "termSource": "EFO"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487335208464",
+              "comments": [],
+              "components": [],
+              "description": "Raw reads were aligned using STAR version 2.5.3 to build version hg38 of the human genome defined by GENCODE release 25. Counts for GENCODE basic annotated genes were calculated from the aligned reads using featureCounts function of the Rsubread R package. Normalization was carried out using edgeR R package. After removal of genes encoded on mitochondrial chromosome, raw counts were normalized according to library size to obtain counts per millions (CPM). Only genes with a CPM greater than 1 in at least 2 sample were retained for subsequent analysis. Genome_build: hg38 (GRCh38)",
+              "name": "Sequence Analysis Data Transformation",
+              "parameters": [
+                {
+                  "@id": "#140487340633056",
+                  "parameterName": {
+                    "@id": "3Hq6ViAPdhnUQVpmPN4g5qe1Sc2CIbQALaTc3jdF",
+                    "annotationValue": "",
+                    "comments": [],
+                    "termAccession": "",
+                    "termSource": ""
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "aXIxQ0CJuWEq1zP88wybyc6Dlx8zbqPw4yRuHEOn",
+                "annotationValue": "Sequence Analysis Data Transformation",
+                "comments": [],
+                "termAccession": "",
+                "termSource": "EFO"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487335208704",
+              "comments": [],
+              "components": [],
+              "description": "Raw fastq files from each sample were assessed for % rRNA using HTStream SeqScreener (version 1.3.2) screened against a fasta file of Homo sapiens rRNA sequences retrieved from NCBI on 01-Sep-2021. Raw fastq file quality was evaluated with FastQC (version 0.12.1) and MultiQC (version 1.26) was used to generate MultiQC reports.",
+              "name": "GeneLab raw data processing protocol",
+              "parameters": [
+                {
+                  "@id": "#140487312655024",
+                  "parameterName": {
+                    "@id": "Ohs1BbENFJo4CWnwszKmpZ4g1nZJNqqJv60k0wyP",
+                    "annotationValue": "Read Depth",
+                    "comments": [],
+                    "termAccession": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                    "termSource": "NCIT"
+                  }
+                },
+                {
+                  "@id": "#140487312656800",
+                  "parameterName": {
+                    "@id": "RaWNd099ZqS9NO9TqfvpU9arANv1Do2iAJueQJMm",
+                    "annotationValue": "rRNA Contamination",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487312658288",
+                  "parameterName": {
+                    "@id": "XGdRyLdFBrQ5sINQ7N8WhowWQEznWY4WnzAmBL6l",
+                    "annotationValue": "Merged Sequence Data",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487312655600",
+                  "parameterName": {
+                    "@id": "WoqQnOe0wYp5oJdMtNlLbe7bcXgG6P1BgtOCncYd",
+                    "annotationValue": "MultiQC File Names",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "gHRCpX8ZCZrvMb1jv0PpSihU4DurynDUUnkOSfet",
+                "annotationValue": "data transformation",
+                "comments": [],
+                "termAccession": "http://purl.obolibrary.org/obo/OBI_0200000",
+                "termSource": "OBI"
+              },
+              "uri": "",
+              "version": ""
+            },
+            {
+              "@id": "#140487340632768",
+              "comments": [],
+              "components": [],
+              "description": "Data were processed as described in GL-DPPD-7101-G (<a href=\"https://github.com/nasa/GeneLab_Data_Processing/blob/master/RNAseq/Pipeline_GL-DPPD-7101_Versions/GL-DPPD-7101-G.md\" target=\"_\" >https://github.com/nasa/GeneLab_Data_Processing/blob/master/RNAseq/Pipeline_GL-DPPD-7101_Versions/GL-DPPD-7101-G.md</a>), using NF_RCP version 2.1.0 (https://github.com/nasa/GeneLab_RNASeq_Workflow/tree/NF_RCP_2.1.0). In short, raw fastq files were filtered using Trim Galore! (version 0.6.10) powered by Cutadapt (version 4.2). Trimmed fastq file quality was evaluated with FastQC (version 0.12.1), and MultiQC (version 1.26) was used to generate MultiQC reports. Homo Sapiens STAR and RSEM references were built using STAR (version 2.7.11b) and RSEM (version 1.3.3), respectively, Ensembl release 112, genome assembly GRCh38 (Homo_sapiens.GRCh38.dna.primary_assembly.fa) and the following gtf annotation file: Homo_sapiens.GRCh38.112.gtf. Trimmed reads were aligned to the Homo Sapiens STAR reference with STAR (version 2.7.11b) and alignment log files were compiled with MultiQC (version 1.26). Aligned reads were assessed for strandedness using RSeQC infer_experiment.py (version 5.0.4), gene body coverage using RSeQC geneBody_coverage.py (version 5.0.4), inner distance was assessed using RSeQC inner_distance.py (version 5.0.4), and distribution of RNA features using RSeQC read_distribution.py (version 5.0.4). Aligned reads from all samples were quantified using RSEM (version 1.3.3), with strandedness set to reverse and RSEM count log files were compiled with MultiQC (version 1.26). To create a set of rRNA-removed quantification data, Ensembl IDs mapping to ribosomal RNA (rRNA) were removed from the RSEM gene count data. Both the original set of RSEM quantification data and the rRNA-removed data were subject to differential gene expression analysis as follows. A runsheet was generated with dp_tools (version 1.3.8) and the runsheet and quantification data were imported to R (version 4.4.2) with tximport (version 1.34.0) and normalized with DESeq2 (version 1.46.0) median of ratios method. Normalized gene counts were subject to differential expression analysis. Differential expression analysis was performed in R (version 4.4.2) using DESeq2 (version 1.46.0); all groups were compared pairwise using the Wald test and the likelihood ratio test was used to generate the F statistic p-value. Gene annotations were assigned using the custom annotation tables generated in-house as detailed in GL-DPPD-7110-A (<a href=\"https://github.com/nasa/GeneLab_Data_Processing/blob/GL_RefAnnotTable-A_1.1.0/GeneLab_Reference_Annotations/Pipeline_GL-DPPD-7110_Versions/GL-DPPD-7110-A/GL-DPPD-7110-A.md\" target=\"_\" >https://github.com/nasa/GeneLab_Data_Processing/blob/GL_RefAnnotTable-A_1.1.0/GeneLab_Reference_Annotations/Pipeline_GL-DPPD-7110_Versions/GL-DPPD-7110-A/GL-DPPD-7110-A.md</a>), with STRINGdb (version 2.16.4), PANTHER.db (version 1.0.12), and org.Hs.eg.db (version 3.19.1).",
+              "name": "GeneLab RNAseq data processing protocol",
+              "parameters": [
+                {
+                  "@id": "#140487310967280",
+                  "parameterName": {
+                    "@id": "W9tes96RPBkIuuA0eNexPPFOXF4m5lLPOIBTnVsM",
+                    "annotationValue": "trimmed sequence data",
+                    "comments": [],
+                    "termAccession": "http://purl.obolibrary.org/obo/OBI_0002569",
+                    "termSource": "OBI"
+                  }
+                },
+                {
+                  "@id": "#140487310969488",
+                  "parameterName": {
+                    "@id": "s2HskUjUzSQmahcRYDfv1xBVjYScvewE8EO773hd",
+                    "annotationValue": "Trimmed Sequence Data/Trimming Reports",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487310969296",
+                  "parameterName": {
+                    "@id": "Paz4Pjo6sV6E66RG3a9xuZDjKKpk7ywwq3VwmAwn",
+                    "annotationValue": "Trimmed Sequence Data/MultiQC Reports",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487310969104",
+                  "parameterName": {
+                    "@id": "lqpWRJZ7O2rPhdA4uPNANCqeFig4cQhw07RfB2f5",
+                    "annotationValue": "aligned sequence data",
+                    "comments": [],
+                    "termAccession": "http://purl.obolibrary.org/obo/OBI_0002580",
+                    "termSource": "OBI"
+                  }
+                },
+                {
+                  "@id": "#140487310968672",
+                  "parameterName": {
+                    "@id": "SPhWEr1D3r2VJ9OKO5b94MEY02Ipod6UwkLtQaRk",
+                    "annotationValue": "Aligned Sequence Data/Unmapped Reads",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487310969248",
+                  "parameterName": {
+                    "@id": "3AwnKZQDUPRaMntinM9bvBrGHpnb8qc6GaaZRIQh",
+                    "annotationValue": "Aligned Sequence Data/Alignment Logs",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487310967040",
+                  "parameterName": {
+                    "@id": "ib7AEGeVUoAruCpz91Qn6GXdO3E5d8k0DSeT2EQR",
+                    "annotationValue": "Aligned Sequence Data/MultiQC Reports",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487335583552",
+                  "parameterName": {
+                    "@id": "QcbiokEiY9OO2PO8IXfNhCwNUeMq4JM2ugyguLO3",
+                    "annotationValue": "RSeQC/MultiQC Reports",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487335581632",
+                  "parameterName": {
+                    "@id": "CzV3xNixKDCRnULWE97WbT9v456v77sgf4dPZG0Y",
+                    "annotationValue": "Raw Counts Data",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487335581056",
+                  "parameterName": {
+                    "@id": "WXhsQG8JLZ5oK8kUYbPxGSfXi520yz8A4dEHcBKs",
+                    "annotationValue": "Raw Counts Tables",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487335580720",
+                  "parameterName": {
+                    "@id": "w31o7Q91WYOVYIwRCqOCvdUs4H84WG2M5y8Qgu1N",
+                    "annotationValue": "Raw Counts Data/MultiQC Reports",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487335583024",
+                  "parameterName": {
+                    "@id": "Lns3jxVPjBQ2dUuFO7KyPzSqST1hCHcuYbzwld4i",
+                    "annotationValue": "Normalized Counts Data",
+                    "comments": [],
+                    "termAccession": "https://osdr.nasa.gov/",
+                    "termSource": ""
+                  }
+                },
+                {
+                  "@id": "#140487335582592",
+                  "parameterName": {
+                    "@id": "c4UoiNar4sA4ty0VawH08rhaf4AR7F8drWBP91tt",
+                    "annotationValue": "differential expression analysis data",
+                    "comments": [],
+                    "termAccession": "http://purl.obolibrary.org/obo/OBI_0002584",
+                    "termSource": "OBI"
+                  }
+                }
+              ],
+              "protocolType": {
+                "@id": "gHRCpX8ZCZrvMb1jv0PpSihU4DurynDUUnkOSfet",
+                "annotationValue": "data transformation",
+                "comments": [],
+                "termAccession": "http://purl.obolibrary.org/obo/OBI_0200000",
+                "termSource": "OBI"
+              },
+              "uri": "",
+              "version": ""
+            }
+          ],
+          "publicReleaseDate": "22-Dec-2021",
+          "publications": [
+            {
+              "authorList": "Barravecchia I, De Cesari C, Forcato M, Scebba F, Pyankova OV, Bridger JM, Foster HA, Signore G, Borghini A, Andreassi M, Andreazzoli M, Bicciato S, P\u00e8 ME, Angeloni D.",
+              "comments": [],
+              "doi": "10.1007/s00018-021-04025-z",
+              "pubMedID": "34936031",
+              "status": {
+                "@id": "LmdAvi3HYaAIgsfwpY1sWHGrDR5sHm3luQJDg1Ay",
+                "annotationValue": "published",
+                "comments": [],
+                "termAccession": "http://www.ebi.ac.uk/efo/EFO_0001796",
+                "termSource": "EFO"
+              },
+              "title": "Microgravity and space radiation inhibit autophagy in human capillary endothelial cells, through either opposite or synergistic effects on specific molecular pathways."
+            }
+          ],
+          "studyDesignDescriptors": [
+            {
+              "@id": "4RixOBC6fhf4nbWNsIBIHQNECE6Cps7f9LJdaqgK",
+              "annotationValue": "transcription profiling by high throughput sequencing",
+              "comments": [],
+              "termAccession": "http://www.ebi.ac.uk/efo/EFO_0002770",
+              "termSource": "EFO"
+            }
+          ],
+          "submissionDate": "14-Sep-2020",
+          "title": "Microgravity and space radiation exert either opposite or synergic effects on single molecular pathways",
+          "unitCategories": [
+            {
+              "@id": "ixhZXi79C7bGPbpBgn0nhYS3WcKUHFxvfrXat1ju",
+              "annotationValue": "degree Celsius",
+              "comments": [],
+              "termAccession": "http://purl.obolibrary.org/obo/UO_0000027",
+              "termSource": ""
+            },
+            {
+              "@id": "s4mQc0cEaxmkRxH4swt1u3Kwmsdo3hiNE43z9pX9",
+              "annotationValue": "hour",
+              "comments": [],
+              "termAccession": "http://purl.obolibrary.org/obo/UO_0000032",
+              "termSource": ""
+            }
+          ]
+        }
+      ],
+      "version": 7
+    }
+  },
+  "success": true
+}
