@@ -16,7 +16,7 @@ class SyncEvent(CreatedMixin, Base):
     entity_id: Mapped[int | None]
     payload: Mapped[dict] = mapped_column(JSON)
     client_timestamp: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
-    # pending | applied | duplicate | conflict | failed
+    # pending | applied | duplicate | conflict | failed | discarded (conflict resolved: keep_server)
     status: Mapped[str] = mapped_column(String(20), default="pending", index=True)
     error: Mapped[str | None] = mapped_column(Text)
     processed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))

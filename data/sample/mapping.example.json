@@ -1,0 +1,25 @@
+{
+  "_notice": "FORMAT EXAMPLE ONLY. The column names below are generic placeholders, not a real NASA dataset. Write one mapping per dataset after inspecting its actual columns. Keys starting with an underscore are ignored.",
+
+  "dataset_name": "example-dataset-v1",
+  "source": "Citation or URL of the original data",
+
+  "format": "csv",
+  "records_path": null,
+
+  "subject_field": "subject_id",
+  "subject_prefix": "ext-",
+  "record_id_field": "record_id",
+
+  "timestamp": { "field": "measured_at", "format": "iso", "timezone": "UTC" },
+
+  "fields": {
+    "heart_rate_bpm": { "source": "hr" },
+    "sleep_hours": { "source": "sleep_minutes", "scale": 0.016666667 },
+    "body_temperature_c": { "source": "temp_f", "scale": 0.5555556, "offset": -17.7777778 }
+  },
+
+  "extra": ["device", "notes"],
+
+  "missing_values": ["", "NA", "NaN", "null", "-"]
+}
