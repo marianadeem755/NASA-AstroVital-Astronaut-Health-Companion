@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from sqlalchemy import DateTime, ForeignKey, Index, String, Text
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.models.base import Base, CreatedMixin
 
@@ -19,6 +19,10 @@ class WellbeingAssessment(CreatedMixin, Base):
     fatigue: Mapped[int]
     notes: Mapped[str | None] = mapped_column(Text)
     client_uuid: Mapped[str | None] = mapped_column(String(64), unique=True)
+    # Optional cognitive test submitted together with this assessment (1:1).
+    cognitive: Mapped["CognitiveAssessment | None"] = relationship(
+        uselist=False, lazy="joined", cascade="all, delete-orphan"
+    )
 
 
 class CognitiveAssessment(CreatedMixin, Base):

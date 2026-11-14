@@ -46,3 +46,18 @@ def open_alert_exists(db: Session, astronaut_id: int, title: str, priority: str)
         )
         is not None
     )
+
+
+def in_window(db: Session, astronaut_id: int, start, end) -> list[RiskAssessment]:
+    """Assessments (without factors) between start and end, oldest first."""
+    return list(
+        db.scalars(
+            select(RiskAssessment)
+            .where(
+                RiskAssessment.astronaut_id == astronaut_id,
+                RiskAssessment.assessed_at >= start,
+                RiskAssessment.assessed_at <= end,
+            )
+            .order_by(RiskAssessment.assessed_at, RiskAssessment.id)
+        )
+    )
