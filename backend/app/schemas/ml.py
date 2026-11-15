@@ -1,7 +1,7 @@
 from datetime import date
 from typing import Any, Literal, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class BoneProfile(BaseModel):
@@ -133,5 +133,16 @@ class MissionProfileSave(BaseModel):
     objective: Optional[str] = Field(None, max_length=200)
     date_of_birth: Optional[date] = None
     sex: Optional[str] = Field(None, max_length=20)
-    height_cm: Optional[float] = Field(None, gt=0, lt=300)
-    weight_kg: Optional[float] = Field(None, gt=0, lt=500)
+    height_cm: Optional[float] = Field(None, ge=100, le=230, description="centimetres, not metres")
+    weight_kg: Optional[float] = Field(None, ge=30, le=250)
+
+    @field_validator("date_of_birth")
+    @classmethod
+    def _plausible_birth(cls, v):
+        if v is None:
+            return v
+        today = date.today()
+        age = today.year - v.year - ((today.month, today.day) < (v.month, v.day))
+        if age < 18 or age > 80:
+            raise ValueError("Date of birth looks wrong: the astronaut must be 18 to 80 years old")
+        return v

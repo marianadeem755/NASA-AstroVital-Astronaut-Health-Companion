@@ -328,3 +328,33 @@ export interface MissionProfileSave {
   weight_kg: number | null;
 }
 export const saveMissionProfile = (body: MissionProfileSave) => http.put<{ saved: boolean }>('/ml/mission-profile', body, { timeout: 30000 }).then((r) => r.data);
+
+/** Medical View: briefing for the medical officer about one astronaut (alert queue, trends against the own baseline, follow-up plan, SBAR handover). */
+export interface MedicalInsight {
+  selection: { astronaut_id: number; days: number };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  readiness: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  mission: any | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  journey: any | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  kpis: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  queue: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  trends: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  follow_up: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  handover: any[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  blind_spots: any[] | null;
+  disclaimer: string;
+}
+
+export const getMedicalInsight = (req: AlertsInsightRequest) =>
+  http.post<MedicalInsight>('/ml/medical-insight', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 60000 }).then((r) => r.data);
+
+export const getMedicalAdvice = (req: AlertsInsightRequest) =>
+  http.post<WellbeingAdvice>('/ml/medical-recommendations', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 90000 }).then((r) => r.data);

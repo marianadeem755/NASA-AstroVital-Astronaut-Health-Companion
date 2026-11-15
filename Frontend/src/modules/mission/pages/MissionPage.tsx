@@ -118,8 +118,8 @@ function MissionForm({ astronautId, profile, open }: { astronautId: number; prof
           <label className="av-field"><span>Sex</span>
             <select className="select-control" value={txt(f.sex)} onChange={(e) => set('sex', e.target.value)}><option value="">not entered</option><option>Female</option><option>Male</option></select>
           </label>
-          <label className="av-field"><span>Height (cm)</span><input type="number" min={50} max={250} value={txt(f.height_cm)} onChange={(e) => set('height_cm', e.target.value)} /></label>
-          <label className="av-field"><span>Weight (kg)</span><input type="number" min={20} max={300} value={txt(f.weight_kg)} onChange={(e) => set('weight_kg', e.target.value)} /></label>
+          <label className="av-field"><span>Height (cm)</span><input type="number" min={100} max={230} value={txt(f.height_cm)} onChange={(e) => set('height_cm', e.target.value)} /></label>
+          <label className="av-field"><span>Weight (kg)</span><input type="number" min={30} max={250} value={txt(f.weight_kg)} onChange={(e) => set('weight_kg', e.target.value)} /></label>
         </div>
         <div className="av-btn-row">
           <button className="primary-button" onClick={() => save.mutate()} disabled={save.isPending}>{save.isPending ? <Loader2 size={15} className="av-spin" /> : <CheckCircle2 size={15} />} Save mission details</button>
@@ -222,7 +222,7 @@ function MissionAdvice({ req, ready }: { req: Any; ready: Any }) {
         <button className="av-ghost-btn" disabled={ai.isFetching} onClick={() => ai.refetch()}>{ai.isFetching ? <Loader2 size={13} className="av-spin" /> : <RefreshCw size={13} />} Ask the AI again</button>
       </div>
       {ai.isFetching && !result && <p className="av-rec-note"><Loader2 size={13} className="av-spin" /> Asking the AI for the readiness brief…</p>}
-      {problem && !ai.isFetching && <p className="av-rec-note warn">AI recommendations are not available right now .</p>}
+      {problem && !ai.isFetching && <p className="av-rec-note warn">AI recommendations are not available right now ({problem}). The rule-based verdict and steps above still apply. Tap “Ask the AI again” in a moment.</p>}
       {result && (
         <>
           {result.summary && <p className="av-summary">{result.summary}</p>}

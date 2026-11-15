@@ -16,7 +16,7 @@ export function Sidebar() {
         {navigation.map((item, index) => {
           const Icon = icons[index] || Atom;
           return <NavLink key={item.path} to={item.path} end={item.path === '/'} title={item.label} onClick={() => { if (window.matchMedia('(max-width: 700px)').matches) toggle(); }} className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <Icon size={18}/>{open && <span>{item.label}</span>}{open && item.path === '/alerts' && <i className="nav-count">2</i>}
+            <Icon size={18}/>{open && <span>{item.label}</span>}
           </NavLink>;
         })}
       </nav>

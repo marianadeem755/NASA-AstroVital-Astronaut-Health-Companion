@@ -52,13 +52,21 @@ def _mission_block(db, astronaut_id, first_log):
     a = astronaut_repo.get(db, astronaut_id)
     if a is None:
         return None
-    age = None
+    age, issues = None, []
     if a.date_of_birth:
         t = date.today()
         age = t.year - a.date_of_birth.year - ((t.month, t.day) < (a.date_of_birth.month, a.date_of_birth.day))
-    bmi = round(a.weight_kg / ((a.height_cm / 100) ** 2), 1) if a.height_cm and a.weight_kg else None
+        if not 18 <= age <= 80:
+            age = None
+            issues.append("The date of birth looks wrong, so age is not shown. Correct it in Edit mission details on the Mission Profile page.")
+    bmi = None
+    if a.height_cm and a.weight_kg:
+        if 100 <= a.height_cm <= 230 and 30 <= a.weight_kg <= 250:
+            bmi = round(a.weight_kg / ((a.height_cm / 100) ** 2), 1)
+        else:
+            issues.append("Height or weight looks wrong (height must be in centimetres), so BMI is not shown. Correct it in Edit mission details on the Mission Profile page.")
     return {"name": a.full_name, "crew_code": a.crew_code, "mission": a.mission_name, "age": age, "sex": a.sex, "height_cm": a.height_cm,
-            "weight_kg": a.weight_kg, "bmi": bmi, "bmi_class": _bmi_class(bmi) if bmi else None,
+            "weight_kg": a.weight_kg, "data_issues": issues or None, "bmi": bmi, "bmi_class": _bmi_class(bmi) if bmi else None,
             "role": (jr.crew_role if (jr := _profile_row(db, astronaut_id)) else None), "crew_size": jr.crew_size if jr else None, "objective": jr.objective if jr else None,
             "destination": jr.destination if jr else None, "launch_date": jr.launch_date.isoformat() if jr and jr.launch_date else None,
             "planned_days": jr.planned_days if jr else None,
@@ -336,7 +344,7 @@ def _gather(db: Session, req: AlertsInsightRequest) -> dict:
     loaded = sorted(predict.load_models().keys())
     cov = _coverage(db, req, d, vals, logs, df, loaded)
     journey = _journey(db, req.astronaut_id, b["alerts"], b["readings"]) if has_astro else None
-    return {"journey": journey, "b": b, "d": d, "logs": logs, "cov": cov, "mission": _mission_block(db, req.astronaut_id, first_log) if has_astro else None,
+    return {"df": df, "journey": journey, "b": b, "d": d, "logs": logs, "cov": cov, "mission": _mission_block(db, req.astronaut_id, first_log) if has_astro else None,
             "models": _models(d, loaded), "readiness": _readiness(b, b["alerts"])}
 
 

@@ -12,7 +12,7 @@ from app.core.config import settings
 from app.core.database import get_db
 from app.ml import data_store, predict
 from app.schemas.ml import AlertsInsightRequest, AnalyticsInsightRequest, BoneMuscleRequest, BoneRequest, DayRequest, MissionProfileSave, RadiationRequest, SleepInsightRequest, WellbeingAdviceRequest
-from app.services import alerts_advice_service, insights_plan_service, alerts_insight_service, analytics_insight_service, bone_advice_service, bone_muscle_insight_service, llm_service, mission_insight_service, ml_service, radiation_service, sleep_advice_service, sleep_insight_service, vitals_insight_service, wellbeing_advice_service, wellbeing_insight_service
+from app.services import alerts_advice_service, insights_plan_service, alerts_insight_service, analytics_insight_service, bone_advice_service, bone_muscle_insight_service, llm_service, medical_insight_service, mission_insight_service, ml_service, radiation_service, sleep_advice_service, sleep_insight_service, vitals_insight_service, wellbeing_advice_service, wellbeing_insight_service
 
 router = APIRouter(prefix="/ml", tags=["ML + AI recommendations"])
 
@@ -135,6 +135,18 @@ def insights_recommendations(payload: AlertsInsightRequest, db: Session = Depend
 def mission_insight(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
     """Mission Profile deep dive: readiness verdict from the factor alerts, data coverage, logging rhythm, astronaut record, models and AI providers."""
     return mission_insight_service.get_mission_insight(db, payload)
+
+
+@router.post("/medical-insight")
+def medical_insight(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Medical View briefing for ONE astronaut: patient summary, alert queue, trends against the own baseline, follow-up plan, SBAR handover."""
+    return medical_insight_service.get_medical_insight(db, payload)
+
+
+@router.post("/medical-recommendations")
+def medical_recommendations(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """AI brief for the mission medical officer (Gemini, Grok/Groq fallback). Built server-side from the same alerts and trends."""
+    return medical_insight_service.get_medical_advice(db, payload)
 
 
 @router.put("/mission-profile")
