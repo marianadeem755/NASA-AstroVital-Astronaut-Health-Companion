@@ -238,3 +238,37 @@ export const getAlertsInsight = (req: AlertsInsightRequest) =>
 /** Risk Alerts AI advice (Gemini first, Groq fallback), written by the backend from the same alerts. */
 export const getAlertsAdvice = (req: AlertsInsightRequest) =>
   http.post<WellbeingAdvice>('/ml/alerts-recommendations', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 90000 }).then((r) => r.data);
+
+/** Insights & Actions: a plan built from the same factor alerts as the Risk Alerts page, plus an AI-written version of it. */
+export interface InsightsPlan {
+  selection: { astronaut_id: number; days: number };
+  available: boolean;
+  headline?: { alerts: number; areas: number; to_medical_officer: number; start_with: string | null; start_share: number | null };
+  plan?: Record<'today' | 'this_week' | 'ask_medical_officer', any[]>;
+  pressure?: any[] | null;
+  links?: any[] | null;
+  watch?: any[] | null;
+  alert_titles?: Record<string, string>;
+  stale?: any[] | null;
+  disclaimer?: string;
+}
+
+export const getInsightsPlan = (req: AlertsInsightRequest) =>
+  http.post<InsightsPlan>('/ml/insights-plan', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 60000 }).then((r) => r.data);
+
+export interface PlanStep { action: string; why?: string; alert?: string; priority?: string }
+export interface InsightsAdvice {
+  ai: {
+    source: string; model: string | null; cached: boolean; attempts: { provider: string; ok: boolean; error: string | null }[]; error?: string;
+    result: {
+      summary?: string; key_findings?: string[];
+      plan?: Record<'today' | 'this_week' | 'ask_medical_officer', PlanStep[]>;
+      watch_next?: string[];
+      contact_medical_officer?: boolean | null; contact_reason?: string; data_gaps?: string[]; disclaimer?: string;
+    } | null;
+  };
+  disclaimer: string;
+}
+
+export const getInsightsAdvice = (req: AlertsInsightRequest) =>
+  http.post<InsightsAdvice>('/ml/insights-recommendations', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 90000 }).then((r) => r.data);

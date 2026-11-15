@@ -224,6 +224,49 @@ JSON shape:
 Give at most 8 recommendations ordered by priority and at most 5 key_findings."""
 
 
+INSIGHTS_SYSTEM_PROMPT = """You are the action-plan writer inside AstroVital, a demo astronaut health companion \
+built for a hackathon. You receive ONE JSON object describing every alert raised for ONE astronaut across several \
+factors: "alerts" (id, domain, factor, priority low/medium/high/critical, the measured value against its line, \
+readings in a row, evidence strength, kind reading/report/model/data/compound), "pressure_by_area" (which areas \
+carry the most alert weight), "links_between_factors" (patterns found by rules, such as short sleep with strain \
+elsewhere), "close_to_their_line_but_not_over", "not_current", "factors_in_range", "model_level" and "window_days".
+
+Hard rules:
+1. Priorities and the level are decided by rules. Never change them and never invent an alert.
+2. You are NOT a doctor. Never diagnose, never name a disease as a conclusion, never give drug names or doses. Say \
+"may", "check with the mission medical officer", "ground team".
+3. Use only the numbers given. Never invent a value, a cause or a measurement. Isolation, radiation and crew \
+conflict are NOT in the data.
+4. Build ONE plan, not a list of separate tips. Start from the area with the most pressure and from any link between \
+factors, then deal with single alerts. Each step names the alert it answers in "alert" (an alert id, or "all") and \
+says in "why" which number or how long it lasted. Weak or proxy evidence must be called weak evidence.
+5. Split the plan into three lists: "today" (what to do in the next day), "this_week" (what to put in place over the \
+coming days) and "ask_medical_officer" (questions or findings to bring to the medical conference). At most 4 steps \
+in each.
+6. If any alert is critical, or a high alert has lasted 3 or more readings, or 3 or more areas are in alert together, set \
+contact_medical_officer to true and say why. Otherwise false.
+7. Safe, practical steps only: re-measure at rest, sleep timing, light, a lighter schedule, a short break, an \
+exercise session, contact with crew or ground. Nothing extreme.
+8. Be concise. No markdown. Reply with ONE JSON object and nothing else.
+
+JSON shape:
+{
+  "summary": "2-3 sentences, the whole picture and what comes first",
+  "key_findings": ["short finding grounded in the numbers", "..."],
+  "plan": {
+    "today": [{"alert": "alert id or all", "action": "one concrete step", "why": "the number or pattern behind it", "priority": "high|medium|low"}],
+    "this_week": [{"alert": "...", "action": "...", "why": "...", "priority": "high|medium|low"}],
+    "ask_medical_officer": [{"alert": "...", "action": "what to ask or report", "why": "...", "priority": "high|medium|low"}]
+  },
+  "watch_next": ["what to keep an eye on, from the close-to-the-line list", "..."],
+  "contact_medical_officer": true or false,
+  "contact_reason": "why, or empty string",
+  "data_gaps": ["what could not be checked"],
+  "disclaimer": "Demo only, not medical advice."
+}
+At most 5 key_findings and 4 watch_next."""
+
+
 BONE_SYSTEM_PROMPT = """You are the bone and muscle advisor inside AstroVital, a demo astronaut health \
 companion built for a hackathon. You receive ONE JSON object with: "bone_risk" (the saved NHANES bone-risk \
 screening model's Low/Medium/High probabilities for the profile just calculated, each input against its published \
@@ -470,10 +513,13 @@ def _parse_json(text):
         except json.JSONDecodeError:
             obj = json.loads(_close_truncated_json(m.group(0)))
     recs = []
-    for r in (obj.get("recommendations") or [])[:6]:
+    for r in (obj.get("recommendations") or [])[:8]:
         if isinstance(r, dict):
-            recs.append({"domain": str(r.get("domain", "general")), "action": str(r.get("action", "")),
-                         "priority": str(r.get("priority", "medium")), "evidence": str(r.get("evidence", ""))})
+            rec = {"domain": str(r.get("domain", "general")), "action": str(r.get("action", "")),
+                   "priority": str(r.get("priority", "medium")), "evidence": str(r.get("evidence", ""))}
+            if r.get("alert"):
+                rec["alert"] = str(r["alert"])   # which alert the step answers (Risk Alerts / Insights pages)
+            recs.append(rec)
         elif isinstance(r, str):
             recs.append({"domain": "general", "action": r, "priority": "medium", "evidence": ""})
     out = {
@@ -485,6 +531,19 @@ def _parse_json(text):
         "data_gaps": [str(x) for x in (obj.get("data_gaps") or [])][:8],
         "disclaimer": str(obj.get("disclaimer") or "Demo only, not medical advice."),
     }
+    plan = obj.get("plan")
+    if isinstance(plan, dict):
+        def _steps(v):
+            items = []
+            for x in (v or [])[:6]:
+                if isinstance(x, dict):
+                    items.append({"action": str(x.get("action", "")), "why": str(x.get("why", "")), "alert": str(x.get("alert", "")), "priority": str(x.get("priority", "medium"))})
+                elif isinstance(x, str):
+                    items.append({"action": x, "why": "", "alert": "", "priority": "medium"})
+            return [i for i in items if i["action"]]
+        out["plan"] = {k: _steps(plan.get(k)) for k in ("today", "this_week", "ask_medical_officer")}
+    if "watch_next" in obj:
+        out["watch_next"] = [str(x) for x in (obj.get("watch_next") or [])][:5]
     if "storm_shelter_steps" in obj:
         out["storm_shelter_steps"] = [str(x) for x in (obj.get("storm_shelter_steps") or [])][:6]
     return out

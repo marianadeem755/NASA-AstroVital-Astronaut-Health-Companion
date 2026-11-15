@@ -12,7 +12,7 @@ from app.core.config import settings
 from app.core.database import get_db
 from app.ml import data_store, predict
 from app.schemas.ml import AlertsInsightRequest, AnalyticsInsightRequest, BoneMuscleRequest, BoneRequest, DayRequest, RadiationRequest, SleepInsightRequest, WellbeingAdviceRequest
-from app.services import alerts_advice_service, alerts_insight_service, analytics_insight_service, bone_advice_service, bone_muscle_insight_service, llm_service, ml_service, radiation_service, sleep_advice_service, sleep_insight_service, vitals_insight_service, wellbeing_advice_service, wellbeing_insight_service
+from app.services import alerts_advice_service, insights_plan_service, alerts_insight_service, analytics_insight_service, bone_advice_service, bone_muscle_insight_service, llm_service, ml_service, radiation_service, sleep_advice_service, sleep_insight_service, vitals_insight_service, wellbeing_advice_service, wellbeing_insight_service
 
 router = APIRouter(prefix="/ml", tags=["ML + AI recommendations"])
 
@@ -116,6 +116,19 @@ def alerts_insight(payload: AlertsInsightRequest, db: Session = Depends(get_db))
 def alerts_recommendations(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
     """AI recommendations for the Risk Alerts page (Gemini, Grok/Groq fallback). Built server-side from the same alerts."""
     return alerts_advice_service.get_alerts_advice(db, payload)
+
+
+@router.post("/insights-plan")
+def insights_plan(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Insights & Actions plan built from the same factor alerts as the Risk Alerts page: steps for today, this week and the
+    medical conference, where the pressure comes from, and the links between factors."""
+    return insights_plan_service.get_insights_plan(db, payload)
+
+
+@router.post("/insights-recommendations")
+def insights_recommendations(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """AI-written action plan for the Insights & Actions page (Gemini, Grok/Groq fallback). Built server-side from the same alerts."""
+    return insights_plan_service.get_insights_advice(db, payload)
 
 
 @router.post("/analytics-insight")
