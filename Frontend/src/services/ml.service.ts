@@ -224,6 +224,7 @@ export interface AlertsInsight {
   timeline: any[] | null;
   heat: any[] | null;
   watch: any[] | null;
+  readings: any[] | null;
   stale: any[] | null;
   engine: any | null;
   reading: any[];
@@ -272,3 +273,58 @@ export interface InsightsAdvice {
 
 export const getInsightsAdvice = (req: AlertsInsightRequest) =>
   http.post<InsightsAdvice>('/ml/insights-recommendations', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 90000 }).then((r) => r.data);
+
+/** Mission Profile: readiness verdict, data coverage, logging rhythm, astronaut record, models and AI providers, plus an AI-written brief. */
+export interface MissionInsight {
+  selection: { astronaut_id: number; days: number };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  readiness: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  coverage: { items: any[]; ready: number; total: number; pct: number };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  complete_the_picture: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  top_alerts: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  watch: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  journey: any | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  profile: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  areas: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pressure: any[] | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  mission: any | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  logs: any | null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  models: any[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  providers: any[];
+  disclaimer: string;
+}
+
+export const getMissionInsight = (req: AlertsInsightRequest) =>
+  http.post<MissionInsight>('/ml/mission-insight', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 60000 }).then((r) => r.data);
+
+export const getMissionAdvice = (req: AlertsInsightRequest) =>
+  http.post<WellbeingAdvice>('/ml/mission-recommendations', { ...cleanRequest(req), astronaut_id: req.astronaut_id, days: req.days ?? 30 }, { timeout: 90000 }).then((r) => r.data);
+
+/** Mission details typed on the Mission Profile page (destination, launch date, duration, role) plus the astronaut's birth date, sex, height and weight. */
+export interface MissionProfileSave {
+  astronaut_id: number;
+  mission_name: string | null;
+  destination: string | null;
+  launch_date: string | null;
+  planned_days: number | null;
+  crew_role: string | null;
+  crew_size: number | null;
+  objective: string | null;
+  date_of_birth: string | null;
+  sex: string | null;
+  height_cm: number | null;
+  weight_kg: number | null;
+}
+export const saveMissionProfile = (body: MissionProfileSave) => http.put<{ saved: boolean }>('/ml/mission-profile', body, { timeout: 30000 }).then((r) => r.data);

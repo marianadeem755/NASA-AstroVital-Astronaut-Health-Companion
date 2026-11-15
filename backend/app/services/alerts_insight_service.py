@@ -200,13 +200,14 @@ def _selection_values(req, d):
     return vals, who
 
 
-def _day_alerts(vals, who, watch):
+def _day_alerts(vals, who, watch, readings):
     out = []
     src_note = f" (MMASH volunteer {who['volunteer']}, an Earth volunteer)" if who.get("volunteer") else ""
     for key, domain, label, col, unit, tiers, line, src, evid, act in DAY_RULES:
         v = vals.get(col)
         if v is None:
             continue
+        readings.append({"id": key, "domain": domain, "factor": label, "shown": (f"{v:.0f}" if abs(v) >= 100 else f"{v:.1f}") + _u(unit), "line": line, "evidence": evid, "source": "selected data"})
         t = _tier(DAY_RULE[key], v)
         if not t:
             n = _near(DAY_RULE[key], v)
@@ -222,12 +223,13 @@ def _day_alerts(vals, who, watch):
     return out
 
 
-def _blood_bone_alerts(d):
+def _blood_bone_alerts(d, readings):
     out = []
     ch = d.get("baseline_changes") or []
     if ch:
         top = ch[0]
         big = abs(top["percent_change"])
+        readings.append({"id": "blood_shift", "domain": "blood", "factor": "Blood values vs own pre-flight", "shown": f"{top['percent_change']:+.0f}% ({top['marker']})", "line": "within 20% of the own pre-flight average", "evidence": "proxy", "source": "selected data"})
         pri = "high" if big >= 50 else "medium" if big >= 30 else "low" if big >= 20 else None
         if pri:
             lst = "; ".join(f"{c['marker']} {c['percent_change']:+.0f}%" for c in ch[:3])
@@ -237,6 +239,8 @@ def _blood_bone_alerts(d):
                         "last_reading": None, "evidence": "proxy", "source": "Own-baseline comparison (Inspiration4 serum values). Not a clinical reference range.",
                         "action": _action("Ask the medical officer whether the blood work should be repeated and which markers to watch.", pri), "kind": "data"})
     bone = d.get("bone_risk")
+    if bone and bone.get("bone_risk_label"):
+        readings.append({"id": "bone_screen", "domain": "bone", "factor": "Bone-risk screening", "shown": bone["bone_risk_label"], "line": "Low class", "evidence": "screening", "source": "selected data"})
     if bone and bone.get("bone_risk_label") in ("Medium", "High"):
         high = bone["bone_risk_label"] == "High"
         p = (bone.get("probabilities") or {}).get(bone["bone_risk_label"])
@@ -251,7 +255,7 @@ def _blood_bone_alerts(d):
 # ---------------------------------------------------------------------------------------------
 # alerts from the logged daily values
 # ---------------------------------------------------------------------------------------------
-def _threshold_alerts(df: pd.DataFrame, end_day, stale: list, watch: list):
+def _threshold_alerts(df: pd.DataFrame, end_day, stale: list, watch: list, readings: list):
     alerts, timeline_hits = [], defaultdict(list)   # timeline_hits[date] -> [(rule key, priority, value)]
     for key, domain, label, col, unit, tiers, line, src, evid, act in RULES:
         if col not in df.columns:
@@ -269,6 +273,7 @@ def _threshold_alerts(df: pd.DataFrame, end_day, stale: list, watch: list):
             stale.append({"factor": label, "last_reading": last_day.isoformat(), "days_ago": age})
             continue
         latest = float(s.iloc[-1])
+        readings.append({"id": key, "domain": domain, "factor": label, "shown": f"{latest:g}{_u(unit)}", "line": line, "evidence": evid, "source": "your logs"})
         t = _tier(RULE[key], latest)
         if not t:
             n = _near(RULE[key], latest)
@@ -300,7 +305,7 @@ def _threshold_alerts(df: pd.DataFrame, end_day, stale: list, watch: list):
     return alerts, timeline_hits
 
 
-def _cognition_alerts(df: pd.DataFrame, end_day, stale: list):
+def _cognition_alerts(df: pd.DataFrame, end_day, stale: list, readings: list):
     out = []
     for key, label, col, unit, sign in (("reaction", "Reaction time", "reaction", "ms", 1), ("attention", "Attention score", "attention", "/100", -1)):
         if col not in df.columns:
@@ -318,6 +323,7 @@ def _cognition_alerts(df: pd.DataFrame, end_day, stale: list):
         if not sd or not np.isfinite(sd):
             continue
         z = sign * (float(recent.mean()) - float(base.mean())) / sd     # positive = worse than own baseline
+        readings.append({"id": key, "domain": "cognition", "factor": label, "shown": f"{float(recent.mean()):.0f} {unit}", "line": f"within 1 spread of your own earlier average ({float(base.mean()):.0f} {unit})", "evidence": "convention", "source": "your logs"})
         pri = "high" if z >= 2 else "medium" if z >= 1 else None
         if not pri:
             continue
@@ -540,14 +546,14 @@ def build_alerts(db: Session, req: AlertsInsightRequest) -> dict:
     end = datetime.now(UTC)
     start = end - timedelta(days=req.days)
     end_day = end.date()
-    alerts, stale, checked, timeline, heat, watch = [], [], set(), [], [], []
+    alerts, stale, checked, timeline, heat, watch, readings = [], [], set(), [], [], [], []
     has_astro = astronaut_repo.get(db, req.astronaut_id) is not None
     df = pd.DataFrame()
     if has_astro:
         df = ais._daily_frame(db, req.astronaut_id, start, end)
     if not df.empty:
-        a1, hits = _threshold_alerts(df, end_day, stale, watch)
-        alerts += a1 + _cognition_alerts(df, end_day, stale) + _recovery_alerts(df, end_day)
+        a1, hits = _threshold_alerts(df, end_day, stale, watch, readings)
+        alerts += a1 + _cognition_alerts(df, end_day, stale, readings) + _recovery_alerts(df, end_day)
         for _k, domain, _l, col, *_rest in RULES:
             if col in df.columns and not df[col].dropna().empty:
                 checked.add(domain)
@@ -572,7 +578,7 @@ def build_alerts(db: Session, req: AlertsInsightRequest) -> dict:
             vals, who = _selection_values(req, d)
         except (AppError, Exception):   # noqa: BLE001 - no MMASH row or HRV windows selected; the rest still stands
             vals, who = {}, {}
-        day_alerts = _day_alerts(vals, who, watch) + _blood_bone_alerts(d)
+        day_alerts = _day_alerts(vals, who, watch, readings) + _blood_bone_alerts(d, readings)
         if any(a["id"] == "d_stress" for a in day_alerts):
             model_alerts = [m for m in model_alerts if m["id"] != "model_stress"]   # same fact, do not list it twice
         alerts += day_alerts + model_alerts
@@ -588,8 +594,14 @@ def build_alerts(db: Session, req: AlertsInsightRequest) -> dict:
         pass
     alerts += _compound(alerts)
     alerts.sort(key=lambda a: (-PRI.index(a["priority"]), -(a["run"] or 0)))
+    by_id = {a["id"]: a["priority"] for a in alerts}
+    near = {w["id"] for w in watch}
+    for r in readings:
+        r["status"] = by_id.get(r["id"]) or ("watch" if f"watch_{r['id']}" in near else "ok")
+    order = {"critical": 0, "high": 1, "medium": 2, "low": 3, "watch": 4, "ok": 5}
+    readings.sort(key=lambda r: (order[r["status"]], r["factor"]))
     watch.sort(key=lambda w: w["distance_pct"])
-    return {"alerts": alerts, "watch": watch, "stale": stale, "checked": checked, "timeline": timeline, "heat": heat, "day_level": day_level, "has_logged": not df.empty,
+    return {"alerts": alerts, "watch": watch, "readings": readings, "stale": stale, "checked": checked, "timeline": timeline, "heat": heat, "day_level": day_level, "has_logged": not df.empty,
             "window": {"start": start.date().isoformat(), "end": end_day.isoformat(), "days": req.days}}
 
 
@@ -606,7 +618,7 @@ def get_alerts_insight(db: Session, req: AlertsInsightRequest) -> dict:
             "longest": {"factor": longest["factor"], "run": longest["run"]} if longest and longest["run"] > 1 else None,
             "alert_days": days_with_alert, "logged_days": len(tl), "watch": len(b["watch"]), "factors_checked": len(b["checked"])}
     out = {"selection": {"astronaut_id": req.astronaut_id, "days": req.days}, "window": b["window"], "kpis": kpis, "alerts": alerts,
-           "board": _board(alerts, b["checked"]), "timeline": tl or None, "heat": b["heat"] or None, "stale": b["stale"] or None, "watch": b["watch"] or None,
+           "board": _board(alerts, b["checked"]), "timeline": tl or None, "heat": b["heat"] or None, "stale": b["stale"] or None, "watch": b["watch"] or None, "readings": b["readings"] or None,
            "engine": _engine_alerts(db, req.astronaut_id) if astronaut_repo.get(db, req.astronaut_id) is not None else None,
            "reading": _reading(alerts, kpis, tl, b["watch"]), "rules": [{"factor": r[2], "domain": r[1], "line": r[6], "source": r[7], "evidence": r[8],
                                                             "tiers": [f"{op} {thr:g} = {pri}" for op, thr, pri in r[5]]} for r in RULES] if alerts or tl else None,

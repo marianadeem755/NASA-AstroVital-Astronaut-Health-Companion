@@ -148,7 +148,7 @@ function BReadings({ cards }: { cards?: any[] }) {
 /* ---- bone model, opened up ---------------------------------------------------------------------------------------------- */
 
 const CODED: Record<string, (v: number) => string> = { sex_female: (v) => (v >= 0.5 ? 'Female' : 'Male'), trouble_sleeping: (v) => (v >= 0.5 ? 'Yes' : 'No') };
-const shownValue = (r: any, v: number | null | undefined) => (r.key === 'sex_female' && !r.entered ? 'Not entered' : v == null ? '—' : CODED[r.key] ? CODED[r.key](v) : `${bf(v, 1)} ${r.unit}`);
+const shownValue = (r: any, v: number | null | undefined) => (v == null ? '—' : CODED[r.key] ? CODED[r.key](v) : `${bf(v, 1)} ${r.unit}`);
 const shownTraining = (r: any) => (r.training?.mean == null ? '—' : r.key === 'sex_female' ? `${bpct(r.training.mean)} female` : r.key === 'trouble_sleeping' ? `${bpct(r.training.mean)} yes` : `${bf(r.training.mean, 1)} ${r.unit}`);
 
 function ReferenceTable({ bone }: { bone: any }) {
@@ -162,7 +162,7 @@ function ReferenceTable({ bone }: { bone: any }) {
               <tr key={r.key}>
                 <td><b>{r.label}</b>{r.modifiable ? '' : ' · fixed'}<small>{r.source}</small>{r.note && <small>{r.note}</small>}</td>
                 <td className="n">{shownValue(r, r.entered ? r.value : r.used_value)}{r.imputed && <small>{r.key === 'activity' ? 'not entered · model used training medians' : 'not entered · model used training median'}</small>}</td>
-                <td>{r.target ?? (r.modifiable ? '—' : 'Fixed, cannot be changed')}</td>
+                <td>{r.key === 'sex_female' ? '—' : r.target ?? '—'}</td>
                 <td>{r.key === 'sex_female' ? <BChip color={BC.grey}>fixed</BChip> : <BChip color={BTONE[STATUS_TONE[r.status]]}>{STATUS_TEXT[r.status]}</BChip>}</td>
                 <td className="n">{shownTraining(r)}{r.training?.sd != null && !CODED[r.key] && <small>spread ±{bf(r.training.sd, 1)}</small>}</td>
                 <td className="n" style={{ color: r.push == null ? undefined : r.push > 0 ? BC.pink : r.push < 0 ? BC.green : undefined }}>{bsigned(r.push, 2)}</td>
@@ -307,14 +307,7 @@ function ExerciseLog({ astronautId, ex }: { astronautId: number; ex: any }) {
   const save = useMutation({
     mutationFn: () => logExercise({ astronaut_id: astronautId, minutes: Math.round(Number(minutes)), kind, performed_at: new Date(`${date}T12:00:00`).toISOString(), client_uuid: buid() }),
     onSuccess: () => { setMsg('Session saved.'); setMinutes(''); void qc.invalidateQueries({ queryKey: ['bm-insight'] }); },
-    onError: (e: any) => {
-      const m = String(e?.message ?? '');
-      const why = /^Not Found$/i.test(m) ? 'The running backend has no /exercise route. Copy the new backend files (exercise endpoint, model, router) and restart it.'
-        : /astronaut not found/i.test(m) ? `Astronaut ${astronautId} does not exist in the database. Create it or pick another astronaut.`
-        : /timeout|network/i.test(m) ? 'The backend is not reachable. Check it is running.'
-        : m || 'Unknown error.';
-      setMsg(`Could not save the session. ${why}`);
-    },
+    onError: () => setMsg('Could not save the session. Check the backend is running.'),
   });
   const ok = Number(minutes) >= 1 && Number(minutes) <= 600 && astronautId > 0;
   return (

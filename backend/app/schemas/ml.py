@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Any, Literal, Optional
 
 from pydantic import BaseModel, Field
@@ -118,3 +119,19 @@ class AlertsInsightRequest(DayRequest):
     """Risk Alerts deep dive: the same data selectors as every page (so the model flags match) plus whose logged data to read."""
     astronaut_id: int = Field(1, ge=1)
     days: int = Field(30, ge=7, le=90)
+
+
+class MissionProfileSave(BaseModel):
+    """Mission details typed on the Mission Profile page. Only what is sent is changed; an empty string clears a text field."""
+    astronaut_id: int = Field(1, ge=1)
+    mission_name: Optional[str] = Field(None, max_length=120)
+    destination: Optional[str] = Field(None, max_length=80)
+    launch_date: Optional[date] = None
+    planned_days: Optional[int] = Field(None, ge=1, le=1500)
+    crew_role: Optional[str] = Field(None, max_length=40)
+    crew_size: Optional[int] = Field(None, ge=1, le=12)
+    objective: Optional[str] = Field(None, max_length=200)
+    date_of_birth: Optional[date] = None
+    sex: Optional[str] = Field(None, max_length=20)
+    height_cm: Optional[float] = Field(None, gt=0, lt=300)
+    weight_kg: Optional[float] = Field(None, gt=0, lt=500)

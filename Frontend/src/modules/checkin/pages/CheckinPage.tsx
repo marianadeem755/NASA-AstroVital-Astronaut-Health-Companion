@@ -1,8 +1,126 @@
-import { useEffect, useState } from 'react';
-import { CheckCircle2, ClipboardCheck, RotateCcw } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { Bar, BarChart, CartesianGrid, Cell, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { CheckCircle2, ClipboardCheck, Loader2, RotateCcw, ShieldAlert, WifiOff } from 'lucide-react';
 import { useDay, useSubjects } from '../../../hooks/useAstro';
+import { getAlertsInsight } from '../../../services/ml.service';
+import { useAstronautStore } from '../../../store/useAstronautStore';
 import { hasSelection, useRunStore, type Selection } from '../../../store/useRunStore';
-import { LevelBadge, Notice, NoData, PageHeader, Panel } from '../../../shared/components/live';
+import { AL_CSS, AlertList, AlertsAdvice, C, Chip, FactorBoard, PRI_COLOR, RichTip, Section, WatchPanel, axis, cursorBar, xl, yl } from '../../alerts/pages/AlertsPage';
+import type { DayRequest } from '../../../types/ml';
+import { EvidenceTag, LevelBadge, Notice, PageHeader, Panel } from '../../../shared/components/live';
+
+
+/* ==========================================================================================================
+   FACTOR ALERTS FOR TODAY'S CHECK · reuses the Risk Alerts engine (POST /ml/alerts-insight) for the data chosen above plus the
+   astronaut's own logs, and the AI panel (POST /ml/alerts-recommendations, Gemini then Groq). The form and the result
+   panel above are unchanged.
+   ========================================================================================================== */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Any = any;
+const STATUS_HEX: Record<string, string> = { over: C.orange, near: C.amber, ok: C.green };
+const statusOf = (s: string) => (s === 'ok' ? 'ok' : s === 'watch' ? 'near' : 'over');
+const STATUS_TXT: Record<string, string> = { over: 'over the line', near: 'close to the line', ok: 'inside the line' };
+
+function FactorsCheck({ board, readings }: { board: Any[]; readings: Any[] }) {
+  const [hot, setHot] = useState<string | null>(null);
+  const label = (dom: string) => board.find((b) => b.domain === dom)?.label ?? dom.charAt(0).toUpperCase() + dom.slice(1);
+  const rows = useMemo(() => {
+    const m = new Map<string, Any>();
+    readings.forEach((r) => {
+      const row = m.get(r.domain) ?? { domain: r.domain, label: label(r.domain), over: 0, near: 0, ok: 0, total: 0, names: [] as string[] };
+      row[statusOf(r.status)] += 1; row.total += 1;
+      if (statusOf(r.status) === 'over') row.names.push(r.factor);
+      m.set(r.domain, row);
+    });
+    return [...m.values()].sort((a, b) => b.over - a.over || b.near - a.near || b.total - a.total);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [readings, board]);
+  const n = (k: string) => readings.filter((r) => statusOf(r.status) === k).length;
+  const tip = (p: Any) => ({
+    title: p.label, sub: `${p.total} factor${p.total > 1 ? 's' : ''} checked in this area`, color: p.over ? C.orange : p.near ? C.amber : C.green,
+    rows: [['Over the line', String(p.over)], ['Close to the line', String(p.near)], ['Inside the line', String(p.ok)]] as [string, string][],
+    note: p.names.length ? `Over the line: ${p.names.join(', ')}.` : p.near ? 'Nothing over a line here, but something is within 10% of one.' : 'Every factor here is inside its healthy line.',
+  });
+  const bar = (key: string) => (
+    <Bar dataKey={key} name={STATUS_TXT[key]} stackId="s" fill={STATUS_HEX[key]} maxBarSize={46} isAnimationActive={false}>
+      {rows.map((r) => <Cell key={r.domain} fill={STATUS_HEX[key]} fillOpacity={hot && hot !== r.domain ? 0.3 : 1} stroke={hot === r.domain ? '#fff' : 'none'} strokeWidth={hot === r.domain ? 1.5 : 0} />)}
+    </Bar>
+  );
+  return (
+    <>
+      <div className="al-kpis">
+        <div><span>Factors checked</span><b>{readings.length}</b><small>Every factor that had a reading today</small></div>
+        <div><span>Over the line</span><b style={{ color: n('over') ? C.orange : C.green }}>{n('over')}</b><small>{n('over') ? 'Each has a step below' : 'Nothing crossed a healthy line'}</small></div>
+        <div><span>Close to the line</span><b style={{ color: C.amber }}>{n('near')}</b><small>Within 10% of a line, not over it</small></div>
+        <div><span>Inside their lines</span><b style={{ color: C.green }}>{n('ok')}</b><small>Healthy on today's reading</small></div>
+      </div>
+      <div className="al-grid al-g2e">
+        <Panel title="Today's check by area" subtitle="Hover an area to see which factors are over, close to or inside their line" icon={<ShieldAlert size={18} className="icon-muted" />}>
+          <div className="al-chart" style={{ height: 300 }}>
+            <ResponsiveContainer>
+              <BarChart data={rows} margin={{ top: 8, right: 12, bottom: 42, left: 8 }} onMouseMove={(e: Any) => setHot(e?.activePayload?.[0]?.payload?.domain ?? null)} onMouseLeave={() => setHot(null)}>
+                <CartesianGrid stroke={C.grid} vertical={false} />
+                <XAxis dataKey="label" tick={axis} interval={0} angle={-20} textAnchor="end" height={70} label={xl('Area checked')} />
+                <YAxis tick={axis} allowDecimals={false} label={yl('Factors checked')} />
+                <Tooltip cursor={cursorBar} wrapperStyle={{ outline: 'none', zIndex: 20 }} content={<RichTip spec={tip} />} />
+                <Legend verticalAlign="top" height={26} wrapperStyle={{ fontSize: 10 }} />
+                {bar('over')}{bar('near')}{bar('ok')}
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </Panel>
+        <Panel title="Every factor checked today" subtitle="What was measured, the healthy line and where it came from" icon={<ClipboardCheck size={18} className="icon-muted" />}>
+          <div className="al-wrap" style={{ maxHeight: 340, overflowY: 'auto' }}>
+            <table className="al-tbl">
+              <thead><tr><th>Factor</th><th>Measured</th><th>Healthy line</th><th>Status</th></tr></thead>
+              <tbody>
+                {readings.map((r) => {
+                  const k = statusOf(r.status);
+                  return (
+                    <tr key={`${r.id}-${r.source}`}>
+                      <td>{r.factor}<small>{r.source}</small></td>
+                      <td>{r.shown}</td>
+                      <td>{r.line}<small><EvidenceTag kind={r.evidence} /></small></td>
+                      <td><Chip color={k === 'over' ? PRI_COLOR[r.status] : STATUS_HEX[k]}>{k === 'over' ? r.status : k === 'near' ? 'close' : 'ok'}</Chip></td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </Panel>
+      </div>
+    </>
+  );
+}
+
+function CheckinFactors() {
+  const astronautId = useAstronautStore((s) => s.astronautId);
+  const selection = useRunStore((s) => s.selection);
+  const language = useRunStore((s) => s.language);
+  const req = useMemo(() => ({ ...(selection as DayRequest), astronaut_id: astronautId, days: 30, language }), [astronautId, selection, language]);
+  const q = useQuery({ queryKey: ['ck-insight', req], queryFn: () => getAlertsInsight(req), enabled: astronautId > 0, retry: 0, staleTime: 60_000 });
+  const d = q.data;
+  return (
+    <>
+      <style>{AL_CSS}</style>
+      {q.isLoading && <p className="muted" style={{ marginTop: 28 }}><Loader2 size={13} className="av-spin" /> Checking every factor against its line…</p>}
+      {q.isError && <p className="muted" style={{ marginTop: 28 }}><WifiOff size={13} /> The factor alerts could not be loaded. The check above still works.</p>}
+      {d && (
+        <>
+          <Section icon={<ShieldAlert size={17} />} title="Alerts for today's check, by factor" sub="Built from the data chosen above and your own logged readings, one rule per factor. Each alert shows the line it crossed and the step to take." />
+          {d.readings && d.readings.length > 0 && <FactorsCheck board={d.board ?? []} readings={d.readings} />}
+          {d.board && d.board.length > 0 && <FactorBoard board={d.board} />}
+          {d.alerts.length > 0 && <AlertList alerts={d.alerts} />}
+          {d.watch && <div className="al-gap" style={{ marginTop: d.alerts.length ? 14 : 0 }}><WatchPanel watch={d.watch} /></div>}
+          {d.alerts.length > 0 && <div className="al-gap"><AlertsAdvice req={req} alerts={d.alerts} /></div>}
+          <p className="al-note">{d.disclaimer}</p>
+        </>
+      )}
+    </>
+  );
+}
 
 const text = (v: unknown) => (v == null ? '' : String(v));
 
@@ -86,7 +204,7 @@ export function CheckinPage() {
         {applied && <p className="success-line"><CheckCircle2 size={15} /> Check updated. Every page now shows this selection.</p>}
       </Panel>
 
-      <div className="dashboard-grid av-gap-top">
+      <div className="av-gap-top">
         <Panel title="Result of the current selection">
           {day.isLoading && <p className="muted">Running the models…</p>}
           {day.isError && <p className="av-rec-note warn">{(day.error as Error).message}</p>}
@@ -98,11 +216,8 @@ export function CheckinPage() {
           )}
           {!day.data && !day.isLoading && !day.isError && <p className="muted">Choose data above and press “Run today's check”.</p>}
         </Panel>
-        <div className="av-stack">
-          <NoData title="MOOD & ENERGY CHECK-IN" why="No daily mood or energy data exists, so they cannot be checked." />
-          <NoData title="SpO₂ & RADIATION" why="No data exists for these either." />
-        </div>
       </div>
+      <CheckinFactors />
     </section>
   );
 }

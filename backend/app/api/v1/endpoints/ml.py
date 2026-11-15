@@ -11,8 +11,8 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.database import get_db
 from app.ml import data_store, predict
-from app.schemas.ml import AlertsInsightRequest, AnalyticsInsightRequest, BoneMuscleRequest, BoneRequest, DayRequest, RadiationRequest, SleepInsightRequest, WellbeingAdviceRequest
-from app.services import alerts_advice_service, insights_plan_service, alerts_insight_service, analytics_insight_service, bone_advice_service, bone_muscle_insight_service, llm_service, ml_service, radiation_service, sleep_advice_service, sleep_insight_service, vitals_insight_service, wellbeing_advice_service, wellbeing_insight_service
+from app.schemas.ml import AlertsInsightRequest, AnalyticsInsightRequest, BoneMuscleRequest, BoneRequest, DayRequest, MissionProfileSave, RadiationRequest, SleepInsightRequest, WellbeingAdviceRequest
+from app.services import alerts_advice_service, insights_plan_service, alerts_insight_service, analytics_insight_service, bone_advice_service, bone_muscle_insight_service, llm_service, mission_insight_service, ml_service, radiation_service, sleep_advice_service, sleep_insight_service, vitals_insight_service, wellbeing_advice_service, wellbeing_insight_service
 
 router = APIRouter(prefix="/ml", tags=["ML + AI recommendations"])
 
@@ -129,6 +129,24 @@ def insights_plan(payload: AlertsInsightRequest, db: Session = Depends(get_db)) 
 def insights_recommendations(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
     """AI-written action plan for the Insights & Actions page (Gemini, Grok/Groq fallback). Built server-side from the same alerts."""
     return insights_plan_service.get_insights_advice(db, payload)
+
+
+@router.post("/mission-insight")
+def mission_insight(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Mission Profile deep dive: readiness verdict from the factor alerts, data coverage, logging rhythm, astronaut record, models and AI providers."""
+    return mission_insight_service.get_mission_insight(db, payload)
+
+
+@router.put("/mission-profile")
+def mission_profile_save(payload: MissionProfileSave, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Save where the mission goes, the launch date, duration, crew role and the astronaut's birth date, sex, height and weight."""
+    return mission_insight_service.save_mission_profile(db, payload)
+
+
+@router.post("/mission-recommendations")
+def mission_recommendations(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """AI readiness brief for the Mission Profile page (Gemini, Grok/Groq fallback). Built server-side from the same alerts and coverage."""
+    return mission_insight_service.get_mission_advice(db, payload)
 
 
 @router.post("/analytics-insight")

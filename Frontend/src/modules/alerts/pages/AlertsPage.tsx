@@ -17,7 +17,7 @@ import type { DayRequest } from '../../../types/ml';
    number arrives in the response. A section with nothing to show is left out.
    ========================================================================================================== */
 
-const AL_CSS = `
+export const AL_CSS = `
 .al-sec { margin:32px 0 13px; } .al-sec h2 { margin:0; font-size:16px; letter-spacing:-.2px; display:flex; align-items:center; gap:9px; } .al-sec h2 svg { color:#b47bff; }
 .al-sec p { margin:5px 0 0; font-size:10px; color:#818ba9; max-width:820px; line-height:1.5; }
 .al-grid { display:grid; gap:14px; align-items:stretch; margin-bottom:14px; } .al-grid > * { min-width:0; } .al-g2e { grid-template-columns:1fr 1fr; } .al-grid .panel { margin-bottom:0; height:100%; } .al-gap { margin-bottom:14px; }
@@ -51,21 +51,21 @@ const AL_CSS = `
 @media (max-width:1100px) { .al-g2e { grid-template-columns:1fr; } }
 `;
 
-const C = { blue: '#7aa8ff', violet: '#b47bff', pink: '#ff6b8b', green: '#55e6b1', amber: '#ffd37c', orange: '#ff9a5c', grey: '#8992b1', grid: '#252d4b' };
+export const C = { blue: '#7aa8ff', violet: '#b47bff', pink: '#ff6b8b', green: '#55e6b1', amber: '#ffd37c', orange: '#ff9a5c', grey: '#8992b1', grid: '#252d4b' };
 const PRI = ['low', 'medium', 'high', 'critical'] as const;
-const PRI_COLOR: Record<string, string> = { clear: C.green, low: C.green, medium: C.amber, high: C.orange, critical: C.pink };
+export const PRI_COLOR: Record<string, string> = { clear: C.green, low: C.green, medium: C.amber, high: C.orange, critical: C.pink };
 const TONE_HEX: Record<string, string> = { ok: C.green, warn: C.amber, bad: C.pink, mute: C.blue };
-const axis = { stroke: '#8992b1', fontSize: 10 };
+export const axis = { stroke: '#8992b1', fontSize: 10 };
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const uv = (v: Any, u: string) => `${v}${u.startsWith('/') ? u : u ? ` ${u}` : ''}`;
 const dlab = (iso: string) => { const [, m, d] = iso.slice(0, 10).split('-'); return `${MONTHS[Number(m) - 1]} ${Number(d)}`; };
-const xl = (value: string) => ({ value, position: 'insideBottom' as const, offset: -14, fill: C.grey, fontSize: 11 });
-const yl = (value: string) => ({ value, angle: -90, position: 'insideLeft' as const, offset: 14, style: { textAnchor: 'middle' as const }, fill: C.grey, fontSize: 11 });
+export const xl = (value: string) => ({ value, position: 'insideBottom' as const, offset: -14, fill: C.grey, fontSize: 11 });
+export const yl = (value: string) => ({ value, angle: -90, position: 'insideLeft' as const, offset: 14, style: { textAnchor: 'middle' as const }, fill: C.grey, fontSize: 11 });
 
-type TipSpec = { title: string; sub?: string; rows: [string, ReactNode][]; color?: string; note?: string };
+export type TipSpec = { title: string; sub?: string; rows: [string, ReactNode][]; color?: string; note?: string };
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Any = any;
-function TipBody({ t }: { t: TipSpec }) {
+export function TipBody({ t }: { t: TipSpec }) {
   return (
     <div className="al-tip" style={{ ['--tip' as string]: t.color ?? '#b47bff' }}>
       <div className="al-tip-title">{t.title}</div>
@@ -75,17 +75,17 @@ function TipBody({ t }: { t: TipSpec }) {
     </div>
   );
 }
-function RichTip({ active, payload, label, spec }: { active?: boolean; payload?: { payload?: Any }[]; label?: string | number; spec: (p: Any, label?: string | number) => TipSpec | null }) {
+export function RichTip({ active, payload, label, spec }: { active?: boolean; payload?: { payload?: Any }[]; label?: string | number; spec: (p: Any, label?: string | number) => TipSpec | null }) {
   if (!active || !payload?.length || !payload[0].payload) return null;
   const t = spec(payload[0].payload, label);
   return t ? <TipBody t={t} /> : null;
 }
-const cursorBar = { fill: '#b47bff', fillOpacity: 0.12 };
+export const cursorBar = { fill: '#b47bff', fillOpacity: 0.12 };
 
-function Chip({ color, children }: { color: string; children: ReactNode }) {
+export function Chip({ color, children }: { color: string; children: ReactNode }) {
   return <span className="al-chip" style={{ color, borderColor: `${color}66`, background: `${color}1f` }}>{children}</span>;
 }
-function Section({ icon, title, sub }: { icon: ReactNode; title: string; sub?: string }) {
+export function Section({ icon, title, sub }: { icon: ReactNode; title: string; sub?: string }) {
   return <div className="al-sec"><h2>{icon}{title}</h2>{sub && <p>{sub}</p>}</div>;
 }
 function Readings({ cards }: { cards?: Any[] }) {
@@ -115,7 +115,7 @@ function useAlertsQuery(days: number) {
 
 /* ---------------------------------------------------------------- sections ---------------------------------------------------------------- */
 
-function FactorBoard({ board }: { board: Any[] }) {
+export function FactorBoard({ board }: { board: Any[] }) {
   const hot = board.filter((b) => b.status !== 'clear');
   const clear = board.filter((b) => b.status === 'clear');
   return (
@@ -136,7 +136,7 @@ function FactorBoard({ board }: { board: Any[] }) {
   );
 }
 
-function WatchPanel({ watch }: { watch: Any[] }) {
+export function WatchPanel({ watch }: { watch: Any[] }) {
   return (
     <Panel title="Close to the line" subtitle="Not alerts yet. These are on the safe side of a line but within 10% of it, so they are the first to watch" icon={<ShieldAlert size={18} className="icon-muted" />}>
       {watch.map((w) => (
@@ -153,7 +153,7 @@ function WatchPanel({ watch }: { watch: Any[] }) {
   );
 }
 
-function AlertList({ alerts }: { alerts: Any[] }) {
+export function AlertList({ alerts }: { alerts: Any[] }) {
   return (
     <Panel title="Alerts by factor" subtitle="Highest priority first. Each one shows what was measured, the line, how long it has lasted and the step to take" icon={<AlertTriangle size={18} className="icon-muted" />}>
       {alerts.map((a) => (
@@ -266,7 +266,7 @@ function Rules({ rules }: { rules: Any[] }) {
 }
 
 /** AI recommendations: written by the backend (Gemini first, Groq fallback) from the same alerts. */
-function AlertsAdvice({ req, alerts }: { req: Any; alerts: Any[] }) {
+export function AlertsAdvice({ req, alerts }: { req: Any; alerts: Any[] }) {
   const base = useAI();   // the page's own AI call goes first; the free tiers need a gap between calls
   const run = async () => {
     let r = await getAlertsAdvice(req);
@@ -288,7 +288,7 @@ function AlertsAdvice({ req, alerts }: { req: Any; alerts: Any[] }) {
         <button className="av-ghost-btn" disabled={ai.isFetching} onClick={() => ai.refetch()}>{ai.isFetching ? <Loader2 size={13} className="av-spin" /> : <RefreshCw size={13} />} Ask the AI again</button>
       </div>
       {ai.isFetching && !result && <p className="av-rec-note"><Loader2 size={13} className="av-spin" /> Asking the AI for recommendations…</p>}
-      {problem && !ai.isFetching && <p className="av-rec-note warn">AI recommendations are not available right now</p>}
+      {problem && !ai.isFetching && <p className="av-rec-note warn">AI recommendations are not available right now ({problem}). The rule-based steps above still apply. Tap “Ask the AI again” in a moment.</p>}
       {result && (
         <>
           {result.summary && <p className="av-summary">{result.summary}</p>}
