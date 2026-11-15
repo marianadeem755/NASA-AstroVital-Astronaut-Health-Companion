@@ -169,3 +169,14 @@ a.primary-button { text-decoration: none; }
   .av-body { justify-content: center; }
   .scenario-select { max-width: 110px; }
 }
+
+
+/* Vitals & Physical deep-dive additions */
+.av-note{display:flex;align-items:flex-start;gap:10px;padding:13px 15px;margin:0 0 16px;border:1px solid #394267;border-left:3px solid #58d8ff;border-radius:10px;background:#101832;color:#c5cce4;font-size:12px;line-height:1.55}
+.av-note svg{flex:0 0 auto;color:#58d8ff;margin-top:1px}
+.av-periods{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 12px}
+.av-period{display:inline-flex;align-items:center;padding:7px 11px;border:1px solid #394267;border-radius:20px;color:#cbd2ec;background:#111832;font-size:10px;font-weight:700;letter-spacing:.35px}
+.av-period.active{border-color:#8062b7;color:#e4d5ff;background:#281d43}
+.av-period.disabled{opacity:.48;border-style:dashed}
+.av-table-wrap{width:100%;overflow-x:auto}
+.av-table-wrap .av-table{min-width:690px}

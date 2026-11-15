@@ -37,3 +37,16 @@ export const checkDay = (req: DayRequest) =>
 /** Models + rule flag + AI recommendations (can take several seconds). */
 export const getRecommendations = (req: DayRequest) =>
   http.post<DayResult>('/ml/recommendations', cleanRequest(req), { timeout: 90000 }).then((r) => r.data);
+
+/** Detailed Vitals & Physical data; selectors only, all measurements come from backend files. */
+export const getVitalsInsight = (req: DayRequest) =>
+  http.post<VitalsInsight>('/ml/vitals-insight', cleanRequest(req)).then((r) => r.data);
+
+export interface VitalsInsight {
+  selection: { hrv_user: string | null; mmash_user: string | null; blood_astronaut: string | null; timepoint: string | null };
+  hrv: any;
+  blood: any;
+  activity: any;
+  time_ranges: { available: string[]; unavailable: string[]; reason: string };
+  disclaimer: string;
+}

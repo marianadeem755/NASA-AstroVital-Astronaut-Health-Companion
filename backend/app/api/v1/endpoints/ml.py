@@ -10,7 +10,7 @@ from fastapi import APIRouter, HTTPException, Query, status
 from app.core.config import settings
 from app.ml import data_store, predict
 from app.schemas.ml import BoneRequest, DayRequest
-from app.services import llm_service, ml_service
+from app.services import llm_service, ml_service, vitals_insight_service
 
 router = APIRouter(prefix="/ml", tags=["ML + AI recommendations"])
 
@@ -51,6 +51,31 @@ def list_subjects() -> dict[str, Any]:
 @router.get("/scenarios")
 def list_scenarios() -> list[dict[str, Any]]:
     return data_store.crew_map()["scenarios"]
+
+
+@router.get("/vitals-insight")
+def vitals_insight_get(
+    scenario_id: Optional[str] = Query(None),
+    subject_id: Optional[str] = Query(None),
+    mmash_user: Optional[str] = Query(None),
+    hrv_user: Optional[str] = Query(None),
+    blood_astronaut: Optional[str] = Query(None),
+    timepoint: Optional[str] = Query(None),
+    exercise_minutes: Optional[float] = Query(None, ge=0, le=1440),
+    steps: Optional[int] = Query(None, ge=0, le=200000),
+) -> dict[str, Any]:
+    """Detailed HRV, blood and activity insights from the selected source records."""
+    req = _query_request(
+        scenario_id, subject_id, mmash_user, hrv_user, blood_astronaut,
+        timepoint, exercise_minutes, steps, "en"
+    )
+    return vitals_insight_service.get_vitals_insight(req)
+
+
+@router.post("/vitals-insight")
+def vitals_insight_post(payload: DayRequest) -> dict[str, Any]:
+    """Same detailed insight endpoint using the frontend's JSON selector payload."""
+    return vitals_insight_service.get_vitals_insight(payload)
 
 
 @router.get("/demo-results")
