@@ -161,3 +161,68 @@ def test_unknown_ids_give_404(client):
     assert client.get("/api/v1/ml/check-day", params={"scenario_id": "nope"}).status_code == 404
     assert client.get("/api/v1/ml/check-day",
                       params={"blood_astronaut": "C001", "timepoint": "R+999"}).status_code == 404
+
+
+# ---------------------------------------------------------------------------
+# Radiation Monitor AI advice (fake HTTP layer, no real API call)
+# ---------------------------------------------------------------------------
+def _radiation_payload(**over):
+    body = {
+        "mission": "mars", "mission_label": "Mars mission", "mission_day": 120, "mission_total_days": 860,
+        "phase": "Transit out", "phase_days_left": 60, "environment": "Deep-space transit",
+        "dose_rate_msv_per_day": 1.84, "dose_to_date_msv": 220.8, "prior_career_dose_msv": 0,
+        "career_dose_now_msv": 220.8, "career_dose_end_of_plan_msv": 982.4, "share_of_nasa_limit_now_pct": 36.8,
+        "share_of_nasa_limit_end_pct": 163.7, "plan_crosses_nasa_limit_on_day": 326,
+        "shielding_scenario": "Baseline hull and habitat", "shielding_factor": 1.0, "shielding_saving_msv": 0,
+        "transit_dose_share_pct": 67.4, "phases": [
+            {"label": "Transit out", "environment": "Deep-space transit", "days": 180, "rate_msv_per_day": 1.84, "dose_msv": 331.2}],
+    }
+    body.update(over)
+    return body
+
+
+def test_radiation_recommendations_use_ai_and_keep_shelter_steps(client, monkeypatch):
+    monkeypatch.setattr(settings, "gemini_api_key", "test-key")
+    reply = {"summary": "s", "recommendations": [
+        {"domain": "radiation", "action": "Plan shorter transit", "priority": "high", "evidence": "proxy"}],
+        "storm_shelter_steps": ["Go to shelter"], "contact_medical_officer": True, "contact_reason": "over limit"}
+    gemini = {"candidates": [{"content": {"parts": [{"text": json.dumps(reply)}]}}]}
+    monkeypatch.setattr(httpx, "post", lambda url, **kw: httpx.Response(200, json=gemini, request=httpx.Request("POST", url)))
+    r = client.post("/api/v1/ml/radiation-recommendations", json=_radiation_payload())
+    assert r.status_code == 200
+    ai = r.json()["ai"]
+    assert ai["source"] == "gemini"
+    assert ai["result"]["recommendations"][0]["action"] == "Plan shorter transit"
+    assert ai["result"]["storm_shelter_steps"] == ["Go to shelter"]
+
+
+def test_radiation_recommendations_report_error_without_keys(client):
+    r = client.post("/api/v1/ml/radiation-recommendations", json=_radiation_payload())
+    assert r.status_code == 200
+    assert r.json()["ai"]["source"] == "rules_only" and r.json()["ai"]["result"] is None
+
+
+def test_radiation_recommendations_validate_input(client):
+    assert client.post("/api/v1/ml/radiation-recommendations", json=_radiation_payload(dose_to_date_msv=-5)).status_code == 422
+
+
+def test_gemini_cut_off_json_is_repaired_and_groq_key_ignores_xai_config(monkeypatch):
+    cut = '{"summary": "ok", "recommendations": [{"domain": "radiation", "action": "a", "priority": "high", "evidence": "proxy"}, {"domain": "radiation", "action": "unfinis'
+    out = llm_service._parse_json(cut)
+    assert out["summary"] == "ok" and out["recommendations"][0]["action"] == "a"
+    monkeypatch.setattr(settings, "grok_api_key", "gsk_abc")
+    monkeypatch.setattr(settings, "grok_base_url", "https://api.x.ai/v1")
+    monkeypatch.setattr(settings, "grok_model", "grok-4.7")
+    cfg = llm_service._grok_config()
+    assert "api.groq.com" in cfg["base"] and not cfg["model"].startswith("grok")
+
+
+def test_gemini_failure_moves_straight_to_grok(monkeypatch):
+    monkeypatch.setattr(settings, "gemini_api_key", "g")
+    monkeypatch.setattr(settings, "grok_api_key", "gsk_abc")
+    monkeypatch.setattr(settings, "grok_base_url", "https://api.x.ai/v1")
+    monkeypatch.setattr(settings, "grok_model", "grok-4.7")
+    calls = []
+    monkeypatch.setattr(httpx, "post", _fake_post(calls, gemini_status=429))
+    out = llm_service.generate({"x": 1})
+    assert out["source"] == "grok" and "api.groq.com" in calls[-1]

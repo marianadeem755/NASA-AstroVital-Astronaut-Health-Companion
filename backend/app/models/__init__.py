@@ -5,6 +5,7 @@ from app.models.base import Base
 from app.models.body_map import BodyRegion, SymptomReport
 from app.models.countermeasure import CountermeasureProtocol, CountermeasureRecommendation
 from app.models.dataset import Dataset
+from app.models.exercise import ExerciseSession
 from app.models.ml import ModelVersion, Prediction
 from app.models.observation import Observation
 from app.models.risk import RiskAssessment, RiskFactor
@@ -15,5 +16,5 @@ __all__ = [
     "Base", "Alert", "Astronaut", "BodyRegion", "SymptomReport", "CountermeasureProtocol",
     "CountermeasureRecommendation", "Dataset", "ModelVersion", "Prediction", "Observation",
     "RiskAssessment", "RiskFactor", "SyncConflict", "SyncEvent", "CognitiveAssessment",
-    "WellbeingAssessment",
+    "WellbeingAssessment", "ExerciseSession",
 ]

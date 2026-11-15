@@ -41,8 +41,8 @@ class Settings(BaseSettings):
     # If your key starts with "gsk_" it is a Groq key; the base URL and model
     # then switch to Groq defaults automatically (override them to change).
     grok_api_key: str = "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"
-    grok_model: str = "grok-4.7"
-    grok_base_url: str = "https://api.x.ai/v1"
+    grok_model: str = ""
+    grok_base_url: str = ""
 
     # Free-tier protection (counters live in memory and reset on restart).
     llm_timeout_seconds: float = 25.0

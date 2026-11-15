@@ -102,9 +102,13 @@ def _merge_defaults(req: DayRequest):
                 chosen.update({k: subject.get(k) for k in _DEFAULT_FIELDS if subject.get(k) is not None})
         chosen.update({k: scenario.get(k) for k in _DEFAULT_FIELDS if scenario.get(k) is not None})
     body = req.model_dump(exclude_none=True)
+    base_bone = dict(chosen.get("bone_profile") or {})
     for k in _DEFAULT_FIELDS:
         if k in body:
             chosen[k] = body[k]
+    if base_bone and isinstance(body.get("bone_profile"), dict):
+        # boxes left empty in the calculator keep the crew-file value (the form says so); typed boxes win
+        chosen["bone_profile"] = {**base_bone, **{k: v for k, v in body["bone_profile"].items() if v is not None}}
     return chosen, subject, scenario
 
 

@@ -14,7 +14,7 @@ from app.schemas.wellbeing import (
     WellbeingRead,
     WellbeingTrendResponse,
 )
-from app.wellbeing import assessment_service
+from app.wellbeing import assessment_service, insight_service
 
 router = APIRouter(prefix="/wellbeing", tags=["Wellbeing"])
 
@@ -69,3 +69,15 @@ def assessment_trends(
 ):
     _require_astronaut(db, astronaut_id)
     return assessment_service.trends_for_astronaut(db, astronaut_id, days)
+
+
+@router.get("/{astronaut_id}/insight")
+def assessment_insight(
+    astronaut_id: int,
+    days: int = Query(30, ge=7, le=365),
+    db: Session = Depends(get_db),
+):
+    """Deep dive for the Mental Wellbeing page: own usual range, concern runs, cognitive baseline,
+    how the scales move together, decline pattern, journal. Read-only; blocks with too few
+    check-ins are left out instead of being filled in."""
+    return insight_service.get_wellbeing_insight(db, astronaut_id, days)

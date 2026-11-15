@@ -10,6 +10,8 @@ export const endpoints = {
   bulkObservations: '/observations/bulk',
   wellbeing: (id: number) => `/wellbeing/${id}`,
   wellbeingTrends: (id: number, days = 30) => `/wellbeing/${id}/trends?days=${days}`,
+  wellbeingInsight: (id: number, days = 30) => `/wellbeing/${id}/insight?days=${days}`,
+  wellbeingMoodOptions: '/wellbeing/mood-options',
   wellbeingAssessment: '/wellbeing/assessment',
   risk: (id: number) => `/risk/${id}`,
   riskHistory: (id: number) => `/risk/${id}/history`,

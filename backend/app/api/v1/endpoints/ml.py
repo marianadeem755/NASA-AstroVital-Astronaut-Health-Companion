@@ -5,12 +5,14 @@ The frontend never sends health values. It only picks WHICH data to look at
 """
 from typing import Any, Literal, Optional
 
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status
+from sqlalchemy.orm import Session
 
 from app.core.config import settings
+from app.core.database import get_db
 from app.ml import data_store, predict
-from app.schemas.ml import BoneRequest, DayRequest
-from app.services import llm_service, ml_service, vitals_insight_service
+from app.schemas.ml import AlertsInsightRequest, AnalyticsInsightRequest, BoneMuscleRequest, BoneRequest, DayRequest, RadiationRequest, SleepInsightRequest, WellbeingAdviceRequest
+from app.services import alerts_advice_service, alerts_insight_service, analytics_insight_service, bone_advice_service, bone_muscle_insight_service, llm_service, ml_service, radiation_service, sleep_advice_service, sleep_insight_service, vitals_insight_service, wellbeing_advice_service, wellbeing_insight_service
 
 router = APIRouter(prefix="/ml", tags=["ML + AI recommendations"])
 
@@ -78,6 +80,76 @@ def vitals_insight_post(payload: DayRequest) -> dict[str, Any]:
     return vitals_insight_service.get_vitals_insight(payload)
 
 
+@router.get("/wellbeing-insight")
+def wellbeing_insight_get(
+    scenario_id: Optional[str] = Query(None),
+    subject_id: Optional[str] = Query(None),
+    mmash_user: Optional[str] = Query(None),
+) -> dict[str, Any]:
+    """Questionnaire scores (stress, anxiety, affect, PSQI) of the selected volunteer against all volunteers,
+    mind-body links across the cohort, and the saved stress/sleep model against what was reported."""
+    req = _query_request(scenario_id, subject_id, mmash_user, None, None, None, None, None, "en")
+    return wellbeing_insight_service.get_wellbeing_insight(req)
+
+
+@router.post("/wellbeing-insight")
+def wellbeing_insight_post(payload: DayRequest) -> dict[str, Any]:
+    """Same detailed insight endpoint using the frontend's JSON selector payload."""
+    return wellbeing_insight_service.get_wellbeing_insight(payload)
+
+
+@router.post("/sleep-insight")
+def sleep_insight(payload: SleepInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Sleep Tracker deep dive: the astronaut's own nights (sleep debt, runs, regularity, cost of short nights) and one MMASH
+    volunteer's measured night against the cohort (profile, perception vs measurement, better-sleeper split, model drivers)."""
+    return sleep_insight_service.get_sleep_insight(db, payload)
+
+
+@router.post("/alerts-insight")
+def alerts_insight(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Risk Alerts deep dive: alerts raised per factor from the astronaut's own logs, reports and the check-day models, with
+    persistence, a compound pattern, a daily timeline and the rule-engine alert queue."""
+    return alerts_insight_service.get_alerts_insight(db, payload)
+
+
+@router.post("/alerts-recommendations")
+def alerts_recommendations(payload: AlertsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """AI recommendations for the Risk Alerts page (Gemini, Grok/Groq fallback). Built server-side from the same alerts."""
+    return alerts_advice_service.get_alerts_advice(db, payload)
+
+
+@router.post("/analytics-insight")
+def analytics_insight(payload: AnalyticsInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Trends & Analytics deep dive: logged-data trends, relations between measures, risk and alert history, blood across the
+    whole crew and a scorecard of every saved model."""
+    return analytics_insight_service.get_analytics_insight(db, payload)
+
+
+@router.post("/bone-muscle-insight")
+def bone_muscle_insight(payload: BoneMuscleRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Bone & Muscle deep dive: the bone-risk model opened up (reference table, drivers, levers, curves, reliability),
+    the astronaut's logged exercise, musculoskeletal symptom reports, and published reference values."""
+    return bone_muscle_insight_service.get_bone_muscle_insight(db, payload)
+
+
+@router.post("/bone-recommendations")
+def bone_recommendations(payload: BoneMuscleRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """AI recommendations for the Bone & Muscle calculator (Gemini, Grok/Groq fallback). Built server-side from the data."""
+    return bone_advice_service.get_bone_advice(db, payload)
+
+
+@router.post("/sleep-recommendations")
+def sleep_recommendations(payload: SleepInsightRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """AI recommendations for the Sleep Tracker page (Gemini, Grok/Groq fallback). Built server-side from the data."""
+    return sleep_advice_service.get_sleep_advice(db, payload)
+
+
+@router.post("/wellbeing-recommendations")
+def wellbeing_recommendations(payload: WellbeingAdviceRequest, db: Session = Depends(get_db)) -> dict[str, Any]:
+    """AI recommendations for the Mental Wellbeing page (Gemini, Grok/Groq fallback). Built server-side from the data."""
+    return wellbeing_advice_service.get_wellbeing_advice(db, payload)
+
+
 @router.get("/demo-results")
 def demo_results() -> dict[str, Any]:
     """The team's 5 saved example outputs (models/demo_results.json), for frontend testing."""
@@ -133,6 +205,12 @@ def recommendations_get(
 def recommendations_post(payload: DayRequest) -> dict[str, Any]:
     """Same as GET, JSON body (also accepts a bone_profile and language)."""
     return ml_service.run_day(payload, with_ai=True)
+
+
+@router.post("/radiation-recommendations")
+def radiation_recommendations(payload: RadiationRequest) -> dict[str, Any]:
+    """AI recommendations for the Radiation Monitor page (Gemini, Grok fallback)."""
+    return radiation_service.get_radiation_advice(payload)
 
 
 @router.post("/bone-risk")
