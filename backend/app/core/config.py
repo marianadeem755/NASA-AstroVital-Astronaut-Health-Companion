@@ -34,13 +34,13 @@ class Settings(BaseSettings):
 
     # ---- AI recommendations (primary + fallback) --------------------------
     # Primary: Google Gemini (free tier, Google AI Studio key).
-    gemini_api_key: str = "AQ.Ab8RN6JZzauetKpyiiLZo8Kf76tHF1jC3MVjSdqgQNqS3xiNcA"
+    gemini_api_key: str = ""
     gemini_model: str = "gemini-2.5-flash"
     gemini_base_url: str = "https://generativelanguage.googleapis.com/v1beta"
     # Fallback: any OpenAI-compatible chat API. Default = xAI Grok.
     # If your key starts with "gsk_" it is a Groq key; the base URL and model
     # then switch to Groq defaults automatically (override them to change).
-    grok_api_key: str = "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"
+    grok_api_key: str = ""
     grok_model: str = ""
     grok_base_url: str = ""
 
