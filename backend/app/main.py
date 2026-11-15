@@ -1,6 +1,6 @@
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 
@@ -31,6 +31,12 @@ app.add_middleware(
 
 register_exception_handlers(app)
 app.include_router(api_router, prefix=settings.api_v1_prefix)
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    """Browsers ask for this automatically; answer with 'no content' so the log has no 404."""
+    return Response(status_code=204)
 
 
 @app.get("/", tags=["System"])

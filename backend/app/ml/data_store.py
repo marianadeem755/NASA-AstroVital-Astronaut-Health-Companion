@@ -249,17 +249,38 @@ def baseline_changes(astronaut, timepoint, top_n=None):
 # --------------------------------------------------------------------------
 # Crew map (optional file that links subjects to data sources)
 # --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+# Crew map (optional file that links subjects to data sources)
+# --------------------------------------------------------------------------
 def _crew_map_path():
     if settings.crew_map_path:
         return Path(settings.crew_map_path)
     return Path(settings.data_dir) / "profiles" / "crew_map.json"
 
 
+def _derived_crew_map():
+    """crew_map.json nahi hai to data se khud subjects banao (kuch hardcode nahi)."""
+    try:
+        astronauts = blood_astronauts()
+    except DataNotFound:
+        return {"subjects": [], "scenarios": []}
+    subjects = []
+    for a in astronauts:
+        tps = blood_timepoints(a)
+        subjects.append({
+            "subject_id": a,
+            "display_name": a,
+            "blood_astronaut": a,
+            "timepoint": tps[-1] if tps else None,  # sabse aakhri timepoint
+        })
+    return {"subjects": subjects, "scenarios": []}
+
+
 def crew_map():
-    """{'subjects': [...], 'scenarios': [...]}. Empty lists if no file."""
+    """{'subjects': [...], 'scenarios': [...]}. File na ho to data se derive hota hai."""
     p = _crew_map_path()
     if not p.exists():
-        return {"subjects": [], "scenarios": []}
+        return _derived_crew_map()
     with open(p, encoding="utf-8") as f:
         data = json.load(f)
     return {"subjects": data.get("subjects", []), "scenarios": data.get("scenarios", [])}

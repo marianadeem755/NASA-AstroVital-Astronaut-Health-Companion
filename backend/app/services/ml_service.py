@@ -41,13 +41,29 @@ def _read_json(name):
         return json.load(f)
 
 
+def _factor_note(extra, n_factors):
+    """One plain sentence for models whose inputs are too many to list (read from metrics.json)."""
+    f = extra.get("features")
+    if isinstance(f, str):
+        return f
+    if extra.get("n_genes"):
+        return (f"{extra['n_genes']:,} gene-expression values from {extra.get('n_samples')} samples, "
+                "reduced to principal components")
+    if extra.get("model") and n_factors:
+        return f"{n_factors:,} measured values, then {extra['model']}"
+    return None
+
+
 def model_registry():
     """metadata + metrics for every model, merged, straight from the model files."""
     meta, metrics = _read_json("model_metadata.json"), _read_json("metrics.json")
+    columns = _read_json("feature_columns.json")
     loaded = predict.load_models()
     out = []
     for name in predict.MODEL_NAMES:
         m = meta.get(name, {})
+        cols = columns.get(name) or []
+        n_factors = m.get("n_features") or len(cols) or None
         out.append({
             "model": name,
             "loaded": name in loaded,
@@ -57,6 +73,10 @@ def model_registry():
             "validation": m.get("validation"),
             "metrics": m.get("metrics"),
             "warning": (metrics.get(name) or {}).get("warning"),
+            "target": m.get("target"),
+            "factors": [str(c) for c in cols[:40]],
+            "factor_count": n_factors,
+            "factor_note": _factor_note(metrics.get(name) or {}, n_factors),
             "used_in_check_day": name in SCORE_TO_MODEL.values(),
             "separate_call": name == BONE_MODEL,
         })
