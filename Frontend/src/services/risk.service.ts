@@ -1,0 +1,1 @@
+import {http} from './http/client';import {endpoints} from './http/endpoints';export const getRisk=async(id:number)=>(await http.get(endpoints.risk(id))).data;export const analyzeRisk=async(id:number)=>(await http.post(endpoints.analyzeRisk(id))).data;

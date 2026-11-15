@@ -10,3 +10,10 @@ __pycache__/
 *.db
 *.db-shm
 *.db-wal
+node_modules/
+dist/
+build/
+.env
+.env.local
+coverage
+.DS_Store

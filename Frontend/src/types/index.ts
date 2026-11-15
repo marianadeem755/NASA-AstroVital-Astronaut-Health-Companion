@@ -1,0 +1,1 @@
+export type ApiPage<T>={items:T[];total:number;skip:number;limit:number}; export type RiskLevel='low'|'medium'|'high'|'critical';

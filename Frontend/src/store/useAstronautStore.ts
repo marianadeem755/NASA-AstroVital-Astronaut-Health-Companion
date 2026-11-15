@@ -1,0 +1,1 @@
+import {create} from 'zustand'; type AstronautState={astronautId:number;setAstronautId:(id:number)=>void}; export const useAstronautStore=create<AstronautState>(set=>({astronautId:Number(import.meta.env.VITE_DEFAULT_ASTRONAUT_ID||1),setAstronautId:(astronautId)=>set({astronautId})}));

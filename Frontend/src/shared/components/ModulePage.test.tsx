@@ -1,0 +1,1 @@
+import {render,screen} from '@testing-library/react';import {describe,it,expect} from 'vitest';import {ModulePage} from './ModulePage';describe('ModulePage',()=>{it('renders the selected module title',()=>{render(<ModulePage item={{label:'Sleep Tracker',path:'/sleep'}}/>);expect(screen.getByRole('heading',{name:'Sleep Tracker'})).toBeInTheDocument();});});

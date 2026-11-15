@@ -1,0 +1,1 @@
+export const formatMetric=(value:number|undefined|null,unit='')=>value==null?'—':`${value}${unit}`;

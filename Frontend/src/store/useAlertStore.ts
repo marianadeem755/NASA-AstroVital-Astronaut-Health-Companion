@@ -1,0 +1,1 @@
+import {create} from 'zustand'; type AlertState={unread:number;setUnread:(n:number)=>void}; export const useAlertStore=create<AlertState>(set=>({unread:2,setUnread:(unread)=>set({unread})}));

@@ -1,0 +1,1 @@
+import {http} from './http/client';import {endpoints} from './http/endpoints';export const getRecommendations=async(id:number)=>(await http.get(endpoints.recommendations(id))).data;export const evaluateRecommendations=async(payload:unknown)=>(await http.post(endpoints.evaluateRecommendations,payload)).data;
